@@ -2,6 +2,14 @@
 
 Jogo educativo mobile-first em React e TypeScript: seis continentes, leitura real de QR dentro do app, realidade aumentada por marcador físico, modelos 3D sem câmera, países e atividades. Dados e progresso ficam no navegador; não há cadastro, GPS, backend ou serviço pago.
 
+## Auditoria e visual de 2026-10-29
+
+[Auditoria dos fluxogramas](docs/AUDITORIA-FLUXOGRAMAS.md): comparação das cinco páginas locais com a SPEC §14, tabela por passo, correções e limites das evidências. `referencia-visual.png` foi consultada localmente, sem incorporar marca, textos ou imagem no build. A nova arte SVG é autoral MIT.
+
+Paleta e valores reutilizáveis ficam em `src/styles/tokens.css`: lavanda e pêssego complementam rosa, menta e amarelo. `app.css`/`components.css` usam os tokens e `playful.css` define a composição infantil. O preparo de desenvolvimento/build copia os tokens para `public/styles/tokens.css`, também usado pela página AR isolada; editar a fonte em `src/`, não a cópia gerada. Textos usam tons escuros, com contraste calculado documentado na auditoria, foco visível e controles alternativos aos gestos.
+
+Dados pontuais confirmados que complementam o Natural Earth ficam em `data-src/country-facts.json`, com fonte em SOURCES.md; o pipeline aplica a capital de Juba confirmada na UNdata. Demais dados não confirmados continuam em verificação. Esta revisão passou em typecheck, build e 11 testes essenciais; câmera, RA e revisão manual da interface continuam pendentes. Os commits locais não publicam automaticamente o site.
+
 ## Rodar no Windows
 
 Pré-requisito: Node.js 22.12+ (recomendado 22 LTS) e npm. No PowerShell, use `npm.cmd` se a política de execução bloquear `npm.ps1`.

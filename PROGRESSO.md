@@ -1,10 +1,10 @@
 # Progresso — Exploradores do Mundo
 
-## Etapa atual — auditoria e revisão visual (2026-10-29)
+## Etapa atual — auditoria e revisão visual concluídas localmente (2026-10-29)
 - AGENTS.md, SPEC.md, PROGRESSO.md e PENDENCIAS.md lidos antes de alterações.
 - PDF local de cinco páginas renderizado e lido visualmente; cópias raiz/docs idênticas por SHA-256. Referência local `referencia-visual.png` inspecionada.
 - Achados e reconciliação com a SPEC §14 em docs/AUDITORIA-FLUXOGRAMAS.md.
-- Próximo passo exato: corrigir confirmação do QR, resumo/dica da RA, entradas da orientação, ficha e acessibilidade; aplicar tokens pastel; executar typecheck, build e testes essenciais.
+- Concluídos: correções de fluxo, tokens pastel, ilustração autoral, contraste e comandos essenciais. Tabela final de rastreabilidade em docs/AUDITORIA-FLUXOGRAMAS.md.
 - Revisão de interface por Computer Use impedida: host de navegador e pipe nativo indisponíveis nesta sessão. Câmera/RA seguem NÃO VALIDADAS.
 
 ### Marco de implementação e verificações
@@ -12,15 +12,19 @@
 - Tokens pastel, ilustração SVG autoral, foco de importação e cadeados aplicados. Juba confirmada na UNdata e registrada no pipeline.
 - Última execução: `npm.cmd run typecheck` e `npm.cmd run build`, ambos exit 0; `npm.cmd test`, 11 testes em 2 arquivos, todos passaram. Uma regressão essencial de HTML foi acrescentada; não executa câmera/WebGL.
 - Contrastes principais calculados: texto >= 5,45:1; foco 6,44:1 e borda de campo 3,98:1. Revisão de layout no navegador continua pendente.
-- Próximo passo exato: fechar a tabela de rastreabilidade, atualizar roteiro físico e pendências e registrar o marco documental em commit. Não houve push/deploy desta revisão.
+- Documentação finalizada: auditoria de cada passo dos cinco fluxos, roteiro físico ampliado e pendências atualizadas. Nenhuma validação de câmera/RA foi declarada.
+- Commits desta revisão: `0c99b76` (leitura/achados) e `1d6ffcd` (implementação); marco documental registrado em commit posterior. Não houve push/deploy desta revisão.
+- Imagem local do responsável preservada como referência; não incorporada ao build nem adicionada ao commit por não ter licença de redistribuição informada.
+- Próximo passo exato: executar `npm.cmd run dev`, configurar a URL HTTPS conforme README, gerar/imprimir as folhas para essa URL e cumprir docs/TESTE-NO-CELULAR.md separadamente em Android Chrome e iPhone Safari. Registrar aparelho, navegador, responsável e resultado de cada item. A revisão completa de layout, voz e Organizador também continua manual.
 
-## Estado atual: seis etapas implementadas e site publicado
+## Histórico anterior a esta revisão: seis etapas e publicação registrada
+Os resultados abaixo são do registro anterior, não foram repetidos nesta sessão. O site publicado anteriormente não contém automaticamente as mudanças locais acima.
 - Site: https://pedroayan.github.io/testtt/
 - Repositório: https://github.com/PedroAyan/testtt — branch main, origin configurado.
 - Primeiro deploy confirmado: workflow 40804625866, commit d2abb47; jobs build e deploy concluídos com success.
 - Leitura de AGENTS.md e SPEC.md completa; a navegação segue a §14. PDF original copiado para docs/ (5 páginas), preservando o original recebido na raiz.
 
-## Etapas concluídas no código
+## Etapas da entrega anterior
 1. África ponta a ponta: dados, GLB, QR, marcador, folha A4, QR interno, cena AR isolada, persistência e 3D sem câmera.
 2. Arquitetura reutilizável: dados JSON, serviços TypeScript, repositórios assíncronos, ponte postMessage validada e módulo compartilhado entre app e RA inteira.
 3. Seis continentes: África, América unificada, Antártida, Ásia, Europa e Oceania; 195 Estados em listas sem duplicação, 6 GLBs continentais + 177 nacionais, 6 QR/barcodes/folhas.
@@ -28,7 +32,7 @@
 5. Publicação: GitHub Pages ativado por Actions; URL pública e recursos dos seis conjuntos verificados por HTTP. README, SOURCES, guias de impressão e roteiro físico entregues.
 6. Organizador: PBKDF2/SHA-256 com sal, atraso crescente, editor por continente/ano, atividades extras, revisão, rascunhos locais e exportar/importar overrides validados. Hash configurado na variável VITE_ORGANIZER_PASSWORD_HASH do repositório; senha aleatória entregue somente ao responsável, sem texto em código.
 
-## Verificado
+## Verificações da entrega anterior
 - npm.cmd run typecheck e npm.cmd run build: sem erros.
 - npm.cmd test: 10 testes essenciais passaram, sem bateria exaustiva; inclusive seis PNGs QR decodificados por software.
 - GitHub Actions também executou npm ci, typecheck, testes, geração das folhas e build com sucesso em Linux/Node 22.
@@ -40,7 +44,7 @@
 - Seis PDFs finais A4, uma página cada, renderizados e inspecionados; QR aponta para a URL pública. Silhuetas revisadas. Exceções geométricas ultramarinas documentadas em data-src/geographic-parts.json.
 - Teardown ajustado para preservar o iframe no mesmo nó DOM até ACK/timeout, sem reiniciá-lo por movimentação durante desmontagem.
 
-## Não validado e próximo passo exato
+## Pendências já registradas na entrega anterior
 - Câmera e AR em celular físico: NÃO VALIDADOS. Executar docs/TESTE-NO-CELULAR.md em Android Chrome e iPhone Safari, incluindo cinco ciclos de entrada/saída.
 - Interface em navegador, voz, leitor de tela e editor: sem validação manual; Computer Use não encontrou host de navegador/pipe nativo no ambiente.
 - Estatísticas null/verificar:true permanecem documentadas em docs/DADOS-EM-VERIFICACAO.md.

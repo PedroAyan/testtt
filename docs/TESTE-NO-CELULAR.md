@@ -2,6 +2,8 @@
 
 Nenhum teste físico foi executado pelo agente. Testes automatizados de lógica/build não validam câmera, leitura de papel nem pose AR.
 
+Revisão de 2026-10-29: os 11 testes de domínio/artefatos/HTML e o build passaram. O navegador não esteve disponível ao agente; nenhum item manual abaixo foi marcado como aprovado. Teste o build desta revisão: a publicação anterior não se atualiza com commits somente locais.
+
 ## Preparação
 1. Node.js 22.12+ e celular na mesma rede do computador.
 2. PowerShell: `npm.cmd install`, `npm.cmd run dev`.
@@ -43,3 +45,27 @@ Copie o checklist para cada dispositivo. Todos os itens começam **NÃO VALIDADO
 | Layout 360 px, alvos 44 px, teclado/leitor de tela | [ ] Passou [ ] Falhou | |
 
 Não remover o status de não validado sem anotar evidência e responsável. Se iframe falhar no Safari, testar o botão de página inteira e registrar o comportamento.
+
+## Retornos e regressões da auditoria de 2026-10-29 — NÃO VALIDADOS
+
+Executar somente os percursos essenciais abaixo; não é uma bateria exaustiva. Usar um perfil de teste separado para não apagar progresso de uso.
+
+| Percurso | Resultado esperado | Resultado real / responsável |
+|---|---|---|
+| Primeira visita por Explorar e pelo atalho Meu mapa | Orientação ilustrada e pergunta do ano; pular usa geral; Voltar ao início funciona | NÃO VALIDADO |
+| Voltar ao mapa em visita seguinte e tocar Como jogar | Mapa direto; ajuda pode ser reaberta; ano continua salvo | NÃO VALIDADO |
+| Bloqueado → câmera negada → Tentar novamente ou Voltar ao mapa | Instrução, dica ilustrada, nenhum modelo completo nem descoberta | NÃO VALIDADO |
+| Selecionar África e ler QR da Ásia → Tentar novamente → QR da África | Aviso de continente errado sem progresso; depois câmera fecha, aparece “Continente descoberto!” e ficha sem câmera | NÃO VALIDADO |
+| Cancelar enquanto o leitor inicia | Mapa, câmera desligada; resultado tardio não deve abrir ficha após o cancelamento | NÃO VALIDADO |
+| Descoberto → Ver em RA → perder/reencontrar marcador → Ver sem câmera | Resumo sobre a câmera, rastreamento real, estado preservado e câmera desliga ao estudar | NÃO VALIDADO |
+| Erro de RA de continente já descoberto | Ver em 3D sem câmera abre a mesma ficha; Tentar novamente reinicia | NÃO VALIDADO |
+| Ficha → Conhecer os países → ficha do país → dois retornos | Botão funciona sem gesto, modelo/ícone adequado, Voltar ao continente e Voltar ao mapa preservam progresso | NÃO VALIDADO |
+| Arrastar só a alça da ficha para baixo / Entendi | Abre países; dica dispensada não volta; rolagem normal fora da alça não deve navegar | NÃO VALIDADO |
+| Abrir Antártida pela ficha e tentar URL de países | Sem lista/botão de países; rota volta à ficha antártica | NÃO VALIDADO |
+| Atividade → três erros → Mostrar a resposta → Refazer → acerto | Dicas sem punição; revelação não conclui; novo acerto conta uma vez; saída sem concluir preserva contagem | NÃO VALIDADO |
+| Mapa com seis descobertas, antes/depois de seis atividades | Duas celebrações diferentes e consulta continua disponível | NÃO VALIDADO |
+| Organizador → senha errada → correta → editar/revisar/cancelar/salvar → Sair | Atraso após erro, cancelamento não salva, salvar volta ao mapa e Sair encerra sessão em cada tela | NÃO VALIDADO |
+| Organizador → importar inválido → exportar/importar rascunho válido | Aviso sem aplicar inválido; rascunho local; não altera descobertas dos alunos | NÃO VALIDADO |
+| 360 px / teclado / movimento reduzido / leitor de tela | Sem corte dos cartões/botões; mapa desliza lateralmente e lista funciona; foco claro, importação focável e animação dispensável | NÃO VALIDADO |
+
+Se qualquer percurso falhar, registrar o passo da tabela em AUDITORIA-FLUXOGRAMAS.md e atualizar PENDENCIAS.md, sem transformar evidência de código em aprovação manual.

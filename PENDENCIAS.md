@@ -1,8 +1,15 @@
 # Pendências
 
+## Revisão de 2026-10-29
+- Auditoria dos cinco fluxos concluída por comparação visual do PDF local com SPEC §14 e rastreamento do código: docs/AUDITORIA-FLUXOGRAMAS.md. A tabela distingue código, testes de domínio/HTML e teste físico pendente.
+- Verificações locais executadas: `npm.cmd run typecheck` (exit 0), `npm.cmd run build` (exit 0) e `npm.cmd test` (11/11 passaram). Não há falha automatizada conhecida nesta revisão.
+- Revisão visual da interface no navegador continua pendente: o inventário de Computer Use retornou host de navegador indisponível e falha no pipe nativo. SVG novo inspecionado isoladamente e contrastes principais calculados; isso não valida layout, toque ou leitor de tela.
+- Mudanças estão em commits locais e `dist/`; não foram enviadas/publicadas nesta sessão. Para avaliar esta versão no celular, usar o HTTPS local descrito no README ou publicar o commit antes de usar a URL pública.
+- Referência `referencia-visual.png` preservada no projeto para consulta local. Licença não informada: a imagem não é distribuída no app, apenas inspira a arte autoral e os tokens.
+
 ## Validação física e manual
 - Câmera, leitura de papel e rastreamento AR em Android Chrome/iPhone Safari: NÃO VALIDADOS. Executar docs/TESTE-NO-CELULAR.md; verificar pose, perda/retorno, gestos, permissão negada e cinco ciclos de teardown.
-- Interface real, acessibilidade com leitor de tela, áudio pt-BR, exploração WebGL e editor: implementados, mas não validados manualmente. O host de navegador e o pipe nativo de Computer Use estavam indisponíveis.
+- Interface real, acessibilidade com leitor de tela, áudio pt-BR, exploração WebGL e editor: implementados, mas não validados manualmente. Conferir especialmente confirmação de descoberta, resumo sobre a RA, dicas com câmera negada, alça da ficha, rolagem/lista do mapa em 360 px, foco no arquivo de importação e cancelamento/saída do Organizador.
 
 ## Dados em verificação
 - Seis continentes: areaKm2 e populacao com valor:null e verificar:true; anoReferencia:0 é sentinela não exibida. Confirmar valores segundo o mesmo recorte geográfico antes de substituir.
@@ -15,5 +22,7 @@
 - Edições não chegam automaticamente aos alunos: exportar overrides, versionar os arquivos/mídias/fontes e publicar.
 
 ## Pendências resolvidas
+- Capital do Sudão do Sul: Juba, confirmada em https://data.un.org/legacy/en/iso/ss.html em 2026-10-29, fonte `undata-south-sudan` em SOURCES.md. Registrada em data-src/country-facts.json e aplicada no pipeline/JSON. Relatório de dados regenerado com `node scripts/report-pending.mjs`. Demais capitais não confirmadas continuam omitidas.
+- Divergências de interface/navegação encontradas nesta revisão corrigidas no código: confirmação QR, resumo sobreposto da RA, dica ilustrada em erro de câmera, orientação por todas as entradas do mapa, gesto opcional com botão permanente e foco de importação. Aceitação física/manual segue pendente.
 - Destino GitHub informado: https://github.com/PedroAyan/testtt . main enviada; Pages ativado e deploy com sucesso. Página e seis conjuntos responderam HTTP 200.
 - PDF original recebido na raiz e copiado para docs/Fluxogramas_Exploradores_do_Mundo.pdf (5 páginas); original preservado. A SPEC §14 continua normativa.
