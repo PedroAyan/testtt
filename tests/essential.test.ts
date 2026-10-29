@@ -11,9 +11,20 @@ import { activityContinents, answerActivity, defaultActivities, isExplorationCom
 import type { Continent } from '../src/types/continent';
 import { verifyOrganizerPassword } from '../src/services/organizerAuth';
 import { pbkdf2Sync, randomBytes } from 'node:crypto';
+import { runInNewContext } from 'node:vm';
+// Leitura dos arquivos gerados em Node não equivale à validação de câmera física.
+import { createRequire } from 'node:module';
 class MemoryStorage implements StoragePort {data=new Map<string,string>();getItem(k:string){return this.data.get(k)||null;}setItem(k:string,v:string){this.data.set(k,v);}removeItem(k:string){this.data.delete(k);}}
 const data=async(id:string)=>JSON.parse(await readFile(`src/data/continents/${id}.json`,'utf8')) as Continent;
 describe('Verificações essenciais da especificação',()=>{
+ it('os seis QR gerados podem ser decodificados e os barcodes são distintos',async()=>{
+  const context={module:{exports:{}},exports:{}};runInNewContext(await readFile('public/vendor/jsQR-1.4.0.js','utf8'),context);
+  const decode=context.module.exports as (data:Uint8ClampedArray,w:number,h:number)=>{data:string}|null;
+  const require=createRequire(import.meta.url);const {PNG}=require('pngjs') as {PNG:{sync:{read:(b:Buffer)=>{width:number;height:number;data:Buffer}}}};
+  const barcodes:string[]=[];
+  for(const id of IMPLEMENTED_CONTINENTS){const png=PNG.sync.read(await readFile(`public/markers/${id}-qr.png`));const qr=decode(new Uint8ClampedArray(png.data),png.width,png.height);expect(qr).not.toBeNull();expect(new URL(qr!.data).searchParams.get('continente')).toBe(id);barcodes.push((await readFile(`public/markers/${id}-ar.png`)).toString('base64'));}
+  expect(new Set(barcodes).size).toBe(IMPLEMENTED_CONTINENTS.length);
+ },15000);
  it('valida hash PBKDF2 sem guardar uma senha de Organizador no código',async()=>{
   const password=randomBytes(16).toString('hex'),salt=randomBytes(16).toString('hex');
   const expected=pbkdf2Sync(password,Buffer.from(salt,'hex'),100000,32,'sha256').toString('hex');

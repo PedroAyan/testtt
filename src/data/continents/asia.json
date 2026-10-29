@@ -23,7 +23,7 @@
   },
   "quantidadePaises": {
     "valor": 49,
-    "fonte": "un-members",
+    "fonte": "country-assignments",
     "criterio": "Estados-membros da ONU e observadores; país no continente da maior parte do território, Cáucaso na Ásia."
   },
   "caracteristicasGeograficas": [
@@ -65,6 +65,7 @@
       "curiosidade": "No mapa desta coleção, Afeganistão faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -92,6 +93,7 @@
       "curiosidade": "No mapa desta coleção, Arábia Saudita faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -119,6 +121,7 @@
       "curiosidade": "No mapa desta coleção, Arménia faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "nota": "Esta coleção adota a Armênia na Ásia, conforme a região geográfica do Natural Earth.",
@@ -147,6 +150,7 @@
       "curiosidade": "No mapa desta coleção, Azerbaijão faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "nota": "O limite entre Europa e Ásia no Cáucaso varia por convenção; esta coleção adota o Azerbaijão na Ásia.",
@@ -175,6 +179,7 @@
       "curiosidade": "No mapa desta coleção, Bahrein faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -202,6 +207,7 @@
       "curiosidade": "No mapa desta coleção, Bangladesh faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -229,6 +235,7 @@
       "curiosidade": "No mapa desta coleção, Brunei faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -256,6 +263,7 @@
       "curiosidade": "No mapa desta coleção, Butão faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -283,6 +291,7 @@
       "curiosidade": "No mapa desta coleção, Camboja faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -310,6 +319,7 @@
       "curiosidade": "No mapa desta coleção, Catar faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -337,6 +347,7 @@
       "curiosidade": "No mapa desta coleção, Cazaquistão faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "nota": "O Cazaquistão tem terras na Europa e na Ásia; a maior parte fica na Ásia.",
@@ -365,6 +376,7 @@
       "curiosidade": "No mapa desta coleção, China faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -392,6 +404,7 @@
       "curiosidade": "No mapa desta coleção, Chipre faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -419,6 +432,7 @@
       "curiosidade": "No mapa desta coleção, Coreia do Norte faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -446,6 +460,7 @@
       "curiosidade": "No mapa desta coleção, Coreia do Sul faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -473,6 +488,7 @@
       "curiosidade": "No mapa desta coleção, Emirados Árabes Unidos faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -500,6 +516,7 @@
       "curiosidade": "No mapa desta coleção, Filipinas faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -527,6 +544,7 @@
       "curiosidade": "No mapa desta coleção, Geórgia faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "nota": "O limite entre Europa e Ásia no Cáucaso varia por convenção; esta coleção adota a Geórgia na Ásia.",
@@ -555,6 +573,7 @@
       "curiosidade": "No mapa desta coleção, Iémen faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -582,6 +601,7 @@
       "curiosidade": "No mapa desta coleção, Índia faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -609,6 +629,7 @@
       "curiosidade": "No mapa desta coleção, Indonésia faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "nota": "A Indonésia tem ilhas dos dois lados do limite convencional Ásia/Oceania; a maior parte do território fica na Ásia.",
@@ -637,6 +658,7 @@
       "curiosidade": "No mapa desta coleção, Irão faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -664,6 +686,7 @@
       "curiosidade": "No mapa desta coleção, Iraque faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -691,6 +714,7 @@
       "curiosidade": "No mapa desta coleção, Israel faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -718,6 +742,7 @@
       "curiosidade": "No mapa desta coleção, Japão faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -745,6 +770,7 @@
       "curiosidade": "No mapa desta coleção, Jordânia faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -772,6 +798,7 @@
       "curiosidade": "No mapa desta coleção, Kuwait faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -799,6 +826,7 @@
       "curiosidade": "No mapa desta coleção, Laos faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -826,6 +854,7 @@
       "curiosidade": "No mapa desta coleção, Líbano faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -853,6 +882,7 @@
       "curiosidade": "No mapa desta coleção, Malásia faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -880,6 +910,7 @@
       "curiosidade": "No mapa desta coleção, Maldivas faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ]
     },
@@ -904,6 +935,7 @@
       "curiosidade": "No mapa desta coleção, Mongólia faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -931,6 +963,7 @@
       "curiosidade": "No mapa desta coleção, Myanmar faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -958,6 +991,7 @@
       "curiosidade": "No mapa desta coleção, Nepal faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -985,6 +1019,7 @@
       "curiosidade": "No mapa desta coleção, Omã faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1008,7 +1043,8 @@
       "curiosidade": "No mapa desta coleção, Palestina faz parte de Ásia.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments",
+        "un-observers"
       ],
       "modelo": {
         "arquivo": "models/countries/PSX.glb"
@@ -1035,6 +1071,7 @@
       "curiosidade": "No mapa desta coleção, Paquistão faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1062,6 +1099,7 @@
       "curiosidade": "No mapa desta coleção, Quirguistão faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1089,6 +1127,7 @@
       "curiosidade": "No mapa desta coleção, Rússia faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "nota": "A Rússia se estende pela Europa e pela Ásia; fica na Ásia nesta coleção pela maior parte do território.",
@@ -1117,6 +1156,7 @@
       "curiosidade": "No mapa desta coleção, Singapura faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1144,6 +1184,7 @@
       "curiosidade": "No mapa desta coleção, Síria faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1171,6 +1212,7 @@
       "curiosidade": "No mapa desta coleção, Sri Lanka faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1198,6 +1240,7 @@
       "curiosidade": "No mapa desta coleção, Tailândia faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1225,6 +1268,7 @@
       "curiosidade": "No mapa desta coleção, Tajiquistão faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1252,6 +1296,7 @@
       "curiosidade": "No mapa desta coleção, Timor-Leste faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1279,6 +1324,7 @@
       "curiosidade": "No mapa desta coleção, Turquemenistão faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1306,6 +1352,7 @@
       "curiosidade": "No mapa desta coleção, Turquia faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "nota": "A Turquia tem terras na Europa e na Ásia; a maior parte fica na Ásia.",
@@ -1334,6 +1381,7 @@
       "curiosidade": "No mapa desta coleção, Uzbequistão faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1361,6 +1409,7 @@
       "curiosidade": "No mapa desta coleção, Vietname faz parte de Ásia.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1386,7 +1435,7 @@
       "curiosidade": "No mapa desta coleção, Glaciar de Siachen faz parte de Ásia.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -1407,7 +1456,7 @@
       "curiosidade": "No mapa desta coleção, Hong Kong faz parte de Ásia.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -1428,7 +1477,7 @@
       "curiosidade": "No mapa desta coleção, Macau faz parte de Ásia.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -1449,7 +1498,7 @@
       "curiosidade": "No mapa desta coleção, República Turca do Chipre do Norte faz parte de Ásia.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -1474,7 +1523,7 @@
       "curiosidade": "No mapa desta coleção, Taiwan faz parte de Ásia.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -1495,7 +1544,7 @@
       "curiosidade": "No mapa desta coleção, Território Britânico do Oceano Índico faz parte de Ásia.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -1516,7 +1565,7 @@
       "curiosidade": "No mapa desta coleção, Territórios australianos do Oceano Índico faz parte de Ásia.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     }

@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
   return {
     base: env.VITE_BASE_PATH || '/',
     plugins: [react(), basicSsl()],
-    server: { host: '0.0.0.0', port: 5173, strictPort: true },
+    server: { host: '0.0.0.0', port: 5173, strictPort: true, allowedHosts: env.VITE_PUBLIC_URL ? [new URL(env.VITE_PUBLIC_URL).hostname] : [] },
     build: { chunkSizeWarningLimit: 600 },
     test: { environment: 'node', include: ['tests/**/*.test.ts'] },
   };

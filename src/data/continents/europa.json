@@ -23,7 +23,7 @@
   },
   "quantidadePaises": {
     "valor": 43,
-    "fonte": "un-members",
+    "fonte": "country-assignments",
     "criterio": "Estados-membros da ONU e observadores; país no continente da maior parte do território, Cáucaso na Ásia."
   },
   "caracteristicasGeograficas": [
@@ -65,6 +65,7 @@
       "curiosidade": "No mapa desta coleção, Albânia faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -92,6 +93,7 @@
       "curiosidade": "No mapa desta coleção, Alemanha faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -119,6 +121,7 @@
       "curiosidade": "No mapa desta coleção, Andorra faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -146,6 +149,7 @@
       "curiosidade": "No mapa desta coleção, Áustria faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -173,6 +177,7 @@
       "curiosidade": "No mapa desta coleção, Bélgica faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -200,6 +205,7 @@
       "curiosidade": "No mapa desta coleção, Bielorrússia faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -227,6 +233,7 @@
       "curiosidade": "No mapa desta coleção, Bósnia e Herzegovina faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -254,6 +261,7 @@
       "curiosidade": "No mapa desta coleção, Bulgária faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -281,6 +289,7 @@
       "curiosidade": "No mapa desta coleção, Chéquia faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -308,6 +317,7 @@
       "curiosidade": "No mapa desta coleção, Croácia faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -335,6 +345,7 @@
       "curiosidade": "No mapa desta coleção, Dinamarca faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -362,6 +373,7 @@
       "curiosidade": "No mapa desta coleção, Eslováquia faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -389,6 +401,7 @@
       "curiosidade": "No mapa desta coleção, Eslovénia faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -416,6 +429,7 @@
       "curiosidade": "No mapa desta coleção, Espanha faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -443,6 +457,7 @@
       "curiosidade": "No mapa desta coleção, Estónia faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -470,6 +485,7 @@
       "curiosidade": "No mapa desta coleção, Finlândia faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -497,6 +513,7 @@
       "curiosidade": "No mapa desta coleção, França faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -524,6 +541,7 @@
       "curiosidade": "No mapa desta coleção, Grécia faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -551,6 +569,7 @@
       "curiosidade": "No mapa desta coleção, Hungria faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -578,6 +597,7 @@
       "curiosidade": "No mapa desta coleção, Islândia faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -605,6 +625,7 @@
       "curiosidade": "No mapa desta coleção, Itália faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -632,6 +653,7 @@
       "curiosidade": "No mapa desta coleção, Letónia faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -659,6 +681,7 @@
       "curiosidade": "No mapa desta coleção, Liechtenstein faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ]
     },
@@ -683,6 +706,7 @@
       "curiosidade": "No mapa desta coleção, Lituânia faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -710,6 +734,7 @@
       "curiosidade": "No mapa desta coleção, Luxemburgo faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -737,6 +762,7 @@
       "curiosidade": "No mapa desta coleção, Macedónia do Norte faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -764,6 +790,7 @@
       "curiosidade": "No mapa desta coleção, Malta faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ]
     },
@@ -788,6 +815,7 @@
       "curiosidade": "No mapa desta coleção, Moldávia faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -815,6 +843,7 @@
       "curiosidade": "No mapa desta coleção, Mónaco faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ]
     },
@@ -839,6 +868,7 @@
       "curiosidade": "No mapa desta coleção, Montenegro faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -866,6 +896,7 @@
       "curiosidade": "No mapa desta coleção, Noruega faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -893,6 +924,7 @@
       "curiosidade": "No mapa desta coleção, Países Baixos faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -920,6 +952,7 @@
       "curiosidade": "No mapa desta coleção, Polónia faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -947,6 +980,7 @@
       "curiosidade": "No mapa desta coleção, Portugal faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -974,6 +1008,7 @@
       "curiosidade": "No mapa desta coleção, Reino Unido faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1001,6 +1036,7 @@
       "curiosidade": "No mapa desta coleção, República da Irlanda faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1028,6 +1064,7 @@
       "curiosidade": "No mapa desta coleção, Roménia faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1055,6 +1092,7 @@
       "curiosidade": "No mapa desta coleção, San Marino faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ]
     },
@@ -1079,6 +1117,7 @@
       "curiosidade": "No mapa desta coleção, Sérvia faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1106,6 +1145,7 @@
       "curiosidade": "No mapa desta coleção, Suécia faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1133,6 +1173,7 @@
       "curiosidade": "No mapa desta coleção, Suíça faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1160,6 +1201,7 @@
       "curiosidade": "No mapa desta coleção, Ucrânia faz parte de Europa.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1187,7 +1229,8 @@
       "curiosidade": "No mapa desta coleção, Vaticano faz parte de Europa.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments",
+        "un-observers"
       ]
     }
   ],
@@ -1209,7 +1252,7 @@
       "curiosidade": "No mapa desta coleção, Åland faz parte de Europa.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -1230,7 +1273,7 @@
       "curiosidade": "No mapa desta coleção, Guernsey faz parte de Europa.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -1251,7 +1294,7 @@
       "curiosidade": "No mapa desta coleção, Ilha de Man faz parte de Europa.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -1272,7 +1315,7 @@
       "curiosidade": "No mapa desta coleção, Ilhas Feroe faz parte de Europa.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -1293,7 +1336,7 @@
       "curiosidade": "No mapa desta coleção, Jersey faz parte de Europa.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -1318,7 +1361,7 @@
       "curiosidade": "No mapa desta coleção, Kosovo faz parte de Europa.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     }
@@ -1350,7 +1393,7 @@
   },
   "modelo": {
     "arquivo": "models/europa.glb",
-    "tamanhoKb": 303.69
+    "tamanhoKb": 297.23
   },
   "dicaQr": {
     "texto": "Procure a folha com o título “Europa”, preparada pelo professor. O QR fica ao lado do quadrado preto.",

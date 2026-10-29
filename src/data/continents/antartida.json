@@ -23,7 +23,7 @@
   },
   "quantidadePaises": {
     "valor": 0,
-    "fonte": "un-members",
+    "fonte": "country-assignments",
     "criterio": "Estados-membros da ONU e observadores; país no continente da maior parte do território, Cáucaso na Ásia."
   },
   "caracteristicasGeograficas": [

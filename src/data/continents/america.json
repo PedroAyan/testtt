@@ -23,7 +23,7 @@
   },
   "quantidadePaises": {
     "valor": 35,
-    "fonte": "un-members",
+    "fonte": "country-assignments",
     "criterio": "Estados-membros da ONU e observadores; país no continente da maior parte do território, Cáucaso na Ásia."
   },
   "caracteristicasGeograficas": [
@@ -65,6 +65,7 @@
       "curiosidade": "No mapa desta coleção, Antígua e Barbuda faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "Caribe"
@@ -90,6 +91,7 @@
       "curiosidade": "No mapa desta coleção, Argentina faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América do Sul",
@@ -118,6 +120,7 @@
       "curiosidade": "No mapa desta coleção, Bahamas faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "Caribe",
@@ -146,6 +149,7 @@
       "curiosidade": "No mapa desta coleção, Barbados faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "Caribe"
@@ -171,6 +175,7 @@
       "curiosidade": "No mapa desta coleção, Belize faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América Central",
@@ -199,6 +204,7 @@
       "curiosidade": "No mapa desta coleção, Bolívia faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América do Sul",
@@ -227,6 +233,7 @@
       "curiosidade": "No mapa desta coleção, Brasil faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América do Sul",
@@ -255,6 +262,7 @@
       "curiosidade": "No mapa desta coleção, Canadá faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América do Norte",
@@ -283,6 +291,7 @@
       "curiosidade": "No mapa desta coleção, Chile faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América do Sul",
@@ -311,6 +320,7 @@
       "curiosidade": "No mapa desta coleção, Colômbia faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América do Sul",
@@ -339,6 +349,7 @@
       "curiosidade": "No mapa desta coleção, Costa Rica faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América Central",
@@ -367,6 +378,7 @@
       "curiosidade": "No mapa desta coleção, Cuba faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "Caribe",
@@ -395,6 +407,7 @@
       "curiosidade": "No mapa desta coleção, Dominica faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "Caribe",
@@ -423,6 +436,7 @@
       "curiosidade": "No mapa desta coleção, El Salvador faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América Central",
@@ -451,6 +465,7 @@
       "curiosidade": "No mapa desta coleção, Equador faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América do Sul",
@@ -479,6 +494,7 @@
       "curiosidade": "No mapa desta coleção, Estados Unidos faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América do Norte",
@@ -507,6 +523,7 @@
       "curiosidade": "No mapa desta coleção, Granada faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "Caribe"
@@ -532,6 +549,7 @@
       "curiosidade": "No mapa desta coleção, Guatemala faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América Central",
@@ -560,6 +578,7 @@
       "curiosidade": "No mapa desta coleção, Guiana faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América do Sul",
@@ -588,6 +607,7 @@
       "curiosidade": "No mapa desta coleção, Haiti faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "Caribe",
@@ -616,6 +636,7 @@
       "curiosidade": "No mapa desta coleção, Honduras faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América Central",
@@ -644,6 +665,7 @@
       "curiosidade": "No mapa desta coleção, Jamaica faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "Caribe",
@@ -672,6 +694,7 @@
       "curiosidade": "No mapa desta coleção, México faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América Central",
@@ -700,6 +723,7 @@
       "curiosidade": "No mapa desta coleção, Nicarágua faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América Central",
@@ -728,6 +752,7 @@
       "curiosidade": "No mapa desta coleção, Panamá faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América Central",
@@ -756,6 +781,7 @@
       "curiosidade": "No mapa desta coleção, Paraguai faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América do Sul",
@@ -784,6 +810,7 @@
       "curiosidade": "No mapa desta coleção, Peru faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América do Sul",
@@ -812,6 +839,7 @@
       "curiosidade": "No mapa desta coleção, República Dominicana faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "Caribe",
@@ -840,6 +868,7 @@
       "curiosidade": "No mapa desta coleção, Santa Lúcia faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "Caribe",
@@ -868,6 +897,7 @@
       "curiosidade": "No mapa desta coleção, São Cristóvão e Nevis faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "Caribe"
@@ -893,6 +923,7 @@
       "curiosidade": "No mapa desta coleção, São Vicente e Granadinas faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "Caribe"
@@ -918,6 +949,7 @@
       "curiosidade": "No mapa desta coleção, Suriname faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América do Sul",
@@ -946,6 +978,7 @@
       "curiosidade": "No mapa desta coleção, Trinidad e Tobago faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "Caribe",
@@ -974,6 +1007,7 @@
       "curiosidade": "No mapa desta coleção, Uruguai faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América do Sul",
@@ -1002,6 +1036,7 @@
       "curiosidade": "No mapa desta coleção, Venezuela faz parte de América.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "regiao": "América do Sul",
@@ -1028,7 +1063,7 @@
       "curiosidade": "No mapa desta coleção, Anguilla faz parte de América.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "regiao": "Caribe",
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
@@ -1050,7 +1085,7 @@
       "curiosidade": "No mapa desta coleção, Aruba faz parte de América.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "regiao": "Caribe",
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
@@ -1076,7 +1111,7 @@
       "curiosidade": "No mapa desta coleção, Bermudas faz parte de América.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "regiao": "América do Norte",
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
@@ -1098,7 +1133,7 @@
       "curiosidade": "No mapa desta coleção, Coletividade de São Bartolomeu faz parte de América.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "regiao": "Caribe",
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
@@ -1120,7 +1155,7 @@
       "curiosidade": "No mapa desta coleção, Curaçao faz parte de América.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "regiao": "Caribe",
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
@@ -1142,7 +1177,7 @@
       "curiosidade": "No mapa desta coleção, Groenlândia faz parte de América.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "regiao": "América do Norte",
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
@@ -1164,7 +1199,7 @@
       "curiosidade": "No mapa desta coleção, Ilhas Caimão faz parte de América.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "regiao": "Caribe",
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
@@ -1186,7 +1221,7 @@
       "curiosidade": "No mapa desta coleção, Ilhas Malvinas faz parte de América.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "regiao": "América do Sul",
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
@@ -1208,7 +1243,7 @@
       "curiosidade": "No mapa desta coleção, Ilhas Virgens Americanas faz parte de América.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "regiao": "Caribe",
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
@@ -1230,7 +1265,7 @@
       "curiosidade": "No mapa desta coleção, Ilhas Virgens Britânicas faz parte de América.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "regiao": "Caribe",
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
@@ -1252,7 +1287,7 @@
       "curiosidade": "No mapa desta coleção, Montserrat faz parte de América.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "regiao": "Caribe",
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
@@ -1274,7 +1309,7 @@
       "curiosidade": "No mapa desta coleção, Porto Rico faz parte de América.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "regiao": "Caribe",
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
@@ -1296,7 +1331,7 @@
       "curiosidade": "No mapa desta coleção, Saint-Pierre e Miquelon faz parte de América.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "regiao": "América do Norte",
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
@@ -1318,7 +1353,7 @@
       "curiosidade": "No mapa desta coleção, São Martinho faz parte de América.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "regiao": "Caribe",
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
@@ -1340,7 +1375,7 @@
       "curiosidade": "No mapa desta coleção, São Martinho faz parte de América.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "regiao": "Caribe",
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
@@ -1362,7 +1397,7 @@
       "curiosidade": "No mapa desta coleção, Turks e Caicos faz parte de América.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "regiao": "Caribe",
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
@@ -1395,7 +1430,7 @@
   },
   "modelo": {
     "arquivo": "models/america.glb",
-    "tamanhoKb": 277.78
+    "tamanhoKb": 277.14
   },
   "dicaQr": {
     "texto": "Procure a folha com o título “América”, preparada pelo professor. O QR fica ao lado do quadrado preto.",

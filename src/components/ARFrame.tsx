@@ -8,6 +8,7 @@ export function ARFrame({continent,onMessage,onWindow,session=0}:{continent:Cont
   const frame=document.createElement('iframe');frame.allow='camera; fullscreen';frame.title=`Realidade aumentada de ${continent.nome}`;
   frame.src=`${asset('ar/scene.html')}?continente=${continent.id}&model=${encodeURIComponent(continent.modelo.arquivo)}`;
   let stopping=false,timer:ReturnType<typeof setTimeout>|undefined;
+  frame.onload=()=>{if(stopping)sendARMessage(frame.contentWindow,'ar:stop');};
   const remove=()=>{if(timer)clearTimeout(timer);window.removeEventListener('message',listener);frame.remove();};
   const listener=(event:MessageEvent)=>{const message=receiveARMessage(event,frame.contentWindow,location.origin,continent.id);if(!message)return;if(message.type==='ar:stopped'){remove();return;}if(!stopping)callback.current(message);};
   window.addEventListener('message',listener);host.current?.append(frame);windowCallback.current(frame.contentWindow);

@@ -1,7 +1,7 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { Document, NodeIO } from '@gltf-transform/core';
 import { dedup, prune, weld } from '@gltf-transform/functions';
-import { geoAzimuthalEqualArea, geoEqualEarth, geoPath, geoStream, geoArea } from 'd3-geo';
+import { geoAzimuthalEqualArea, geoEqualEarth, geoPath, geoStream, geoArea, geoCentroid } from 'd3-geo';
 import { topology } from 'topojson-server';
 import { merge, feature } from 'topojson-client';
 import { presimplify, simplify } from 'topojson-simplify';
@@ -12,9 +12,13 @@ import { META, IMPLEMENTED_CONTINENTS } from './config.mjs';
 const json = async path => JSON.parse(await readFile(path, 'utf8'));
 const geo = await json('data-src/geo/ne_50m_admin_0_countries.geojson');
 const mapping = await json('data-src/country-continent.json');
+const parts = await json('data-src/geographic-parts.json');
 const sovereigns = new Set(await json('data-src/un-sovereign-codes.json'));
 const io = new NodeIO();
 const reports = [];
+const minimumIslandArea=Number(process.env.MODEL_MIN_ISLAND_SR||0.0000001);
+const microstateArea=Number(process.env.MODEL_MICROSTATE_SR||0.00000025);
+if(!Number.isFinite(minimumIslandArea)||minimumIslandArea<0||!Number.isFinite(microstateArea)||microstateArea<0)throw new Error('Limiares de área devem ser finitos e não negativos.');
 await Promise.all(['public/models/countries','public/images/silhouettes','src/data/generated'].map(p=>mkdir(p,{recursive:true})));
 ShapeUtils.triangulateShape = (contour, holes) => {
   const rings = [contour, ...holes];
@@ -43,7 +47,7 @@ function cleanGeometry(geometry, threshold) {
   const simple = feature(simplify(t,threshold), t.objects.shape).geometry;
   const polygons = simple.type === 'Polygon' ? [simple.coordinates] : simple.coordinates;
   // 0.0000001 sr ~= 4 km²; dimensão cartográfica, não área oficial.
-  const kept = polygons.filter(p=>geoArea({type:'Polygon',coordinates:p})>0.0000001 && p[0].length>=4);
+  const kept = polygons.filter(p=>geoArea({type:'Polygon',coordinates:p})>minimumIslandArea && p[0].length>=4);
   return {type:'MultiPolygon',coordinates:kept};
 }
 async function writeModel(id, geometry, color, country=false) {
@@ -93,12 +97,27 @@ async function writeModel(id, geometry, color, country=false) {
   return report;
 }
 // A topologia dissolve fronteiras internas antes da extrusão.
-const topo=topology({world:geo});
+const geographic={type:'FeatureCollection',features:geo.features.flatMap(f=>{
+ const code=f.properties.ADM0_A3;
+ const polys=f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates;
+ const groups={};
+ for(const polygon of polys){
+  let rings=polygon;
+  if(code==='ATA')rings=rings.map(r=>{const clean=r.filter(p=>p[1]>-89.9);if(clean.length&&JSON.stringify(clean[0])!==JSON.stringify(clean.at(-1)))clean.push(clean[0]);return clean;});
+  if(!rings[0]?.length)continue;
+  const center=geoCentroid({type:'Polygon',coordinates:rings});
+  const override=parts.regras.find(r=>r.pais===code&&center[0]<r.longitudeMenorQue&&center[1]<r.latitudeMenorQue);
+  const group=override?.continente||mapping[code];
+  (groups[group]??=[]).push(rings);
+ }
+ return Object.entries(groups).map(([group,polygons])=>({type:'Feature',properties:{...f.properties,group},geometry:{type:'MultiPolygon',coordinates:polygons}}));
+})};
+const topo=topology({world:geographic});
 const mapTopo=simplify(presimplify(topo),0.04);
 const mapProjection=geoEqualEarth().fitExtent([[15,15],[985,480]],geo);
 const map=[];
 for(const id of IMPLEMENTED_CONTINENTS){
-  const geometries=topo.objects.world.geometries.filter(g=>mapping[g.properties.ADM0_A3]===id);
+  const geometries=topo.objects.world.geometries.filter(g=>g.properties.group===id);
   const continent=merge(topo,geometries);
   const report=await writeModel(id,continent,META[id].cor);
   if(!report)throw new Error(`Sem geometria: ${id}`);
@@ -108,17 +127,17 @@ for(const id of IMPLEMENTED_CONTINENTS){
     if(!sovereigns.has(c.id)){delete c.modelo;continue;}
     const f=geo.features.find(f=>f.properties.ADM0_A3===c.id);
     // Microestados têm fallback explícito em vez de uma silhueta sem significado.
-    if(!f || geoArea(f)<0.00000025){delete c.modelo;continue;}
+    if(!f || geoArea(f)<microstateArea){delete c.modelo;continue;}
     const generated=await writeModel(id,f.geometry,META[id].cor,c.id);
     if(!generated)delete c.modelo;
   }
   await writeFile(dataPath,JSON.stringify(data,null,2)+'\n');
-  const mapShape=merge(mapTopo,mapTopo.objects.world.geometries.filter(g=>mapping[g.properties.ADM0_A3]===id));
+  const mapShape=merge(mapTopo,mapTopo.objects.world.geometries.filter(g=>g.properties.group===id));
   map.push({id,nome:META[id].nome,cor:META[id].cor,d:geoPath(mapProjection)(mapShape),label:META[id].label});
   console.log(`${id}: ${report.triangulos} triângulos, ${report.tamanhoKb} KB`);
 }
 // Mesmo na Etapa 1 há seis alvos no mapa, com os ainda não implementados inativos.
-for(const id of Object.keys(META).filter(id=>!IMPLEMENTED_CONTINENTS.includes(id))){const c=merge(mapTopo,mapTopo.objects.world.geometries.filter(g=>mapping[g.properties.ADM0_A3]===id));map.push({id,nome:META[id].nome,cor:META[id].cor,d:geoPath(mapProjection)(c),label:META[id].label});}
+for(const id of Object.keys(META).filter(id=>!IMPLEMENTED_CONTINENTS.includes(id))){const c=merge(mapTopo,mapTopo.objects.world.geometries.filter(g=>g.properties.group===id));map.push({id,nome:META[id].nome,cor:META[id].cor,d:geoPath(mapProjection)(c),label:META[id].label});}
 await writeFile('src/data/generated/map.json',JSON.stringify(map));
 await writeFile('public/images/world-map.svg',`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500">${map.map(c=>`<path id="${c.id}" d="${c.d}" fill="${c.cor}" stroke="#5c3a45" stroke-width="0.5"/>`).join('')}</svg>`);
 await writeFile('models-report.json',JSON.stringify(reports,null,2)+'\n');

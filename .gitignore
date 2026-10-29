@@ -7,3 +7,5 @@ dist/
 .cert/
 .cache/
 artifacts/
+# Original recebido na raiz; a cópia canônica está versionada em docs/.
+/Fluxogramas_Exploradores_do_Mundo.pdf

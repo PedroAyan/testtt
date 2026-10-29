@@ -11,6 +11,9 @@ Lista oficial consultada e snapshot de auditoria em data-src/. Contagem gerada p
 ## [un-observers] ONU, Estados observadores — https://www.un.org/en/about-us/non-member-states — fatos; página não redistribuída no app — 2026-10-28
 Santa Sé e Estado da Palestina, identificados no snapshot de auditoria. Não confundir territórios e áreas disputadas com Estados-membros.
 
+## [country-assignments] Lista e contagens derivadas de ONU e Natural Earth — ./data-src/country-continent.json — nomes/geometrias Natural Earth em domínio público; seleção e código autorais MIT — 2026-10-28
+Reproduzível por scripts/build-data.mjs: cruza os 193 nomes de un-members e os dois Estados de un-observers com os códigos Natural Earth, aplica a regra da maior parte do território e exceções documentadas do Cáucaso. Fonte da quantidadePaises e da atribuição didática de país a continente. Distribuição gerada: África 54, América 35, Antártida 0, Ásia 49, Europa 43, Oceania 14; total 195, sem duplicar Estados. Não é uma contagem oficial da ONU por continente.
+
 ## [ng-continents] National Geographic, Continent — https://education.nationalgeographic.org/resource/Continent/ — referência factual, redação própria; artigo/imagens não redistribuídos — 2026-10-28
 Modelo de sete continentes; neste projeto adaptado ao modelo de seis, com América unificada. Geografia e história agrícola da América.
 
@@ -43,3 +46,6 @@ Bundle local; Three.js incorporado sob MIT; licenças em public/vendor/licenses/
 
 ## [jsqr] jsQR 1.4.0 — https://github.com/cozmo/jsQR/tree/v1.4.0 — Apache-2.0 — 2026-10-28
 Leitura real de QR em frames de getUserMedia. Bundle e licença locais.
+
+## [ui-libraries] React 19.2.0, React DOM 19.2.0, React Router 7.9.4 e Zod 3.25.76 — ./package-lock.json — MIT — 2026-10-28
+Versões fixadas no lockfile; avisos de licença copiados dos pacotes para public/vendor/licenses/. Fontes: https://github.com/facebook/react , https://github.com/remix-run/react-router , https://github.com/colinhacks/zod .

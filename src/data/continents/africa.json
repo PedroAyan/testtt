@@ -23,7 +23,7 @@
   },
   "quantidadePaises": {
     "valor": 54,
-    "fonte": "un-members",
+    "fonte": "country-assignments",
     "criterio": "Estados-membros da ONU e observadores; país no continente da maior parte do território, Cáucaso na Ásia."
   },
   "caracteristicasGeograficas": [
@@ -65,6 +65,7 @@
       "curiosidade": "No mapa desta coleção, África do Sul faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -92,6 +93,7 @@
       "curiosidade": "No mapa desta coleção, Angola faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -119,6 +121,7 @@
       "curiosidade": "No mapa desta coleção, Argélia faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -146,6 +149,7 @@
       "curiosidade": "No mapa desta coleção, Benim faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -173,6 +177,7 @@
       "curiosidade": "No mapa desta coleção, Botsuana faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -200,6 +205,7 @@
       "curiosidade": "No mapa desta coleção, Burkina Faso faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -227,6 +233,7 @@
       "curiosidade": "No mapa desta coleção, Burundi faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -254,6 +261,7 @@
       "curiosidade": "No mapa desta coleção, Cabo Verde faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -281,6 +289,7 @@
       "curiosidade": "No mapa desta coleção, Camarões faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -308,6 +317,7 @@
       "curiosidade": "No mapa desta coleção, Chade faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -335,6 +345,7 @@
       "curiosidade": "No mapa desta coleção, Comores faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -362,6 +373,7 @@
       "curiosidade": "No mapa desta coleção, Costa do Marfim faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -389,6 +401,7 @@
       "curiosidade": "No mapa desta coleção, Djibouti faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -416,6 +429,7 @@
       "curiosidade": "No mapa desta coleção, Egito faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "nota": "O Egito inclui a Península do Sinai, na Ásia; a maior parte de seu território fica na África.",
@@ -444,6 +458,7 @@
       "curiosidade": "No mapa desta coleção, Eritreia faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -471,6 +486,7 @@
       "curiosidade": "No mapa desta coleção, Essuatíni faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -498,6 +514,7 @@
       "curiosidade": "No mapa desta coleção, Etiópia faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -525,6 +542,7 @@
       "curiosidade": "No mapa desta coleção, Gabão faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -552,6 +570,7 @@
       "curiosidade": "No mapa desta coleção, Gâmbia faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -579,6 +598,7 @@
       "curiosidade": "No mapa desta coleção, Gana faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -606,6 +626,7 @@
       "curiosidade": "No mapa desta coleção, Guiné faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -633,6 +654,7 @@
       "curiosidade": "No mapa desta coleção, Guiné Equatorial faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -660,6 +682,7 @@
       "curiosidade": "No mapa desta coleção, Guiné-Bissau faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -687,6 +710,7 @@
       "curiosidade": "No mapa desta coleção, Lesoto faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -714,6 +738,7 @@
       "curiosidade": "No mapa desta coleção, Libéria faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -741,6 +766,7 @@
       "curiosidade": "No mapa desta coleção, Líbia faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -768,6 +794,7 @@
       "curiosidade": "No mapa desta coleção, Madagáscar faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -795,6 +822,7 @@
       "curiosidade": "No mapa desta coleção, Malawi faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -822,6 +850,7 @@
       "curiosidade": "No mapa desta coleção, Mali faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -849,6 +878,7 @@
       "curiosidade": "No mapa desta coleção, Marrocos faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -876,6 +906,7 @@
       "curiosidade": "No mapa desta coleção, Maurícia faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -903,6 +934,7 @@
       "curiosidade": "No mapa desta coleção, Mauritânia faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -930,6 +962,7 @@
       "curiosidade": "No mapa desta coleção, Moçambique faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -957,6 +990,7 @@
       "curiosidade": "No mapa desta coleção, Namíbia faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -984,6 +1018,7 @@
       "curiosidade": "No mapa desta coleção, Níger faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1011,6 +1046,7 @@
       "curiosidade": "No mapa desta coleção, Nigéria faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1038,6 +1074,7 @@
       "curiosidade": "No mapa desta coleção, Quénia faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1065,6 +1102,7 @@
       "curiosidade": "No mapa desta coleção, República Centro-Africana faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1092,6 +1130,7 @@
       "curiosidade": "No mapa desta coleção, República Democrática do Congo faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1119,6 +1158,7 @@
       "curiosidade": "No mapa desta coleção, República do Congo faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1146,6 +1186,7 @@
       "curiosidade": "No mapa desta coleção, Ruanda faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1173,6 +1214,7 @@
       "curiosidade": "No mapa desta coleção, São Tomé e Príncipe faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1200,6 +1242,7 @@
       "curiosidade": "No mapa desta coleção, Senegal faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1227,6 +1270,7 @@
       "curiosidade": "No mapa desta coleção, Serra Leoa faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1254,6 +1298,7 @@
       "curiosidade": "No mapa desta coleção, Seychelles faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ]
     },
@@ -1278,6 +1323,7 @@
       "curiosidade": "No mapa desta coleção, Somália faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1305,6 +1351,7 @@
       "curiosidade": "No mapa desta coleção, Sudão faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1328,6 +1375,7 @@
       "curiosidade": "No mapa desta coleção, Sudão do Sul faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1355,6 +1403,7 @@
       "curiosidade": "No mapa desta coleção, Tanzânia faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1382,6 +1431,7 @@
       "curiosidade": "No mapa desta coleção, Togo faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1409,6 +1459,7 @@
       "curiosidade": "No mapa desta coleção, Tunísia faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1436,6 +1487,7 @@
       "curiosidade": "No mapa desta coleção, Uganda faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1463,6 +1515,7 @@
       "curiosidade": "No mapa desta coleção, Zâmbia faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1490,6 +1543,7 @@
       "curiosidade": "No mapa desta coleção, Zimbábue faz parte de África.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -1515,7 +1569,7 @@
       "curiosidade": "No mapa desta coleção, Santa Helena faz parte de África.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -1536,7 +1590,7 @@
       "curiosidade": "No mapa desta coleção, Sara Ocidental faz parte de África.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -1561,7 +1615,7 @@
       "curiosidade": "No mapa desta coleção, Somalilândia faz parte de África.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     }

@@ -435,8 +435,8 @@
     "id": "america",
     "tipo": "continente",
     "arquivo": "models/america.glb",
-    "triangulos": 4092,
-    "tamanhoKb": 277.78,
+    "triangulos": 4084,
+    "tamanhoKb": 277.14,
     "simplificacao": 0.768
   },
   {
@@ -1083,8 +1083,8 @@
     "id": "europa",
     "tipo": "continente",
     "arquivo": "models/europa.glb",
-    "triangulos": 4504,
-    "tamanhoKb": 303.69,
+    "triangulos": 4412,
+    "tamanhoKb": 297.23,
     "simplificacao": 0.096
   },
   {
@@ -1395,9 +1395,9 @@
     "id": "oceania",
     "tipo": "continente",
     "arquivo": "models/oceania.glb",
-    "triangulos": 5656,
-    "tamanhoKb": 389.02,
-    "simplificacao": 0.024
+    "triangulos": 3560,
+    "tamanhoKb": 246.91,
+    "simplificacao": 0.048
   },
   {
     "id": "AUS",

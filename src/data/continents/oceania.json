@@ -23,7 +23,7 @@
   },
   "quantidadePaises": {
     "valor": 14,
-    "fonte": "un-members",
+    "fonte": "country-assignments",
     "criterio": "Estados-membros da ONU e observadores; país no continente da maior parte do território, Cáucaso na Ásia."
   },
   "caracteristicasGeograficas": [
@@ -64,6 +64,7 @@
       "curiosidade": "No mapa desta coleção, Austrália faz parte de Oceania.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -91,6 +92,7 @@
       "curiosidade": "No mapa desta coleção, Fiji faz parte de Oceania.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -118,6 +120,7 @@
       "curiosidade": "No mapa desta coleção, Ilhas Marshall faz parte de Oceania.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ]
     },
@@ -142,6 +145,7 @@
       "curiosidade": "No mapa desta coleção, Ilhas Salomão faz parte de Oceania.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -169,6 +173,7 @@
       "curiosidade": "No mapa desta coleção, Kiribati faz parte de Oceania.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ]
     },
@@ -193,6 +198,7 @@
       "curiosidade": "No mapa desta coleção, Micronésia faz parte de Oceania.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ]
     },
@@ -213,6 +219,7 @@
       "curiosidade": "No mapa desta coleção, Nauru faz parte de Oceania.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ]
     },
@@ -237,6 +244,7 @@
       "curiosidade": "No mapa desta coleção, Nova Zelândia faz parte de Oceania.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -264,6 +272,7 @@
       "curiosidade": "No mapa desta coleção, Palau faz parte de Oceania.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -291,6 +300,7 @@
       "curiosidade": "No mapa desta coleção, Papua-Nova Guiné faz parte de Oceania.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -318,6 +328,7 @@
       "curiosidade": "No mapa desta coleção, Samoa faz parte de Oceania.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -345,6 +356,7 @@
       "curiosidade": "No mapa desta coleção, Tonga faz parte de Oceania.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ]
     },
@@ -369,6 +381,7 @@
       "curiosidade": "No mapa desta coleção, Tuvalu faz parte de Oceania.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ]
     },
@@ -393,6 +406,7 @@
       "curiosidade": "No mapa desta coleção, Vanuatu faz parte de Oceania.",
       "fontes": [
         "natural-earth",
+        "country-assignments",
         "un-members"
       ],
       "modelo": {
@@ -418,7 +432,7 @@
       "curiosidade": "No mapa desta coleção, Guam faz parte de Oceania.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -439,7 +453,7 @@
       "curiosidade": "No mapa desta coleção, Ilha Norfolk faz parte de Oceania.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -461,7 +475,7 @@
       "curiosidade": "No mapa desta coleção, Ilhas Ashmore e Cartier faz parte de Oceania.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -482,7 +496,7 @@
       "curiosidade": "No mapa desta coleção, Ilhas Cook faz parte de Oceania.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -503,7 +517,7 @@
       "curiosidade": "No mapa desta coleção, Ilhas Marianas do Norte faz parte de Oceania.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -524,7 +538,7 @@
       "curiosidade": "No mapa desta coleção, Ilhas Pitcairn faz parte de Oceania.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -545,7 +559,7 @@
       "curiosidade": "No mapa desta coleção, Niue faz parte de Oceania.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -566,7 +580,7 @@
       "curiosidade": "No mapa desta coleção, Nova Caledónia faz parte de Oceania.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -587,7 +601,7 @@
       "curiosidade": "No mapa desta coleção, Polinésia Francesa faz parte de Oceania.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -608,7 +622,7 @@
       "curiosidade": "No mapa desta coleção, Samoa Americana faz parte de Oceania.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     },
@@ -629,7 +643,7 @@
       "curiosidade": "No mapa desta coleção, Wallis e Futuna faz parte de Oceania.",
       "fontes": [
         "natural-earth",
-        "un-members"
+        "country-assignments"
       ],
       "nota": "Território, dependência ou área com status próprio/disputado; fora da contagem de Estados da ONU."
     }
@@ -661,7 +675,7 @@
   },
   "modelo": {
     "arquivo": "models/oceania.glb",
-    "tamanhoKb": 389.02
+    "tamanhoKb": 246.91
   },
   "dicaQr": {
     "texto": "Procure a folha com o título “Oceania”, preparada pelo professor. O QR fica ao lado do quadrado preto.",

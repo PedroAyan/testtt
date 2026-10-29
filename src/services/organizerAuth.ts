@@ -1,6 +1,7 @@
 const hex=(buffer:ArrayBuffer)=>Array.from(new Uint8Array(buffer),v=>v.toString(16).padStart(2,'0')).join('');
 export async function verifyOrganizerPassword(password:string,encoded:string):Promise<boolean>{
  try{
+  if(encoded.split(':').length!==5)return false;
   const [scheme,algorithm,count,salt,expected]=encoded.split(':');const iterations=Number(count);
   if(scheme!=='pbkdf2'||algorithm!=='sha256'||!Number.isInteger(iterations)||iterations<100000||iterations>2000000||!/^([a-f0-9]{2}){16,64}$/.test(salt)||!/^([a-f0-9]{2}){32}$/.test(expected))return false;
   const saltBytes=Uint8Array.from(salt.match(/../g)!,s=>parseInt(s,16));
