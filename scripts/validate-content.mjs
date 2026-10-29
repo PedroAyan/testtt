@@ -11,7 +11,7 @@ for(const id of IMPLEMENTED_CONTINENTS){
  for(const file of [c.modelo.arquivo,c.fichaCurta.ilustracao,c.marcador.arquivo,...c.paises.filter(p=>p.modelo).map(p=>p.modelo.arquivo)])await access(`public/${file}`);
  if(c.id==='america'&&c.paises.some(p=>!p.regiao))throw new Error('País da América sem região.');
 }
-try{const o=JSON.parse(await readFile('public/content/overrides.json','utf8'));if(!validateOverrides(o,ids))throw new Error('Overrides inválidos: não publicar.');}catch(e){if(e.code!=='ENOENT')throw e;}
+try{const o=JSON.parse(await readFile('public/content/overrides.json','utf8'));if(!validateOverrides(o,ids))throw new Error('Overrides inválidos: não publicar.');const inspect=async value=>{if(typeof value==='string'&&value.startsWith('media/'))await access(`public/${value}`);else if(Array.isArray(value))for(const item of value)await inspect(item);else if(value&&typeof value==='object')for(const item of Object.values(value))await inspect(item);};await inspect(o);}catch(e){if(e.code==='ENOENT'&&e.path==='public/content/overrides.json'){}else throw e;}
 await mkdir('public/content',{recursive:true});
 await writeFile('public/content/continents.json',JSON.stringify(IMPLEMENTED_CONTINENTS));
 const esc=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');

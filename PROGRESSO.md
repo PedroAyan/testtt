@@ -1,6 +1,6 @@
 # Progresso — Exploradores do Mundo
 
-## Etapa atual: Etapa 4 — interface, países e atividades
+## Etapa atual: Etapa 5 — documentação e publicação
 - AGENTS.md e SPEC.md lidos integralmente; §14 governa a navegação.
 - Pasta original continha apenas AGENTS.md, SPEC.md e PROMPT-CODEX.md.
 - Repositório Git próprio iniciado nesta pasta (o repositório ancestral era C:/).
@@ -18,5 +18,10 @@
 - Etapa 4 implementada: países/busca/regiões, fichas, Ouvir, Saiba mais, 2 atividades gerais + variantes por ano, dicas e resposta após 3 erros, contadores e duas celebrações.
 - Inspeção via navegador indisponível: CUA relatou ausência do host de navegador e pipe nativo. Testes físicos seguem não validados.
 - Próximo passo: verificar tipos/build/testes, registrar marco da interface e concluir workflow/documentação/Organizador.
+- Etapa 4 verificada: typecheck/build e 9 testes essenciais passam, incluindo hash PBKDF2.
+- Seis PDFs renderizados: A4, uma página cada, texto dentro das margens. Montagem visual inspecionada sem cortes/sobreposições.
+- Etapa 5: README, fontes, licenças, impressão, checklist de celular, relatório de dados null e workflow Pages preparados.
+- Bloqueio externo de publicação: repositório de destino não informado, sem remote; pergunta enviada ao usuário enquanto o trabalho local continua.
+- Próximo passo: finalizar licenças e validação do editor, verificar build com subpasta, registrar entrega com pendências físicas/publicação.
 - Em seguida: reutilização, seis conjuntos, países/atividades, publicação/documentação e Organizador.
 - Câmera e AR: NÃO VALIDADOS em celular físico.
