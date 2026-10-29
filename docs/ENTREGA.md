@@ -2,7 +2,9 @@
 
 ## Feito e verificado
 
-O projeto foi criado nesta pasta e versionado por marcos. Os seis continentes foram implementados; a entrega não parou na África. Câmera/AR físicos e publicação real não são declarados validados.
+O projeto foi criado nesta pasta e versionado por marcos. Os seis continentes foram implementados e publicados em https://pedroayan.github.io/testtt/ . Repositório: https://github.com/PedroAyan/testtt . Câmera/AR físicos e interface em navegador não são declarados validados.
+
+Publicação confirmada: workflow https://github.com/PedroAyan/testtt/actions/runs/40804625866 — build e deploy concluídos com sucesso, incluindo typecheck/testes no Linux. A checagem HTTP dos seis conjuntos passou; modelos públicos têm o mesmo SHA-256 dos locais. O Organizador recebeu hash pela variável do repositório; a senha aleatória não está no código.
 
 Comandos executados com sucesso no Windows (PowerShell, Node 24.19.0):
 
@@ -19,6 +21,7 @@ Comandos executados com sucesso no Windows (PowerShell, Node 24.19.0):
 | `node scripts/verify-model-determinism.mjs` | Os 183 SHA-256 ficaram idênticos após regeneração |
 | `node scripts/verify-subpath.mjs` | Build em /exploradores-do-mundo/ e assets locais presentes; sem execução em navegador |
 | `npm.cmd run dev` + `node scripts/check-local-https.mjs` | HTTPS iniciou; página, módulo React, cena AR, módulo compartilhado, parâmetros da câmera, GLB, PDF e overrides responderam HTTP 200 |
+| `node scripts/check-published.mjs` | App publicado, JavaScript, cena/bibliotecas locais e seis conjuntos de GLB/QR/marcador/PDF responderam HTTP 200 |
 
 Revisão de artefatos: seis PDFs renderizados com PyMuPDF em cache local; todos A4, uma página, sem texto fora da página. Montagem das seis folhas e silhuetas inspecionada visualmente. O teste de QR decodifica os arquivos PNG com jsQR em Node; não usa câmera e não valida reconhecimento físico.
 
@@ -37,29 +40,29 @@ Revisão de artefatos: seis PDFs renderizados com PyMuPDF em cache local; todos 
 |---|---|
 | 1. Seis GLBs gerados pelo pipeline, dentro do orçamento | **Concluído e verificado** por geração, parse, orçamento, normalização e SHA-256 |
 | 2. Seis arquivos de dados com fontes e verificar | **Concluído**; valores não confirmados são null/verificar:true, com relação completa em DADOS-EM-VERIFICACAO.md |
-| 3. Seis QR + seis marcadores distintos + seis folhas A4 | **Concluído e verificado como arquivo**; PNGs decodificados e PDFs renderizados. Leitura de papel não validada. URLs atuais são de localhost e exigem regeneração para o destino |
+| 3. Seis QR + seis marcadores distintos + seis folhas A4 | **Concluído e verificado como arquivo**; PNGs decodificados e PDFs finais renderizados. Leitura de papel não validada. Folhas apontam para a URL pública correta |
 | 4. Mapa bloqueado/descoberto/selecionado, X de 6 e lista acessível | **Implementado**; progresso/lógica verificados; navegação, layout e acessibilidade manual não validados em navegador |
 | 5. QR dentro do app, só do selecionado, e desbloqueio AR | **Implementado**; validação de URL, origem, janela, continente e estabilidade coberta. Câmera/pose reais **não validadas** |
 | 6. Fichas ilustradas, Ouvir, Saiba mais, botões, países sob demanda, Antártida sem países | **Implementado**; dados/arquivos validados. Modelos nacionais: 177; microestados sem geometria útil usam símbolo. Interface/voz em aparelhos não validadas |
 | 7. Atividades padrão e por ano, dica, repetição, sem duplicação, contadores e conclusão | **Implementado**; lógica essencial de erro, resposta revelada, contagem por continente e seis descobertas testada. Duas atividades gerais e variantes para os nove anos; editor acrescenta outras |
-| 8. Organizador com hash, editor, exportar/importar e limitação documentada | **Implementado**; hash PBKDF2 e rejeição de override inválido testados. Fluxo visual/importação pelo navegador não validado; responsável precisa configurar hash próprio |
+| 8. Organizador com hash, editor, exportar/importar e limitação documentada | **Implementado e hash configurado** na variável do repositório; PBKDF2 e rejeição de override inválido testados. Senha fornecida fora do código. Fluxo visual/importação pelo navegador não validado |
 | 9. Exploração sem câmera dos seis com países | **Implementado**; mesmos GLBs da AR e carregamento sob demanda. Parse Node verificado, interação WebGL em celular não validada |
 | 10. Typecheck, build e npm test | **Passaram**; 10 testes essenciais |
-| 11. Pages, README, SOURCES, PENDENCIAS e guias | **Arquivos concluídos**. Destino informado posteriormente: PedroAyan/testtt; publicação em andamento, resultado registrado ao final deste relatório |
+| 11. Pages, README, SOURCES, PENDENCIAS e guias | **Concluído e publicado** em PedroAyan/testtt; build/deploy com success e verificação HTTP pública. Documentação e PDF dos fluxogramas incluídos |
 
 ## Feito mas não verificado
 
 - Câmera Android Chrome e iPhone Safari; rastreamento da posição e orientação do marcador; gestos; perda/retorno; permissão negada; cinco ciclos de teardown.
 - Interface real, leitor de tela, voz pt-BR, editor e importação/exportação pela UI. Computer Use retornou host de navegador/pipe nativo indisponíveis.
-- Workflow no GitHub e carregamento de URL pública; a pasta não possui remote e o destino foi solicitado durante a execução.
+- A publicação e o carregamento por HTTP foram verificados. A execução da interface pelo navegador continua sem validação manual.
 
 ## Pendente
 
-1. Informar o repositório GitHub, configurar Pages por Actions, enviar a branch e verificar a URL publicada.
-2. Configurar `VITE_PUBLIC_URL` e regenerar folhas antes de distribuir. O workflow já faz isso para a URL do Pages.
+1. Publicação resolvida: repositório informado, Pages ativado, main enviada e recursos públicos verificados. Não há bloqueio de publicação restante.
+2. Para testar por IP/túnel local, configurar `VITE_PUBLIC_URL` e regenerar as folhas. As folhas públicas já estão corretas para o site publicado.
 3. Executar TESTE-NO-CELULAR.md em Android e iPhone. Não remover o status de não validado sem registrar resultados.
 4. Confirmar áreas/populações continentais e áreas nacionais conforme DADOS-EM-VERIFICACAO.md; campos permanecem honestamente em verificação.
-5. Gerar o hash de uma senha própria se for usar Organizador. A barreira é local e não protege conteúdo público contra inspeção.
+5. Para trocar a senha aleatória ou usar localmente, gerar outro hash e configurar a variável correspondente. A barreira é local e não protege conteúdo público contra inspeção.
 
 O PDF original dos cinco fluxogramas foi recebido na raiz durante a execução e copiado para docs/, preservando o original. Navegação implementada pela transcrição normativa da SPEC §14.
 

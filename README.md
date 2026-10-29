@@ -89,6 +89,8 @@ Os seis IDs são fixos. Para corrigir um continente, edite `data-src/editorial.m
 
 ## Modo Organizador
 
+Na entrega publicada, o hash já está configurado na variável do repositório. A senha aleatória foi entregue somente ao responsável, fora do código. Para trocar essa senha ou configurar um ambiente local, siga os passos abaixo.
+
 1. Execute `npm.cmd run organizer:hash` e informe uma senha de pelo menos 8 caracteres no terminal.
 2. Copie somente `pbkdf2:sha256:...` para `VITE_ORGANIZER_PASSWORD_HASH` em `.env.local` (ignorado pelo Git) ou na variável do repositório GitHub. São 210.000 iterações, sal aleatório de 16 bytes e hash de 32 bytes.
 3. Reinicie o dev/build. Entre por Organizador e informe a senha. Não existe senha padrão embutida. A sessão termina em Sair ou ao deixar a área.
