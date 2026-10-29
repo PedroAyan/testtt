@@ -1,5 +1,11 @@
 # Pendências
 
+## Reformulação visual ilustrada — 2026-10-29
+- Implementação local e verificações concluídas: typecheck, 11 testes, build e 35 pares de contraste passaram. Planeta, folha e seis paisagens revisados como arte isolada; isso não equivale à revisão da interface.
+- Comparação antes/depois no navegador NÃO EXECUTADA: `cua.getState()` retornou host indisponível, sem navegadores; Computer Use encerrou o acesso nativo ao Chrome por não conseguir determinar a URL com segurança. Não houve contorno por outro mecanismo.
+- Pendente: executar a nova seção de `docs/TESTE-NO-CELULAR.md` a 320/360/390 px e desktop, paisagem, 200%, foco/teclado/leitor de tela e preferências de movimento/transparência/contraste. Conferir especialmente reserva de espaço sob navegação inferior e arte da ficha junto à dica de gesto. Avaliação com crianças e câmera/AR físicas continuam NÃO VALIDADAS.
+- Sem pendências novas de dados, modelos, fontes ou dependências. Alterações locais ainda não publicadas. Decisões das três skills e evidências em `docs/DIRECAO-VISUAL-INFANTIL.md`.
+
 ## Critérios permanentes de acessibilidade infantil — 2026-10-29
 - Orientações registradas no `AGENTS.md` da raiz e na `SPEC.md` §1/§7. Esta atualização é documental: não valida retroativamente a interface implementada.
 - Na próxima revisão, conferir também leitura e compreensão das instruções, ícones com rótulos, 320–390 px/paisagem, texto a 200%, teclado/leitor de tela e distinção entre QR e marcador. Avaliação com crianças NÃO EXECUTADA; quando realizada, registrar contexto, responsável e resultados sem confundir com testes automatizados.

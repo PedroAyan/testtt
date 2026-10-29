@@ -1,8 +1,10 @@
 # Progresso — Exploradores do Mundo
 
-## Reformulação visual com as três skills — em implementação (2026-10-29)
+## Reformulação visual com as três skills — concluída localmente (2026-10-29)
 - Referência inspecionada, especificação/fluxos e skills lidos. Plano de composição, tokens, revisão prévia e bloqueio de navegador registrados em `docs/DIRECAO-VISUAL-INFANTIL.md`.
-- Próximo passo exato: implementar planeta-guia, acolhida integrada, navegação móvel, orientação por cenas e composição da coleção/fichas; executar typecheck, testes, build e contraste. Não alterar AR, serviços de domínio, dados ou modelos.
+- Implementados: planeta-guia, acolhida integrada, navegação móvel com ícone/nome, orientação com três cenas, coleção com campos orgânicos, folha ilustrada/legendada e seis paisagens novas. Arte autoral MIT e SVGs preservados pelo gerador de dados. Sem novas dependências.
+- `npm.cmd run typecheck`, `npm.cmd test` (11/11), `npm.cmd run build` e `node scripts/check-ui-contrast.mjs` (35/35) passaram. `build:data` conferido quanto à preservação dos SVGs; dados finais mantidos byte a byte. Arte isolada rasterizada e examinada. Documentação e limites em `docs/DIRECAO-VISUAL-INFANTIL.md`.
+- Próximo passo exato: executar o roteiro novo de `docs/TESTE-NO-CELULAR.md` em navegador disponível e em aparelhos físicos; registrar resultados de layout, 200%, teclado/leitor de tela e AR. Não houve publicação nesta tarefa. AGENTS/SPEC, fluxos, domínio, dados, modelos e cena AR preservados.
 - Comparação antes/depois no navegador bloqueada: host indisponível; Computer Use encerrou a alternativa Chrome por não identificar a URL com segurança. Não contornar o bloqueio. Validação física continua pendente.
 
 ## Orientações permanentes de interface infantil — 2026-10-29

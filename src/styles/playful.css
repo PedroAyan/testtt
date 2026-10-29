@@ -1,44 +1,81 @@
-/* Acolhida e orientação: arte autoral e sequência curta de exploração. */
-.home { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 28px 40px; padding-top: 40px; }
-.hero-copy h1 { font-size: clamp(2.5rem, 4.7vw, 4rem); margin: 16px 0 24px; }
-.hero-copy > p { max-width: 44ch; color: var(--ink-muted); font-size: 1.1rem; }
-.hero-copy .actions { margin-top: 28px; }
-.hero-progress { display: flex; gap: 14px; align-items: center; margin-top: 28px; }
+﻿/* A ilustração concentra a personalidade; as telas de estudo ficam mais calmas. */
+.home { display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem 2.5rem; padding-top: 1.75rem; }
+.welcome-world { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1.05fr; align-items: center; padding: 2.5rem; background: var(--lavender-soft); border-radius: 2rem 5rem 2rem 2rem; }
+.hero-copy { grid-column: 1; grid-row: 1; position: relative; }
+.hero-copy h1 { font-size: clamp(2.25rem, 4.4vw, 3.75rem); line-height: 1.06; letter-spacing: -.045em; margin: 0 0 1.5rem; }
+.hero-copy > p { max-width: 34ch; font-size: 1.125rem; line-height: 1.6; margin-bottom: 1.75rem; }
+.hero-copy .actions { gap: .75rem; }
+.hero-copy .primary { min-width: 10rem; }
+.hero-copy .secondary { background: transparent; }
+.hero-art { grid-column: 2; grid-row: 1; min-width: 0; }
+.travel-friends { display: block; width: 112%; height: auto; max-width: none; margin: -1rem -6%; }
+.hero-progress { display: flex; gap: 1rem; align-items: center; padding: .5rem 0; }
 .hero-progress strong, .hero-progress div > span { display: block; }
-.hero-progress div > span { color: var(--ink-muted); margin-top: 4px; }
-.tiny-globe { display: grid; place-items: center; width: 48px; height: 48px; flex-shrink: 0; background: var(--yellow); border-radius: 16px; color: var(--ink); font-size: 1.5rem; }
-.hero-art { position: relative; padding: 14px 8px 50px; background: var(--lavender-soft); border-radius: 44% 44% 28px 28px; }
-.travel-friends { display: block; width: 100%; max-width: 530px; margin: auto; }
-.floating-card { display: flex; align-items: center; gap: 12px; position: absolute; bottom: 10px; left: 16px; right: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 16px; box-shadow: 0 8px 20px var(--shadow-soft); }
-.floating-card strong, .floating-card div > span { display: block; }
-.floating-card div > span { color: var(--ink-muted); margin-top: 4px; }
-.card-icon { display: grid; place-items: center; width: 44px; height: 44px; flex-shrink: 0; border-radius: 14px; background: var(--peach); font-size: 1.5rem; }
-.home-bottom { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) auto; gap: 16px; align-items: center; margin-top: 16px; }
-.home-bottom > span { display: flex; gap: 12px; align-items: center; padding: 16px; border-radius: 20px; background: var(--lavender-soft); font-weight: 600; }
-.home-bottom > span:nth-child(2) { background: var(--peach); }
-.home-bottom > span:nth-child(3) { background: var(--mint); }
-.home-bottom b { display: grid; place-items: center; background: var(--surface); border: 1px solid var(--border-control); min-width: 36px; height: 36px; border-radius: 50%; }
-.home-bottom a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
-.home-organizer { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-top: 28px; border-top: 1px solid var(--border); }
-.home-organizer h2 { font-size: 1.25rem; margin-bottom: 6px; }
+.hero-progress div > span { color: var(--ink-muted); margin-top: .25rem; }
+.tiny-globe { display: grid; place-items: center; width: 3.5rem; height: 3.5rem; flex-shrink: 0; background: var(--mint); border-radius: 1rem 1rem 1.5rem 1rem; }
+.home-how { display: flex; align-items: center; gap: 1rem; padding: 1.25rem; border-radius: 1.5rem; background: var(--peach-soft); text-decoration: none; }
+.home-how > span:first-of-type { flex: 1; }
+.home-how strong, .home-how > span > span { display: block; }
+.home-how > span > span { margin-top: .25rem; color: var(--ink-muted); }
+.home-how > span:last-child { font-size: 2rem; }
+.home-organizer { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1.75rem; border-top: 1px solid var(--border); }
+.home-organizer h2 { font-size: 1.25rem; margin-bottom: .375rem; }
 .home-organizer p { margin: 0; color: var(--ink-muted); }
-.steps { list-style: none; counter-reset: step; padding: 0; margin: 28px 0; display: grid; gap: 16px; }
-.steps li { display: grid; grid-template-columns: 44px 1fr; column-gap: 16px; counter-increment: step; }
-.steps li::before { content: counter(step); display: grid; place-items: center; align-self: start; width: 44px; height: 44px; border-radius: 16px; background: var(--lavender); font-weight: 700; grid-row: 1 / 3; }
-.steps li:nth-child(2)::before { background: var(--peach); }
-.steps li:nth-child(3)::before { background: var(--mint); }
+/* Cada etapa aproxima a imagem da ação; o texto também explica tudo. */
+.orientation-page { max-width: 820px; }
+.orientation-page h1 { margin-bottom: 1rem; }
+.orientation-lead { color: var(--ink-muted); font-size: 1.125rem; }
+.steps { list-style: none; counter-reset: step; padding: 0; margin: 2rem 0; display: grid; gap: 1rem; }
+.steps li { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; counter-increment: step; position: relative; padding: 1.25rem; background: var(--surface); border-radius: 1.5rem; }
+.steps li > div { flex: 1 1 16rem; min-width: 0; }
+.steps li::before { content: counter(step); position: absolute; left: .6rem; top: .6rem; display: grid; place-items: center; width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--ink); color: var(--surface); font-weight: 700; line-height: 1; }
+.guide-scene { display: block; flex: 0 1 8rem; width: 100%; height: 7rem; object-fit: contain; background: var(--lavender-soft); border-radius: 1rem 2rem 1rem 1rem; padding: .375rem; }
+.steps li:nth-child(2) .guide-scene { background: var(--peach-soft); }
+.steps li:nth-child(3) .guide-scene { background: var(--mint-soft); }
 .steps strong, .steps span { display: block; }
-.steps span { color: var(--ink-muted); margin-top: 4px; }
-@media (max-width: 900px) {
-  .home { gap: 28px; }
-  .home-bottom { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.steps strong { font-size: 1.2rem; line-height: 1.3; }
+.steps span { color: var(--ink-muted); margin-top: .5rem; }
+/* Legendas em HTML acompanham a ampliação de texto. */
+.discovery-state { display: inline-flex; padding: .4rem .85rem; background: var(--lavender-soft); border-radius: 2rem; font-weight: 600; }
+.locked-page h1 { margin-bottom: 1rem; }
+.discovery-lead { color: var(--ink-muted); font-size: 1.125rem; }
+.discovery-guide { margin: 1.75rem 0; padding: 1.5rem; background: var(--peach-soft); border-radius: 2rem 3.5rem 2rem 2rem; }
+.discovery-guide > img { display: block; width: 100%; max-width: 400px; height: auto; margin: 0 auto 1.25rem; }
+.discovery-guide figcaption { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr)); gap: 1.5rem; }
+.discovery-guide figcaption span { display: block; color: var(--ink-muted); }
+.discovery-guide figcaption strong { display: block; color: var(--ink); margin-bottom: .25rem; font-size: 1.125rem; }
+.locked-page .actions { flex-direction: column; align-items: stretch; }
+.locked-page .primary { min-height: 3.75rem; }
+.fact-heading { display: flex; gap: .65rem; align-items: center; font-weight: 700; color: var(--accent-ink); }
+@media (hover: hover) and (pointer: fine) {
+  .home-how:hover { background: var(--peach); }
+  .hero-copy .secondary:hover { background: var(--surface); }
+}
+@media (max-width: 760px) {
+  .welcome-world { padding: 1.75rem; }
+  .home { gap: 1.5rem; }
+  .hero-copy .actions { flex-direction: column; align-items: stretch; }
 }
 @media (max-width: 640px) {
-  .home { display: flex; flex-direction: column; align-items: stretch; gap: 28px; }
-  .hero-copy h1 { font-size: 2.6rem; }
-  .hero-art { max-width: 400px; width: 100%; align-self: center; padding-bottom: 60px; }
-  .home-bottom { grid-template-columns: 1fr; margin-top: 0; gap: 12px; }
-  .home-organizer { gap: 20px; }
-  .floating-card { left: 12px; right: 12px; padding: 12px; }
+  .home { display: flex; flex-direction: column; align-items: stretch; gap: 1.5rem; padding-top: 1rem; }
+  .welcome-world { display: flex; flex-direction: column; gap: .5rem; padding: 1rem 1.25rem 1.5rem; border-radius: 2rem 3.5rem 2rem 2rem; }
+  .hero-art { width: 100%; max-width: 350px; }
+  .travel-friends { width: 110%; margin: -.75rem -5% -1.25rem; }
+  .hero-copy { width: 100%; }
+  .hero-copy h1 { font-size: clamp(2rem, 8vw, 2.75rem); line-height: 1.1; margin-bottom: 1rem; text-align: center; }
+  .hero-copy > p { text-align: center; margin: 0 auto 1.25rem; font-size: 1rem; }
+  .hero-copy .actions > .button { flex: auto; min-height: 3.5rem; }
+  .hero-progress { padding: 0 .25rem; }
+  .home-organizer { gap: 1.25rem; }
+  .steps li { gap: 1rem; padding: 1.25rem .75rem; }
+  .steps li > div { flex-basis: 11rem; }
+  .guide-scene { flex-basis: 6rem; height: 6.5rem; padding: .25rem; }
   .orientation-page .actions > .button { width: 100%; }
+  .discovery-guide { padding: 1.25rem; }
+}
+@media (max-width: 360px) {
+  .welcome-world { padding-inline: 1rem; }
+  .steps li { padding: 1.25rem; gap: .75rem; }
+  .guide-scene { height: 7rem; }
+  .discovery-guide figcaption { grid-template-columns: 1fr; gap: 1rem; }
 }

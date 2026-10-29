@@ -45,6 +45,8 @@ Uso pacífico, cooperação científica, estações e reivindicações preservad
 ## [autoral] Exploradores do Mundo, arte e conteúdo gerados neste projeto — ./LICENSE — MIT — 2026-10-28
 SVGs ilustrados, ícones, composição das folhas e atividades. Silhuetas/mapas/modelos derivados do Natural Earth (domínio público). Não há texturas ou fotografias externas.
 
+Reformulação de 2026-10-29: `public/images/planeta-guia.svg`, redesenho de `guia-qr.svg` e dos seis SVGs de paisagens, além das cenas de `GuideScene.tsx` e ícones de `InterfaceIcon.tsx`: desenhos vetoriais autorais, MIT. Planeta e mapa dobrado das instruções são lúdicos, sem pretensão cartográfica. Paisagens são recortes ilustrativos, sem representar todos os ambientes de um continente; mantêm os temas já usados no projeto. O diagrama do QR/marcador é esquemático e não substitui as folhas imprimíveis de `public/markers/`. Os SVGs autorais são fontes versionadas independentes: `build:data` atualiza dados e preserva os desenhos. Nenhuma imagem, fonte ou biblioteca externa nova.
+
 ## [ar-libraries] A-Frame 1.6.0 e AR.js 3.4.7 — https://github.com/AR-js-org/AR.js/tree/3.4.7 — MIT; ARToolKit incorporado sob LGPL-3.0 — 2026-10-28
 Distribuições locais sem alteração funcional em public/vendor/; avisos de licença preservados e cópias em public/vendor/licenses/. A-Frame: https://github.com/aframevr/aframe/tree/v1.6.0 . Parâmetros da câmera provenientes do AR.js. Referência barcode: https://ar-js-org.github.io/AR.js-Docs/marker-based/ . Marcadores binários gerados por algoritmo (sem imagem externa).
 

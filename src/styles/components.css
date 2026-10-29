@@ -1,8 +1,16 @@
 /* Mapa e coleção */
-.progress-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0 20px; }
+.progress-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 8.5rem), 1fr)); gap: 16px; margin: 28px 0 20px; }
 .progress-row > div { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 20px 24px; }
+.progress-row > div:first-child { background: var(--lavender-soft); }
 .progress-row > div:nth-child(2) { background: var(--mint-soft); }
-.progress-row > div > span { font-weight: 650; }
+.progress-row > div > span { display: flex; gap: .6rem; align-items: center; font-weight: 650; }
+.progress-row > div:nth-child(2) progress::-webkit-progress-value { background: var(--success); }
+.progress-row > div:nth-child(2) progress::-moz-progress-bar { background: var(--success); }
+.collection-heading { margin-bottom: .75rem; flex-wrap: nowrap; }
+.collection-heading p { color: var(--ink-muted); margin: .8rem 0 0; font-size: 1.125rem; }
+.collection-heading > img { width: 12rem; height: auto; max-width: 28%; flex-shrink: 0; }
+.collection-help { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; }
+.collection-help p { margin: 0; }
 .progress-row strong { font-size: 1.8rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
 .progress-row strong small { font-weight: 400; }
 .progress-row > div > small { grid-column: 1 / -1; color: var(--ink-muted); }
@@ -23,16 +31,23 @@
 .map-help { display: block; margin: 10px 0 16px; color: var(--ink-muted); }
 .map-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 24px; padding: 16px 0; color: var(--ink-muted); }
 .continent-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-.continent-card { border: 1px solid var(--border-strong); border-radius: var(--radius-card); background: var(--surface); overflow: hidden; }
+.continent-card { border: 1px solid var(--border-strong); border-radius: 1.5rem; background: var(--surface); overflow: hidden; }
 .continent-card.selected { border-color: var(--focus); box-shadow: 0 0 0 2px var(--focus); }
 .continent-select { display: block; text-align: left; width: 100%; background: none; padding: 22px; color: inherit; transition: transform 140ms var(--ease-out); }
 .continent-select:focus-visible { outline-offset: -5px; border-radius: var(--radius-card); }
-.continent-select > img { width: 130px; height: 110px; object-fit: contain; display: block; margin: 0 auto 18px; }
+.destination-art { display: grid; place-items: center; position: relative; min-height: 10rem; margin-bottom: 1.25rem; border-radius: 40% 50% 38% 45%; background: var(--lavender-soft); }
+.continent-card:nth-child(3n + 2) .destination-art { background: var(--peach-soft); border-radius: 50% 35% 45% 40%; }
+.continent-card:nth-child(3n) .destination-art { background: var(--mint-soft); border-radius: 35% 45% 40% 50%; }
+.destination-art > img { display: block; width: 70%; height: 8rem; object-fit: contain; }
+.destination-spark { position: absolute; top: .5rem; right: 1rem; font-size: 1.5rem; color: var(--accent-ink); }
 .locked-shape { filter: grayscale(1) brightness(.55); }
 .card-state { display: block; color: var(--ink-muted); }
-.continent-select h3 { margin: 8px 0; }
+.continent-select h3 { margin: 0 0 .5rem; font-size: 1.5rem; letter-spacing: -.025em; }
+.destination-prompt { color: var(--ink-muted); margin-top: .4rem; }
 .continent-select > span:last-child { display: block; }
-.discovered { background: var(--mint-soft); background: color-mix(in srgb, var(--continent-color) 16%, white); }
+.discovered { background: var(--surface); }
+.continent-card.discovered .destination-art { background: color-mix(in srgb, var(--continent-color) 18%, white); }
+.discovered .card-state { color: var(--success); font-weight: 700; }
 .card-activity { display: flex; flex-wrap: wrap; align-items: center; min-height: 52px; padding: 12px 22px; border-top: 1px solid var(--border-strong); text-decoration: none; font-weight: 600; }
 .card-activity:focus-visible { outline-offset: -5px; }
 .celebration { display: block; border-radius: 20px; padding: 20px 24px; background: var(--mint); margin-bottom: 24px; font-weight: 700; }
@@ -49,7 +64,7 @@
 .model-loading, .model-message { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 24px; margin: 0; background: var(--mint-soft); border-radius: 20px; }
 .model-message p { margin-bottom: 16px; }
 .fact-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-card); padding: 26px; }
-.fact-art { width: 100%; height: 160px; object-fit: contain; border-radius: 18px; background: var(--peach-soft); margin-bottom: 20px; }
+.fact-art { width: calc(100% + 52px); max-width: none; height: auto; max-height: 280px; object-fit: cover; border-radius: 1.75rem 1.75rem 40% 0; background: var(--peach-soft); margin: 0 -26px 24px; }
 .fact-card h2 { margin: 20px 0 8px; }
 .fact-card p { margin-bottom: 16px; }
 .fact-card details a { display: flex; align-items: center; min-height: 44px; padding: 8px 0; overflow-wrap: anywhere; }
@@ -152,17 +167,22 @@ dl { margin: 12px 0; }
   .progress-row { gap: 12px; }
   .progress-row > div { display: flex; flex-direction: column; align-items: flex-start; padding: 16px; gap: 10px; border-radius: 20px; }
   .progress-row strong { font-size: 1.7rem; }
+  .progress-row > div > span { flex-direction: column; align-items: flex-start; }
   .world-wrap { overflow-x: auto; overscroll-behavior-x: contain; }
   .world-map { min-width: 840px; min-height: 428px; }
   .map-label text { font-size: 20px; }
   .map-ocean { display: none; }
   .map-help { display: block; margin: 10px 0 16px; color: var(--ink-muted); }
   .map-legend { justify-content: flex-start; gap: 8px 16px; }
-  .continent-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .continent-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr)); gap: 12px; }
   .continent-select { padding: 16px 12px; }
-  .continent-select > img { width: 105px; height: 95px; }
+  .destination-art { min-height: 7rem; margin-bottom: 1rem; }
+  .destination-art > img { height: 6rem; width: 75%; }
+  .destination-spark { top: .1rem; right: .5rem; font-size: 1.2rem; }
+  .continent-select h3 { font-size: 1.25rem; }
   .card-activity { padding: 12px; }
   .model-panel, .fact-card { padding: 20px; }
+  .fact-art { width: calc(100% + 40px); margin: 0 -20px 24px; }
   .model-viewport { height: 280px; }
   .ar-summary { padding: 18px; }
   .ar-heading h1 { text-align: left; }

@@ -85,3 +85,18 @@ Repetir em Android Chrome e iPhone Safari, em perfil de teste, com largura peque
 | ADM → Ver como público → Voltar ao Organizador | Retorno disponível também quando a ficha já está desbloqueada; rascunho não aplicado como conteúdo publicado | NÃO VALIDADO |
 | Editor → Revisar modificações | Foco chega ao painel de revisão; dados legíveis; salvar/cancelar/importar/exportar mantêm o fluxo | NÃO VALIDADO |
 | Navegação com leitor de tela, zoom de 200% e movimento reduzido | Rótulos claros, ordem de foco coerente, controles ≥ 44 px, texto base ≥ 16 px, sem animação de movimento | NÃO VALIDADO |
+
+## Reformulação ilustrada e navegação móvel — 2026-10-29 — NÃO VALIDADA
+
+Revisão de telas no navegador bloqueada nesta sessão; nenhuma comparação antes/depois foi executada. Preencher por aparelho/navegador, com data, responsável e resultado real. Repetir também no desktop. A inspeção isolada dos SVGs não aprova nenhuma linha abaixo.
+
+| Percurso | Resultado esperado | Resultado real / responsável |
+|---|---|---|
+| Início a 320/360/390 px e desktop | Planeta integrado à acolhida, sem distorção ou rolagem lateral; Explorar e Organizador disponíveis | NÃO VALIDADO |
+| Navegação inferior, fim da página e teclado | Nenhum conteúdo/foco oculto pela barra; ícone e texto visíveis; item atual sublinhado; saídas claras | NÃO VALIDADO |
+| Paisagem e rotas QR/AR | Navegação estática, sem cobrir câmera, status ou saídas; proporções e teardown preservados | NÃO VALIDADO |
+| Texto a 200%, com e sem zoom de página | Marca, etapas, legendas QR/marcador, progressos e destinos quebram sem cortes; navegação e todas as ações acessíveis | NÃO VALIDADO |
+| Como jogar e página bloqueada | Criança distingue o QR do marcador e entende qual usar; diagramas não substituem material imprimível | NÃO VALIDADO |
+| Descoberto → ficha, dica de gesto aberta/fechada e Antártida | Arte não cobre a alça/dica; ficha curta, Ouvir e Saiba mais legíveis; países ocultos na Antártida | NÃO VALIDADO |
+| Teclado, leitor de tela, preferências de movimento/transparência/contraste | Foco visível, sem transformação ao acionar por teclado; barra sólida quando solicitado; rótulos e ordem compreensíveis | NÃO VALIDADO |
+| QR da folha e AR em Android Chrome/iPhone Safari | Desbloqueio só por leitura válida ou marcador estável; modelo acompanha pose; perda/retorno e cinco ciclos de saída funcionam | NÃO VALIDADO |

@@ -69,7 +69,7 @@ function country(f, continentId) {
 }
 function contintentRegion(id) { return id === 'america'; }
 await mkdir('src/data/continents', {recursive:true});
-await mkdir('public/images', {recursive:true});
+// A arte autoral em public/images é versionada e revisada separadamente dos dados.
 for (const id of IMPLEMENTED_CONTINENTS) {
   const e = editorial[id];
   const features = geo.features.filter(f => mapping[f.properties.ADM0_A3] === id && f.properties.ADM0_A3 !== 'ATA');
@@ -87,15 +87,5 @@ for (const id of IMPLEMENTED_CONTINENTS) {
     saibaMais:{texto:id==='america'?'Usamos o modelo de seis continentes, com a América unificada. Outros livros usam sete e separam América do Norte e América do Sul.':e.descricao,links:[{titulo:'Consultar a fonte',url: id==='antartida'?'https://www.ats.aq/e/antarctictreaty.html':`https://education.nationalgeographic.org/resource/${({africa:'africa-physical-geography',asia:'asia',europa:'europe-physical-geography',oceania:'oceania-physical-geography',america:'Continent'})[id]}/`}]},
   };
   await writeFile(`src/data/continents/${id}.json`, JSON.stringify(data,null,2)+'\n');
-  const art = {
-    sun:'<circle cx="250" cy="90" r="38" fill="#ffd166"/><path d="M10 190Q100 90 200 190T390 185V245H10Z" fill="#e7b66a"/><path d="M105 165v-65m-45 18q45-72 95 0Z" fill="#386956" stroke="#386956" stroke-width="8"/>',
-    leaf:'<path d="M190 215V60m0 90Q60 160 82 80q90-20 108 70m0-25Q305 140 300 45q-90 0-110 80" stroke="#386956" stroke-width="10" fill="#a8e6cf"/>',
-    snow:'<path d="m35 210 95-135 75 135 65-105 95 105Z" fill="#8ec3d7"/><path d="m86 137 44-62 35 62-36-18Z" fill="white"/><ellipse cx="260" cy="179" rx="23" ry="36" fill="#5c3a45"/><ellipse cx="260" cy="188" rx="15" ry="25" fill="white"/>',
-    mountain:'<path d="m20 215 120-170 110 170 50-120 80 120Z" fill="#8e80c2"/><path d="m95 109 45-64 42 64-40-18Z" fill="white"/><circle cx="290" cy="56" r="22" fill="#ffd166"/>',
-    river:'<path d="M0 160Q90 65 180 160t220-15v100H0Z" fill="#a8e6cf"/><path d="M240 130q-140 45-30 70t-50 45" stroke="#70adc8" stroke-width="30" fill="none"/><path d="m70 130 40-60 40 60Z" fill="#386956"/>',
-    wave:'<path d="M0 150q50-45 100 0t100 0t100 0t100 0v95H0Z" fill="#8ec3d7"/><path d="M150 180q50-60 110 0Z" fill="#ffd166"/><path d="M215 160V70m0 0q-45-50-70-10m70 10q45-50 70-10" stroke="#386956" stroke-width="9" fill="none"/>',
-  }[e.icon];
-  await writeFile(`public/images/${id}.svg`,`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250"><rect width="400" height="250" rx="24" fill="#fff8ed"/>${art}</svg>`);
   console.log(`${id}: ${paises.length} países; ${territorios.length} territórios/áreas`);
 }
-await writeFile('public/images/guia-qr.svg','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240"><rect x="35" y="10" width="330" height="220" rx="12" fill="white" stroke="#5c3a45" stroke-width="3"/><text x="200" y="48" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#5c3a45">Folha do continente</text><rect x="70" y="80" width="95" height="95" fill="white" stroke="#5c3a45" stroke-width="8"/><text x="117" y="140" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#5c3a45">QR</text><rect x="220" y="80" width="100" height="100" fill="black"/><rect x="245" y="105" width="50" height="50" fill="white"/><path d="m80 210 35-30 35 30" fill="none" stroke="#9d3156" stroke-width="5"/></svg>');

@@ -18,7 +18,9 @@ for (const foreground of ['ink', 'ink-muted']) {
   }
 }
 pairs.push(['accent-ink', 'lavender-soft', 4.5], ['success', 'mint-soft', 4.5], ['danger', 'peach-soft', 4.5],
-  ['focus', 'canvas', 3], ['focus', 'lavender-soft', 3], ['border-control', 'surface', 3], ['border-control', 'lavender', 3]);
+  ['surface', 'ink', 4.5], ['surface', 'accent-ink', 4.5], ['ink', 'lavender-bold', 4.5],
+  ['focus', 'canvas', 3], ['focus', 'lavender-soft', 3], ['focus', 'peach-soft', 3], ['focus', 'mint-soft', 3],
+  ['border-control', 'surface', 3], ['border-control', 'lavender', 3], ['border-control', 'lavender-soft', 3]);
 const results = pairs.map(([foreground, background, minimum]) => {
   const ratio = contrast(tokens[foreground], tokens[background]);
   return { foreground, background, ratio: Number(ratio.toFixed(2)), minimum, passed: ratio >= minimum };

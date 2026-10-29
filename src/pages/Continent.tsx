@@ -5,6 +5,8 @@ import { ModelViewer3D } from '../components/ModelViewer3D';
 import { ListenButton } from '../components/ListenButton';
 import { asset, descriptionForYear } from '../services/contentRepository';
 import type { Sourced } from '../types/continent';
+import { DiscoveryGuide } from '../components/DiscoveryGuide';
+import { InterfaceIcon } from '../components/InterfaceIcon';
 
 export function Datum({ label, data, unit = '' }: { label: string; data: Sourced<number>; unit?: string }) {
   return <div className="datum"><dt>{label}</dt><dd>
@@ -21,18 +23,19 @@ export default function Continent() {
   const unlocked = app.unlocked.includes(c.id);
   if (!unlocked) return <main className="narrow locked-page">
     {location.state?.organizerPublicView === true ? <div className="organizer-public-preview-bar"><span>Visualização pública do conteúdo publicado</span><Link className="button secondary" to="/organizador">Voltar ao Organizador</Link></div> : <Link className="back-link" to="/mapa">← Voltar ao mapa</Link>}
-    <span className="eyebrow">🔒 Ainda não descoberto</span>
-    <h1>Vamos conhecer<br /><em>{c.nome}?</em></h1>
-    <img className="guide-image" src={asset(c.dicaQr?.imagem || 'images/guia-qr.svg')} alt="Folha com QR e marcador: procure o QR ao lado do quadrado preto" />
+    <span className="discovery-state">🔒 Ainda não descoberto</span>
+    <h1>Vamos conhecer<br />{c.nome}?</h1>
+    <p className="discovery-lead">A próxima pista está na folha da sua turma.</p>
+    <DiscoveryGuide image={c.dicaQr?.imagem} />
     <p>{c.dicaQr?.texto}</p>
     <div className="actions">
-      <Link className="button primary" to={`/qr/${c.id}`}>Escanear QR code ↗</Link>
+      <Link className="button primary" to={`/qr/${c.id}`}><InterfaceIcon name="scan" />Escanear QR code</Link>
       <Link className="button secondary" to={`/ar/${c.id}`}>Iniciar realidade aumentada</Link>
     </div>
     <p className="micro">Para guardar este continente na coleção, leia o QR aqui no app ou aponte a câmera para o marcador da folha.</p>
   </main>;
 
-  return <main>
+  return <main className="continent-page">
     {location.state?.organizerPublicView === true ? <div className="organizer-public-preview-bar"><span>Visualização pública do conteúdo publicado</span><Link className="button secondary" to="/organizador">Voltar ao Organizador</Link></div> : <Link className="back-link" to="/mapa">← Voltar ao mapa</Link>}
     {location.state?.discovered === true && <div className="notice success discovery-notice" role="status">
       <span aria-hidden="true">✦</span><div><strong>Continente descoberto!</strong><p>{c.nome} agora faz parte da sua coleção. Vamos conhecer?</p></div>
@@ -50,7 +53,7 @@ export default function Continent() {
           {shortcut.showHint && <div className="gesture-hint"><p>Arraste a alça para baixo ou toque em “Conhecer os países”.</p><button onClick={shortcut.dismissHint} aria-label="Fechar dica de gesto">Entendi</button></div>}
         </>}
         <img className="fact-art" src={asset(c.fichaCurta.ilustracao)} alt={c.fichaCurta.ilustracaoAlt} />
-        <span className="eyebrow">Sua ficha de descobertas</span>
+        <div className="fact-heading"><InterfaceIcon name="book" /><span>Sua ficha de descobertas</span></div>
         <h2>Onde fica?</h2><p>{c.fichaCurta.localizacao}</p>
         <h2>Você sabia?</h2><p>{c.fichaCurta.curiosidade}</p>
         <ListenButton text={`${c.nome}. ${c.fichaCurta.localizacao} ${c.fichaCurta.curiosidade}`} audioUrl={c.audioUrl} />
