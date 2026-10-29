@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect } from 'react';
 import { HashRouter, Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-import { AppProvider, useApp } from './hooks/useApp';
+import { AppProvider, useApp, safePreference } from './hooks/useApp';
 import { Navigation } from './components/Navigation';
 import { continentFromURL } from './services/discovery';
 const Home=lazy(()=>import('./pages/Home'));
@@ -17,14 +17,14 @@ const Organizer=lazy(()=>import('./pages/Organizer'));
 function Shell(){
  const app=useApp(),navigate=useNavigate(),location=useLocation();
  useEffect(()=>{const id=continentFromURL(window.location.search);if(id&&!window.location.hash)navigate(`/continente/${id}`,{replace:true});},[]);
- useEffect(()=>{window.scrollTo(0,0);},[location.pathname]);
+ useEffect(()=>{window.scrollTo(0,0);document.getElementById('content')?.focus({preventScroll:true});},[location.pathname]);
  return <>
   <a className="skip-link" href="#content">Pular para o conteúdo</a><Navigation/>
   {app.warning&&<div className="global-warning" role="status">{app.warning}</div>}
   <div id="content" tabIndex={-1}><Suspense fallback={<main><p role="status">Preparando sua viagem…</p></main>}>
    {app.ready?<Routes>
     <Route path="/" element={<Home/>}/><Route path="/orientacao" element={<Orientation/>}/>
-    <Route path="/mapa" element={<Collection/>}/><Route path="/continente/:id" element={<Continent/>}/>
+    <Route path="/mapa" element={safePreference('exploradores:intro:v1')?<Collection/>:<Navigate to="/orientacao" replace/>}/><Route path="/continente/:id" element={<Continent/>}/>
     <Route path="/qr/:id" element={<QRScanner/>}/><Route path="/ar/:id" element={<ARExperience/>}/>
     <Route path="/paises/:id" element={<Countries/>}/><Route path="/paises/:id/:countryId" element={<Countries/>}/>
     <Route path="/atividade/:id" element={<Activity/>}/><Route path="/conclusao" element={<Completion/>}/>

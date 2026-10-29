@@ -15,4 +15,4 @@ export function AppProvider({children}:{children:ReactNode}){
  return <AppContext.Provider value={{...content,unlocked,completed,year,ready,warning,refresh,setYear:async y=>{await repository.setProfile({anoEscolar:y});saveYear(y);},previewDraft:d=>{setContent(applyOverrides(baseContinents,d));}}}>{children}</AppContext.Provider>;
 }
 export function useApp(){const context=useContext(AppContext);if(!context)throw new Error('AppProvider ausente');return context;}
-export function safePreference(key:string,value?:string){try{if(value!==undefined)localStorage.setItem(key,value);return localStorage.getItem(key);}catch{return null;}}
+export { safePreference } from '../services/preferences';

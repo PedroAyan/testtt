@@ -1,0 +1,35 @@
+:root {
+  --font-body: 'Trebuchet MS', 'Segoe UI', Arial, sans-serif;
+  --font-heading: var(--font-body);
+  --canvas: #faf7fd;
+  --surface: #ffffff;
+  --surface-warm: #fffdfb;
+  --ink: #39334f;
+  --ink-muted: #655a73;
+  --accent-ink: #62549b;
+  --focus: #62549b;
+  --lavender: #ded8f5;
+  --lavender-soft: #eeeafb;
+  --peach: #f9ddd3;
+  --peach-soft: #fff0e9;
+  --pink: #ffe5f0;
+  --accent: var(--lavender);
+  --mint: #d7eee1;
+  --mint-soft: #f0f8f3;
+  --yellow: #ffedbc;
+  --sky: #b8dce4;
+  --border: #e1dae9;
+  --border-strong: #c5bbd1;
+  --border-control: #887a96;
+  --shadow: #39334f12;
+  --shadow-soft: #39334f08;
+  --shadow-deep: #39334f24;
+  --map-locked: #c8c7d3;
+  --map-grid: var(--ink);
+  --camera-bg: #242330;
+  --camera-overlay: #fffdfbf5;
+  --success: #315d48;
+  --danger: #913c4b;
+  --radius-card: 28px;
+  --radius-button: 18px;
+}

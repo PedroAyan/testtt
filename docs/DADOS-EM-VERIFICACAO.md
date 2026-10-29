@@ -56,7 +56,7 @@ Gerado por `node scripts/report-pending.mjs`. Valores null com verificar:true n�
 | Seychelles (SYC) | areaKm2 | Não | Símbolo/sem modelo |
 | Somália (SOM) | areaKm2 | Não | GLB |
 | Sudão (SDN) | areaKm2 | Não | GLB |
-| Sudão do Sul (SDS) | areaKm2 | Sim; omitida na ficha | GLB |
+| Sudão do Sul (SDS) | areaKm2 | Não | GLB |
 | Tanzânia (TZA) | areaKm2 | Não | GLB |
 | Togo (TGO) | areaKm2 | Não | GLB |
 | Tunísia (TUN) | areaKm2 | Não | GLB |

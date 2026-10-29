@@ -14,6 +14,7 @@ import { pbkdf2Sync, randomBytes } from 'node:crypto';
 import { runInNewContext } from 'node:vm';
 // Leitura dos arquivos gerados em Node não equivale à validação de câmera física.
 import { createRequire } from 'node:module';
+import { safePreference } from '../src/services/preferences';
 class MemoryStorage implements StoragePort {data=new Map<string,string>();getItem(k:string){return this.data.get(k)||null;}setItem(k:string,v:string){this.data.set(k,v);}removeItem(k:string){this.data.delete(k);}}
 const data=async(id:string)=>JSON.parse(await readFile(`src/data/continents/${id}.json`,'utf8')) as Continent;
 describe('Verificações essenciais da especificação',()=>{
@@ -36,6 +37,7 @@ describe('Verificações essenciais da especificação',()=>{
   const reload=new LocalStorageRepository(storage);expect(await reload.getUnlocked()).toEqual(['africa']);expect(await reload.getCompletedActivities()).toEqual(['africa-formato']);
   storage.setItem(r.key,JSON.stringify({unlocked:['africa','invalido'],activities:[],profile:{anoEscolar:'99'}}));expect(await reload.getUnlocked()).toEqual(['africa']);expect(await reload.getProfile()).toEqual({});
   const blocked=new LocalStorageRepository({getItem(){throw Error();},setItem(){throw Error();},removeItem(){throw Error();}});await blocked.unlock('africa');expect(blocked.isPersistent).toBe(false);expect(await blocked.isUnlocked('africa')).toBe(true);
+  safePreference('teste:intro:v1','1');expect(safePreference('teste:intro:v1')).toBe('1');
  });
  it('URL só seleciona; QR exige endereço correto e continente selecionado',async()=>{
   const r=new LocalStorageRepository(new MemoryStorage()),base='https://example.org/jogo/';expect(continentFromURL('?continente=africa')).toBe('africa');expect(await r.getUnlocked()).toEqual([]);
@@ -52,7 +54,7 @@ describe('Verificações essenciais da especificação',()=>{
  });
  it('dados e fontes dos continentes implementados são completos e arquivos existem',async()=>{
   expect(CONTINENT_IDS).toEqual(['africa','america','antartida','asia','europa','oceania']);const sources=await readFile('SOURCES.md','utf8');const sourceIds=[...sources.matchAll(/^## \[([^\]]+)\]/gm)].map(m=>m[1]);
-  for(const id of IMPLEMENTED_CONTINENTS){const c=await data(id);expect(continentSchema.safeParse(c).success).toBe(true);for(const key of ['descricao','caracteristicasGeograficas','climas','faunaFlora','cultura','curiosidades'] as const){expect(c.fontesTexto[key]?.length).toBeGreaterThan(0);c.fontesTexto[key]?.forEach(s=>expect(sourceIds).toContain(s));}for(const n of [c.areaKm2,c.populacao,c.quantidadePaises,...c.paises.flatMap(p=>[p.areaKm2,p.populacao])]){expect(sourceIds).toContain(n.fonte);if(n.valor===null)expect(n.verificar).toBe(true);}await stat(`public/${c.fichaCurta.ilustracao}`);await stat(`public/print/${id}-A4.pdf`);await stat(`public/markers/${id}-qr.png`);if(id==='antartida')expect(c.paises).toEqual([]);}
+  for(const id of IMPLEMENTED_CONTINENTS){const c=await data(id);expect(continentSchema.safeParse(c).success).toBe(true);for(const key of ['descricao','caracteristicasGeograficas','climas','faunaFlora','cultura','curiosidades'] as const){expect(c.fontesTexto[key]?.length).toBeGreaterThan(0);c.fontesTexto[key]?.forEach(s=>expect(sourceIds).toContain(s));}for(const n of [c.areaKm2,c.populacao,c.quantidadePaises,...c.paises.flatMap(p=>[p.areaKm2,p.populacao])]){expect(sourceIds).toContain(n.fonte);if(n.valor===null)expect(n.verificar).toBe(true);}for(const p of c.paises){if(p.capital)expect(sourceIds).toContain(p.capital.fonte);}await stat(`public/${c.fichaCurta.ilustracao}`);await stat(`public/print/${id}-A4.pdf`);await stat(`public/markers/${id}-qr.png`);if(id==='antartida')expect(c.paises).toEqual([]);if(id==='africa')expect(c.paises.find(p=>p.id==='SDS')?.capital).toEqual({valor:'Juba',fonte:'undata-south-sudan'});}
  });
  it('GLB parseia e respeita orçamento, materiais sem textura e normalização',async()=>{
   const reports=JSON.parse(await readFile('models-report.json','utf8')) as {id:string;tipo:string;arquivo:string;triangulos:number}[];const io=new NodeIO();

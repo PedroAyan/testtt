@@ -1,6 +1,13 @@
 <!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Fontes e licenças</title><style>body{max-width:900px;margin:40px auto;padding:20px;font:16px/1.6 system-ui;background:#fffaf7;color:#5c3a45}pre{white-space:pre-wrap;overflow-wrap:anywhere}</style><h1>Fontes e licenças</h1><a href="./">Voltar ao app</a><pre># Fontes e licenças
 
-Consulta: 2026-10-28. Textos educativos são redação original em português baseada em fatos das referências; não reproduzem artigos ou fotografias. Ilustrações e modelos são gerados localmente. Dados históricos são identificados pelo ano e não apresentados como atuais.
+Consulta original: 2026-10-28; acréscimos identificados em 2026-10-29. Textos educativos são redação original em português baseada em fatos das referências; não reproduzem artigos ou fotografias. Ilustrações e modelos são gerados localmente. Dados históricos são identificados pelo ano e não apresentados como atuais.
+
+## [undata-south-sudan] UNdata, South Sudan — https://data.un.org/legacy/en/iso/ss.html — referência factual; página e tabelas não redistribuídas — 2026-10-29
+Campo “Capital city”: Juba. Correção pontual registrada em `data-src/country-facts.json` e aplicada pelo pipeline. O Natural Earth local omitia a capital porque Juba tem `adm0cap: 0` e código `SSD`, enquanto a geometria usa `SDS`. Nenhuma população ou área foi inferida dessa diferença.
+
+## [visual-reference] Referência estética fornecida pelo responsável — ./referencia-visual.png — licença de redistribuição não informada; somente consulta local — 2026-10-29
+Inspiração para cores pastel, cartões e hierarquia visual. A imagem, a marca, os textos e os desenhos originais não são distribuídos em `public/` nem no build. A ilustração `public/images/companheiros-de-viagem.svg` é autoral MIT, conforme [autoral]; representa um planeta lúdico, não um mapa geográfico.
+
 
 ## [natural-earth] Natural Earth 5.1.2 — https://github.com/nvkelso/natural-earth-vector/tree/v5.1.2/geojson — domínio público — 2026-10-28
 `ne_50m_admin_0_countries.geojson`: geometria, nomes em português, POP_EST/POP_YEAR, regiões. `ne_50m_populated_places_simple.geojson`: capitais. Arquivos e SHA-256 em data-src/assets-manifest.json. Licença: https://www.naturalearthdata.com/about/terms-of-use/ . Limites cartográficos simplificados não resolvem disputas territoriais.

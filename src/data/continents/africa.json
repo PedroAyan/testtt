@@ -1376,10 +1376,15 @@
       "fontes": [
         "natural-earth",
         "country-assignments",
+        "undata-south-sudan",
         "un-members"
       ],
       "modelo": {
         "arquivo": "models/countries/SDS.glb"
+      },
+      "capital": {
+        "valor": "Juba",
+        "fonte": "undata-south-sudan"
       }
     },
     {

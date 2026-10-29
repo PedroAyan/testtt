@@ -1,0 +1,63 @@
+.site-header{background:var(--surface);border-radius:0 0 28px 28px}
+.brand-icon{background:var(--lavender-soft);color:var(--accent-ink);border-radius:18px}
+.home{padding-top:42px;gap:28px;align-items:center}
+.hero-copy h1{font-size:clamp(2.6rem,4.4vw,4rem);line-height:1.16}
+.hero-copy>p{color:var(--ink-muted);font-size:1.08rem}
+.hero-copy .eyebrow{letter-spacing:.06em;line-height:1.7}
+.hero-art{min-height:400px;align-self:center}
+.travel-friends{display:block;width:100%;max-width:530px}
+.hero-progress{font-size:1rem;margin-top:28px}
+.hero-progress .back-link{margin:0;font-size:.95rem}
+.floating-card{bottom:12px;left:24px;transform:rotate(-3deg);background:var(--surface-warm);border:1px solid var(--border);padding:16px}
+.floating-card strong{font-size:.95rem}.floating-card div>span{font-size:.88rem}
+.card-icon{background:var(--peach);color:var(--ink)}
+.home-bottom{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr) auto;align-items:center;font-size:.92rem}
+.home-bottom>span{padding:14px;border-radius:18px;background:var(--lavender-soft);color:var(--ink)}
+.home-bottom>span:nth-child(2){background:var(--peach)}.home-bottom>span:nth-child(3){background:var(--mint)}
+.home-bottom a{min-height:44px;display:inline-flex;align-items:center}
+.button{font-size:1rem;min-height:52px;font-weight:700;gap:10px}
+.primary:hover{background:var(--peach)}.secondary{background:var(--surface);border-color:var(--border-control)}
+.site-header nav{font-size:.95rem;gap:20px}
+.eyebrow{font-size:.8rem;letter-spacing:.08em}
+.continent-card{box-shadow:0 8px 24px var(--shadow-soft)}
+.continent-select h3{font-size:1.5rem}.continent-select>span:last-child{font-size:.95rem}.card-state{font-size:.8rem}
+.card-activity{font-size:.95rem;min-height:48px;display:flex;align-items:center}
+.world-wrap{background:var(--lavender-soft)}.map-legend{font-size:.95rem}
+.fact-card{border-radius:30px 30px 24px 24px;box-shadow:0 10px 30px var(--shadow-soft)}
+.fact-art{background:var(--peach-soft)}.fact-card p{font-size:1rem}
+.sheet-grip{display:flex;align-items:center;justify-content:center;min-height:44px;touch-action:pan-x;margin-top:-14px;cursor:grab}
+.sheet-grip span{width:52px;height:6px;border-radius:8px;background:var(--border-control)}
+.gesture-hint{display:flex;align-items:center;gap:12px;background:var(--lavender-soft);border-radius:16px;padding:8px 12px;margin-bottom:18px}
+.gesture-hint p{margin:0;font-size:.9rem}.gesture-hint button{background:var(--surface);border:1px solid var(--border-control);border-radius:12px;padding:8px;flex-shrink:0}
+.country-entry{width:100%;margin-top:20px}
+.discovery-notice{display:flex;align-items:center;gap:18px;flex-wrap:wrap;animation:discovery-arrive .35s ease-out}
+.discovery-notice>span{font-size:2rem}.discovery-notice p{margin:0}.discovery-notice .button{margin-left:auto}
+@keyframes discovery-arrive{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.ar-fact{position:absolute;z-index:2;left:12px;right:12px;bottom:84px;max-width:480px;background:var(--camera-overlay);border-radius:18px;padding:12px 16px;pointer-events:none}
+.ar-fact p{font-size:.9rem;margin:4px 0;line-height:1.4}.ar-fact strong{font-size:1rem}
+.camera-help .guide-image{max-width:220px}
+.fact-card details a{display:flex;align-items:center;min-height:44px;padding:8px 0}
+.file-button:focus-within{outline:3px solid var(--focus);outline-offset:5px}
+.field input,.field select,.field textarea{border-color:var(--border-control)}
+.country-list small,.capital small,.datum small{font-size:.85rem}
+.map-help{display:none}
+@media(max-width:900px){.home-bottom{grid-template-columns:repeat(2,1fr)}.hero-art{min-height:350px}}
+@media(max-width:640px){
+ .home{display:flex;flex-direction:column;padding-top:28px;overflow:visible;gap:14px;align-items:stretch}
+ .hero-copy{padding-top:0}.hero-copy h1{font-size:2.55rem}.hero-copy>p{font-size:1rem}
+ .hero-art{min-height:0;max-width:390px;width:100%;margin:0 auto}.travel-friends{width:100%}
+ .floating-card{left:12px;bottom:0;padding:12px}.floating-card strong{font-size:.82rem}.floating-card div>span{font-size:.78rem}
+ .home-bottom{display:grid;grid-template-columns:1fr;gap:10px;margin-top:22px}.home-bottom strong{margin-left:8px;font-size:.92rem}
+ .site-header{padding:16px;gap:12px;align-items:flex-start}.site-header nav{gap:4px;flex-direction:column;font-size:.9rem}.site-header nav a{padding:10px 4px}
+ .site-header nav a:last-child{font-size:.9rem}.site-header nav a:last-child:after{content:none}
+ .brand{font-size:19px}.brand-icon{width:44px;height:44px}
+ .page-heading{flex-wrap:wrap;gap:4px}.page-heading>.button{font-size:.95rem;white-space:normal}.page-heading h1{margin-bottom:18px}
+ .continent-select>span:last-child{font-size:.88rem}.card-state{font-size:.72rem}.card-activity{font-size:.88rem}
+ .map-legend{font-size:.85rem}.progress-row>div>span{font-size:.9rem}.progress-row>div>small{font-size:.8rem}
+ .world-wrap{overflow-x:auto;overscroll-behavior-x:contain}.world-map{min-width:840px;min-height:428px}.map-ocean{display:none}
+ .map-help{display:block;margin:8px 0 16px;font-size:.9rem;color:var(--ink-muted)}
+ .ar-stage{min-height:480px;height:70vh}.ar-fact{bottom:126px}.ar-status{font-size:.9rem}
+ .ar-exit{flex-wrap:wrap}.ar-exit .button{font-size:.9rem}.ar-summary .actions>.button{font-size:.9rem}
+ .discovery-notice .button{margin-left:0}.fact-card{padding:20px}.ar-toolbar{flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce){.discovery-notice{animation:none}}

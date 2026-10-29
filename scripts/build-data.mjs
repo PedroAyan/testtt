@@ -5,6 +5,7 @@ import { editorial } from '../data-src/editorial.mjs';
 const json = async path => JSON.parse(await readFile(path, 'utf8'));
 const geo = await json('data-src/geo/ne_50m_admin_0_countries.geojson');
 const places = await json('data-src/geo/ne_50m_populated_places_simple.geojson');
+const countryFacts = await json('data-src/country-facts.json');
 const html = await readFile('data-src/un-members.html', 'utf8');
 const clean = text => text.replace(/<[^>]*>/g, '').replace(/&amp;/g, '&').trim();
 const names = [...html.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/g)].map(x => clean(x[1])).filter(x=>x && x !== 'Search the United Nations');
@@ -56,11 +57,11 @@ function country(f, continentId) {
   const capitals = places.features.filter(x => Number(x.properties.adm0cap) === 1 && x.properties.adm0_a3 === p.ADM0_A3).map(x => x.properties.name);
   return {
     id:p.ADM0_A3, nome:p.NAME_PT || p.NAME_EN, nomeFonte:'natural-earth',
-    ...(capitals.length ? { capital:{ valor:[...new Set(capitals)].join(' / '), fonte:'natural-earth' } } : {}),
+    ...(countryFacts[p.ADM0_A3]?.capital ? {capital:countryFacts[p.ADM0_A3].capital} : capitals.length ? { capital:{ valor:[...new Set(capitals)].join(' / '), fonte:'natural-earth' } } : {}),
     populacao: p.POP_EST > 0 && p.POP_YEAR > 0 ? { valor:p.POP_EST, fonte:'natural-earth', anoReferencia:p.POP_YEAR } : { ...missing, anoReferencia:0 },
     areaKm2:{ ...missing },
     curiosidade:`No mapa desta coleção, ${p.NAME_PT || p.NAME_EN} faz parte de ${META[continentId].nome}.`,
-    fontes:['natural-earth', 'country-assignments', ...(sovereigns.has(p.ADM0_A3)?[p.ADM0_A3==='VAT'||p.ADM0_A3==='PSX'?'un-observers':'un-members']:[])],
+    fontes:['natural-earth', 'country-assignments', ...(countryFacts[p.ADM0_A3]?.capital ? [countryFacts[p.ADM0_A3].capital.fonte] : []), ...(sovereigns.has(p.ADM0_A3)?[p.ADM0_A3==='VAT'||p.ADM0_A3==='PSX'?'un-observers':'un-members']:[])],
     ...(transcontinental[p.ADM0_A3] ? { nota:transcontinental[p.ADM0_A3] } : {}),
     ...(contintentRegion(continentId) ? { regiao:region(p) } : {}),
     modelo:{ arquivo:`models/countries/${p.ADM0_A3}.glb` },

@@ -7,6 +7,13 @@
 - Próximo passo exato: corrigir confirmação do QR, resumo/dica da RA, entradas da orientação, ficha e acessibilidade; aplicar tokens pastel; executar typecheck, build e testes essenciais.
 - Revisão de interface por Computer Use impedida: host de navegador e pipe nativo indisponíveis nesta sessão. Câmera/RA seguem NÃO VALIDADAS.
 
+### Marco de implementação e verificações
+- Correções de navegação implementadas: confirmação QR, resumo RA sobreposto, dica QR em erros de câmera, orientação em todas as entradas do mapa e atalho opcional para países com botão permanente.
+- Tokens pastel, ilustração SVG autoral, foco de importação e cadeados aplicados. Juba confirmada na UNdata e registrada no pipeline.
+- Última execução: `npm.cmd run typecheck` e `npm.cmd run build`, ambos exit 0; `npm.cmd test`, 11 testes em 2 arquivos, todos passaram. Uma regressão essencial de HTML foi acrescentada; não executa câmera/WebGL.
+- Contrastes principais calculados: texto >= 5,45:1; foco 6,44:1 e borda de campo 3,98:1. Revisão de layout no navegador continua pendente.
+- Próximo passo exato: fechar a tabela de rastreabilidade, atualizar roteiro físico e pendências e registrar o marco documental em commit. Não houve push/deploy desta revisão.
+
 ## Estado atual: seis etapas implementadas e site publicado
 - Site: https://pedroayan.github.io/testtt/
 - Repositório: https://github.com/PedroAyan/testtt — branch main, origin configurado.

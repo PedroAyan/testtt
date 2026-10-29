@@ -1,10 +1,73 @@
-import { Link, Navigate, useParams } from 'react-router-dom';
+import { Link, Navigate, useLocation, useParams } from 'react-router-dom';
 import { useApp } from '../hooks/useApp';
+import { useCountryShortcut } from '../hooks/useCountryShortcut';
 import { ModelViewer3D } from '../components/ModelViewer3D';
 import { ListenButton } from '../components/ListenButton';
 import { asset, descriptionForYear } from '../services/contentRepository';
 import type { Sourced } from '../types/continent';
-export function Datum({label,data,unit=''}:{label:string;data:Sourced<number>;unit?:string}){return <div className="datum"><dt>{label}</dt><dd>{data.valor===null?'Dado em verificação':`${new Intl.NumberFormat('pt-BR').format(data.valor)}${unit}`}<small>Fonte: {data.fonte}</small></dd></div>;}
-export default function Continent(){const {id}=useParams(),app=useApp(),c=app.continents.find(c=>c.id===id);if(!c)return <Navigate to="/mapa" replace/>;const unlocked=app.unlocked.includes(c.id);if(!unlocked)return <main className="narrow locked-page"><Link className="back-link" to="/mapa">← Voltar ao mapa</Link><span className="eyebrow">UMA DESCOBERTA ESPERA POR VOCÊ</span><h1>Vamos conhecer<br/><em>{c.nome}?</em></h1><img className="guide-image" src={asset(c.dicaQr?.imagem||'images/guia-qr.svg')} alt="Folha com QR e marcador: procure o QR ao lado do quadrado preto"/><p>{c.dicaQr?.texto}</p><div className="actions"><Link className="button primary" to={`/qr/${c.id}`}>Escanear QR code ↗</Link><Link className="button secondary" to={`/ar/${c.id}`}>Iniciar realidade aumentada</Link></div><p className="micro">Abrir o endereço não registra uma descoberta. Use o QR dentro do app ou reconheça o marcador da folha.</p></main>;
-return <main><Link className="back-link" to="/mapa">← Voltar ao mapa</Link><div className="page-heading"><div><span className="eyebrow">✓ SEU DIÁRIO DE DESCOBERTAS</span><h1>{c.nome}<span className="title-dot" style={{background:c.cor}}/></h1></div><Link className="button secondary" to={`/ar/${c.id}`}>Ver em RA ↗</Link></div><div className="explore-layout"><ModelViewer3D key={c.id} file={c.modelo.arquivo} name={c.nome}/><section className="fact-card"><img className="fact-art" src={asset(c.fichaCurta.ilustracao)} alt={c.fichaCurta.ilustracaoAlt}/><span className="eyebrow">UMA PARADA PARA CONHECER</span><h2>Onde fica?</h2><p>{c.fichaCurta.localizacao}</p><h2>Você sabia?</h2><p>{c.fichaCurta.curiosidade}</p><ListenButton text={`${c.nome}. ${c.fichaCurta.localizacao} ${c.fichaCurta.curiosidade}`} audioUrl={c.audioUrl}/><details><summary>Saiba mais</summary><p>{descriptionForYear(c,app.year)}</p><p>{c.saibaMais?.texto}</p><dl><Datum label="Área" data={c.areaKm2} unit=" km²"/><Datum label={`População${c.populacao.anoReferencia?` (${c.populacao.anoReferencia})`:''}`} data={c.populacao}/><Datum label="Países no critério da coleção" data={c.quantidadePaises}/></dl>{(['caracteristicasGeograficas','climas','faunaFlora','cultura'] as const).map(k=><p key={k}><strong>{{caracteristicasGeograficas:'Paisagens',climas:'Climas',faunaFlora:'Fauna e flora',cultura:'Pessoas e histórias'}[k]}: </strong>{c[k].join(' · ')}</p>)}<p className="micro">{c.quantidadePaises.criterio}</p>{c.saibaMais?.links?.map(l=><a key={l.url} href={l.url} target="_blank" rel="noopener noreferrer">{l.titulo} ↗</a>)}</details></section></div><div className="study-actions">{c.id!=='antartida'&&<Link className="button secondary" to={`/paises/${c.id}`}>Conhecer os países →</Link>}<Link className="button primary" to={`/atividade/${c.id}`}>Fazer atividade ✦</Link><Link className="button secondary" to="/mapa">Voltar ao mapa</Link></div></main>;
+
+export function Datum({ label, data, unit = '' }: { label: string; data: Sourced<number>; unit?: string }) {
+  return <div className="datum"><dt>{label}</dt><dd>
+    {data.valor === null || data.verificar ? 'Dado em verificação' : `${new Intl.NumberFormat('pt-BR').format(data.valor)}${unit}`}
+    <small>Fonte: {data.fonte}</small>
+  </dd></div>;
+}
+
+export default function Continent() {
+  const { id } = useParams(), app = useApp(), location = useLocation();
+  const c = app.continents.find(c => c.id === id);
+  const shortcut = useCountryShortcut(c?.id);
+  if (!c) return <Navigate to="/mapa" replace />;
+  const unlocked = app.unlocked.includes(c.id);
+  if (!unlocked) return <main className="narrow locked-page">
+    <Link className="back-link" to="/mapa">← Voltar ao mapa</Link>
+    <span className="eyebrow">UMA DESCOBERTA ESPERA POR VOCÊ</span>
+    <h1>Vamos conhecer<br /><em>{c.nome}?</em></h1>
+    <img className="guide-image" src={asset(c.dicaQr?.imagem || 'images/guia-qr.svg')} alt="Folha com QR e marcador: procure o QR ao lado do quadrado preto" />
+    <p>{c.dicaQr?.texto}</p>
+    <div className="actions">
+      <Link className="button primary" to={`/qr/${c.id}`}>Escanear QR code ↗</Link>
+      <Link className="button secondary" to={`/ar/${c.id}`}>Iniciar realidade aumentada</Link>
+    </div>
+    <p className="micro">Abrir o endereço não registra uma descoberta. Use o QR dentro do app ou reconheça o marcador da folha.</p>
+  </main>;
+
+  return <main>
+    <Link className="back-link" to="/mapa">← Voltar ao mapa</Link>
+    {location.state?.discovered === true && <div className="notice success discovery-notice" role="status">
+      <span aria-hidden="true">✦</span><div><strong>Continente descoberto!</strong><p>{c.nome} agora faz parte da sua coleção. Vamos conhecer?</p></div>
+      <Link className="button secondary" to="/mapa">Minha coleção</Link>
+    </div>}
+    <div className="page-heading"><div><span className="eyebrow">✓ SEU DIÁRIO DE DESCOBERTAS</span>
+      <h1>{c.nome}<span className="title-dot" style={{ background: c.cor }} /></h1></div>
+      <Link className="button secondary" to={`/ar/${c.id}`}>Ver em RA ↗</Link>
+    </div>
+    <div className="explore-layout">
+      <ModelViewer3D key={c.id} file={c.modelo.arquivo} name={c.nome} />
+      <section className="fact-card country-sheet">
+        {c.id !== 'antartida' && <>
+          <div className="sheet-grip" aria-hidden="true" onTouchStart={shortcut.onTouchStart} onTouchEnd={shortcut.onTouchEnd} onTouchCancel={shortcut.onTouchCancel}><span /></div>
+          {shortcut.showHint && <div className="gesture-hint"><p>Arraste a alça para baixo ou toque em “Conhecer os países”.</p><button onClick={shortcut.dismissHint} aria-label="Fechar dica de gesto">Entendi</button></div>}
+        </>}
+        <img className="fact-art" src={asset(c.fichaCurta.ilustracao)} alt={c.fichaCurta.ilustracaoAlt} />
+        <span className="eyebrow">UMA PARADA PARA CONHECER</span>
+        <h2>Onde fica?</h2><p>{c.fichaCurta.localizacao}</p>
+        <h2>Você sabia?</h2><p>{c.fichaCurta.curiosidade}</p>
+        <ListenButton text={`${c.nome}. ${c.fichaCurta.localizacao} ${c.fichaCurta.curiosidade}`} audioUrl={c.audioUrl} />
+        <details><summary>Saiba mais</summary>
+          <p>{descriptionForYear(c, app.year)}</p><p>{c.saibaMais?.texto}</p>
+          <dl><Datum label="Área" data={c.areaKm2} unit=" km²" />
+            <Datum label={`População${c.populacao.anoReferencia ? ` (${c.populacao.anoReferencia})` : ''}`} data={c.populacao} />
+            <Datum label="Países no critério da coleção" data={c.quantidadePaises} /></dl>
+          {(['caracteristicasGeograficas', 'climas', 'faunaFlora', 'cultura'] as const).map(k => <p key={k}>
+            <strong>{{ caracteristicasGeograficas: 'Paisagens', climas: 'Climas', faunaFlora: 'Fauna e flora', cultura: 'Pessoas e histórias' }[k]}: </strong>{c[k].join(' · ')}
+          </p>)}
+          <p className="micro">{c.quantidadePaises.criterio}</p>
+          {c.saibaMais?.links?.map(l => <a key={l.url} href={l.url} target="_blank" rel="noopener noreferrer">{l.titulo} ↗</a>)}
+        </details>
+        {c.id !== 'antartida' && <Link className="button secondary country-entry" to={`/paises/${c.id}`}>Conhecer os países →</Link>}
+      </section>
+    </div>
+    <div className="study-actions"><Link className="button primary" to={`/atividade/${c.id}`}>Fazer atividade ✦</Link><Link className="button secondary" to="/mapa">Voltar ao mapa</Link></div>
+  </main>;
 }
