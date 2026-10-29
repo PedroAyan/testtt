@@ -4,7 +4,7 @@
 - Implementação local e verificações concluídas: typecheck, 11 testes, build e 35 pares de contraste passaram. Planeta, folha e seis paisagens revisados como arte isolada; isso não equivale à revisão da interface.
 - Comparação antes/depois no navegador NÃO EXECUTADA: `cua.getState()` retornou host indisponível, sem navegadores; Computer Use encerrou o acesso nativo ao Chrome por não conseguir determinar a URL com segurança. Não houve contorno por outro mecanismo.
 - Pendente: executar a nova seção de `docs/TESTE-NO-CELULAR.md` a 320/360/390 px e desktop, paisagem, 200%, foco/teclado/leitor de tela e preferências de movimento/transparência/contraste. Conferir especialmente reserva de espaço sob navegação inferior e arte da ficha junto à dica de gesto. Avaliação com crianças e câmera/AR físicas continuam NÃO VALIDADAS.
-- Sem pendências novas de dados, modelos, fontes ou dependências. Alterações locais ainda não publicadas. Decisões das três skills e evidências em `docs/DIRECAO-VISUAL-INFANTIL.md`.
+- Sem pendências novas de dados, modelos, fontes ou dependências. Reformulação publicada no commit `d6f8a23`; workflow `40953119140` com build/deploy bem-sucedidos. Recursos HTTP e nova arte/JS/CSS conferidos em https://pedroayan.github.io/testtt/ . Decisões das três skills e evidências em `docs/DIRECAO-VISUAL-INFANTIL.md`. Revisão visual e física continuam pendentes.
 
 ## Critérios permanentes de acessibilidade infantil — 2026-10-29
 - Orientações registradas no `AGENTS.md` da raiz e na `SPEC.md` §1/§7. Esta atualização é documental: não valida retroativamente a interface implementada.

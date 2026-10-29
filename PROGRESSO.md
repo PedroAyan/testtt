@@ -1,5 +1,12 @@
 # Progresso — Exploradores do Mundo
 
+## Reformulação ilustrada publicada — 2026-10-29
+- Pedido de envio ao repositório atendido: `git push origin main` enviou os três commits pendentes, até `d6f8a23c1240c002ace57dd88100350427dbb350`, para https://github.com/PedroAyan/testtt . SHA remoto conferido com `git ls-remote`.
+- Workflow https://github.com/PedroAyan/testtt/actions/runs/40953119140 terminou com `success` nos jobs build e deploy. Executou typecheck, testes, geração dos marcadores e build. Site: https://pedroayan.github.io/testtt/ .
+- `node scripts/check-published.mjs`: exit 0, página/JS/Organizador e recursos dos seis continentes disponíveis; GLBs públicos idênticos aos locais. `node artifacts/revisao-visual/check-published-redesign.mjs`: exit 0; planeta, folha, seis paisagens e tokens com SHA-256 igual ao local; Home e CSS atuais contêm a nova composição. Caminhos dos chunks resolvidos a partir da entrada pública atual.
+- Nenhuma revisão visual em navegador ou validação física foi realizada nesta publicação. Próximo passo exato: executar a seção de reformulação ilustrada em `docs/TESTE-NO-CELULAR.md`; câmera/AR continuam NÃO VALIDADAS fisicamente.
+- Registro posterior somente documental, com `[skip ci]`, sem alteração do app publicado. Referência local e `windbg.appinstaller` não foram enviados.
+
 ## Reformulação visual com as três skills — concluída localmente (2026-10-29)
 - Referência inspecionada, especificação/fluxos e skills lidos. Plano de composição, tokens, revisão prévia e bloqueio de navegador registrados em `docs/DIRECAO-VISUAL-INFANTIL.md`.
 - Implementados: planeta-guia, acolhida integrada, navegação móvel com ícone/nome, orientação com três cenas, coleção com campos orgânicos, folha ilustrada/legendada e seis paisagens novas. Arte autoral MIT e SVGs preservados pelo gerador de dados. Sem novas dependências.
