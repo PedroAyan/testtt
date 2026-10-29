@@ -1,5 +1,13 @@
 # Progresso — Exploradores do Mundo
 
+## Skills globais de design do Emil — 2026-10-29
+- Pedido concluído: instalar as skills de design úteis da coleção oficial `https://github.com/emilkowalski/skills`, versão `a81dbca07f2217b7103e510c0f13f8d5b017afc9`.
+- Instaladas globalmente em `C:\Users\ayan-\.codex\skills` pelo `install-skill-from-github.py`: `animate`, `animate-expo`, `animation-performance`, `animation-vocabulary`, `ask-sonner`, `break-ui`, `find-animation-opportunities`, `improve-animations`, `mobile-native`, `pick-ui-library`, `prototype`, `remove-animations` e `review-animations`.
+- `emil-design-eng` e `apple-design` já estavam em `C:\Users\ayan-\.agents\skills` e foram preservadas: total de 15 skills de design do Emil. `write-swift` ficou de fora por tratar de programação em Swift.
+- Verificado em PowerShell: metadados das 13 skills, presença dos arquivos de apoio, SHA-256 dos 21 arquivos oficiais idêntico ao arquivo da versão consultada e licença MIT incluída nas 13 pastas. Instalação e verificação terminaram com exit 0.
+- A instalação não executou as novas skills nem alterou o aplicativo; testes/build do app não se aplicam a esta instalação global. O carregamento no Codex ainda não foi observado nesta sessão.
+- Próximo passo exato: as novas skills estarão disponíveis na próxima mensagem; usar a pertinente quando houver uma tarefa de design. Continuam as pendências de revisão visual e teste físico registradas abaixo.
+
 ## Etapa atual — Apple e paleta sálvia publicadas (2026-10-29)
 - Pedido atual: reformular a aparência com `apple-design`, usar as cores da imagem enviada e enviar ao GitHub ao concluir. Plano, amostragem e revisão contra o pedido em `docs/DIRECAO-APPLE-SALVIA.md`.
 - SPEC/AGENTS/PROGRESSO/PENDENCIAS e skills lidos; interface existente e referência examinadas. Verde de fundo `#eef3e9`, suporte `#e0e9d8` e tinta `#344b46` extraídos da imagem.
