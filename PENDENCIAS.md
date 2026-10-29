@@ -1,5 +1,10 @@
 # Pendências
 
+## Apple e paleta sálvia — 2026-10-29
+- Revisão das telas no navegador bloqueada: host indisponível e Computer Use nativo interrompido por não identificar a URL do Chrome com segurança. Não foi usada outra automação para contornar.
+- Após implementação, conferir início/mapa/ficha/atividades/Organizador em 320/360/390 px, desktop, paisagem, texto 200%, teclado, leitor de tela, movimento/transparência reduzida e contraste reforçado. Validar rastreamento e interrupção do gesto da ficha, com botão de países sempre disponível.
+- Câmera/QR/AR em aparelho físico e avaliação com crianças continuam NÃO VALIDADAS. Usar `docs/TESTE-NO-CELULAR.md`.
+
 ## Reformulação visual ilustrada — 2026-10-29
 - Implementação local e verificações concluídas: typecheck, 11 testes, build e 35 pares de contraste passaram. Planeta, folha e seis paisagens revisados como arte isolada; isso não equivale à revisão da interface.
 - Comparação antes/depois no navegador NÃO EXECUTADA: `cua.getState()` retornou host indisponível, sem navegadores; Computer Use encerrou o acesso nativo ao Chrome por não conseguir determinar a URL com segurança. Não houve contorno por outro mecanismo.

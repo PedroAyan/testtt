@@ -1,5 +1,11 @@
 # Progresso — Exploradores do Mundo
 
+## Etapa atual — Apple e paleta sálvia (2026-10-29)
+- Pedido atual: reformular a aparência com `apple-design`, usar as cores da imagem enviada e enviar ao GitHub ao concluir. Plano, amostragem e revisão contra o pedido em `docs/DIRECAO-APPLE-SALVIA.md`.
+- SPEC/AGENTS/PROGRESSO/PENDENCIAS e skills lidos; interface existente e referência examinadas. Verde de fundo `#eef3e9`, suporte `#e0e9d8` e tinta `#344b46` extraídos da imagem.
+- Revisão visual bloqueada nesta sessão: host de navegador indisponível; Computer Use nativo interrompido por não conseguir identificar a URL do Chrome com segurança. Sem contorno por outra automação. Continuar implementação autorizada e separar código de validação visual/física.
+- Próximo passo exato: implementar fonte do sistema, composição e materiais sálvia, lista agrupada de destinos, feedback e gesto contínuo; executar os comandos essenciais; commitar e publicar no GitHub.
+
 ## Reformulação ilustrada publicada — 2026-10-29
 - Pedido de envio ao repositório atendido: `git push origin main` enviou os três commits pendentes, até `d6f8a23c1240c002ace57dd88100350427dbb350`, para https://github.com/PedroAyan/testtt . SHA remoto conferido com `git ls-remote`.
 - Workflow https://github.com/PedroAyan/testtt/actions/runs/40953119140 terminou com `success` nos jobs build e deploy. Executou typecheck, testes, geração dos marcadores e build. Site: https://pedroayan.github.io/testtt/ .
