@@ -3,7 +3,8 @@
 ## Acesso ADM — revisão de 2026-10-29
 - Hash publicado em `VITE_ORGANIZER_PASSWORD_HASH`; bundle público conferido por derivação PBKDF2 contra a senha escolhida. Sem senha ou hash expostos nos relatórios.
 - Modo ADM libera as seis fichas no app normal e escreve QR, marcador, atividade, perfil e reinício somente na memória durante a sessão. Sair limpa esses dados.
-- Pendente: validar manualmente login, navegação e saída no navegador; validar câmera e RA em celular físico. O ajuste do rótulo “Sair do ADM” aguarda deploy.
+- Verificado após deploy: login publicado possui o hash esperado (comparação PBKDF2 sem exibir credenciais); app, seis conjuntos de recursos e o rótulo “Sair do ADM” estão no site. Actions `40817056904` concluiu com sucesso.
+- Pendente: executar manualmente login, navegação e saída no navegador; validar câmera e RA em celular físico. Não declarar câmera/RA validadas até esse teste.
 
 ## Revisão de 2026-10-29
 - Auditoria dos cinco fluxos concluída por comparação visual do PDF local com SPEC §14 e rastreamento do código: docs/AUDITORIA-FLUXOGRAMAS.md. A tabela distingue código, testes de domínio/HTML e teste físico pendente.

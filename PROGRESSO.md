@@ -1,13 +1,15 @@
 # Progresso — Exploradores do Mundo
 
-## Sessão ADM — publicada; ajuste de rótulo em andamento
+## Sessão ADM — publicada e conferida (2026-10-29)
 - O responsável pediu os seis continentes liberados no próprio app enquanto estiver logado como ADM, com a senha escolhida `camila`.
 - Hash PBKDF2 atualizado pela GitHub API na variável `VITE_ORGANIZER_PASSWORD_HASH` (HTTP 204); a senha em texto não foi adicionada ao código.
 - Login ADM ativa mapa/fichas/atividades normais com os seis continentes liberados. QR/AR/atividades/perfil/reset usam memória temporária, descartada ao sair; progresso regular não é alterado.
 - `npm.cmd run typecheck` e `npm.cmd run build` passaram; seis conjuntos de dados/arquivos validados. `git diff --check` sem erros.
 - Publicação principal: commit `4f450d5` no site; hash PBKDF2 comparado ao valor escolhido no bundle público, sem exibir senha ou hash. `node scripts/check-published.mjs` passou; Actions concluiu build/testes/deploy.
 - O site usa o app normal durante a sessão ADM: seis continentes liberados; QR, marcador, atividades e perfil gravam apenas em memória. A sessão encerra e descarta os dados ao sair.
-- Rótulo “Sair do ADM” atualizado localmente; `npm.cmd run typecheck` e `npm.cmd run build` passaram. Próximo passo exato: publicar este ajuste e verificar o rótulo no bundle.
+- Rótulo “Sair do ADM” publicado no commit `9055404dfb72128c6c9cdf37e8eb5f4c0e93cf89`; workflow https://github.com/PedroAyan/testtt/actions/runs/40817056904 concluiu `success`.
+- `npm.cmd run typecheck` e `npm.cmd run build` passaram localmente; o workflow executou testes, build e deploy. `node scripts/check-published.mjs` e `node artifacts/auditoria/verify-admin-published.mjs` passaram após o deploy.
+- Próximo passo exato: executar o roteiro docs/TESTE-NO-CELULAR.md em aparelhos físicos; câmera e RA permanecem NÃO VALIDADAS.
 
 ## Publicação concluída — 2026-10-29
 - Repositório atualizado: https://github.com/PedroAyan/testtt , branch main. Os três commits da auditoria e do visual foram enviados por `git push origin main`.
