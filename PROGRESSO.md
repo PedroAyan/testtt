@@ -1,5 +1,10 @@
 # Progresso — Exploradores do Mundo
 
+## Reformulação visual com as três skills — em implementação (2026-10-29)
+- Referência inspecionada, especificação/fluxos e skills lidos. Plano de composição, tokens, revisão prévia e bloqueio de navegador registrados em `docs/DIRECAO-VISUAL-INFANTIL.md`.
+- Próximo passo exato: implementar planeta-guia, acolhida integrada, navegação móvel, orientação por cenas e composição da coleção/fichas; executar typecheck, testes, build e contraste. Não alterar AR, serviços de domínio, dados ou modelos.
+- Comparação antes/depois no navegador bloqueada: host indisponível; Computer Use encerrou a alternativa Chrome por não identificar a URL com segurança. Não contornar o bloqueio. Validação física continua pendente.
+
 ## Orientações permanentes de interface infantil — 2026-10-29
 - Seção acrescentada ao `AGENTS.md` da raiz, entre estilo de código e relatório final, para orientar alterações de interface em todo o projeto: skills pertinentes, escopo proporcional, decisões concretas e revisão visual quando disponível/autorizada.
 - `SPEC.md` §1 e §7 complementadas com compreensão infantil, instruções por etapa, ícones com rótulos, acessibilidade no celular/texto ampliado, estados claros e separação do percurso infantil e dos detalhes do Organizador. Fluxos, desbloqueio, arquitetura e requisitos de AR preservados.
