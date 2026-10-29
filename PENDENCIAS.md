@@ -1,5 +1,8 @@
 # Pendências
 
+## Visualização pública do Organizador — 2026-10-29
+- Implementada localmente; typecheck/build passaram. Falta conferir após publicação. A visualização mostra o conteúdo publicado atual; alterações em rascunho precisam ser exportadas/publicadas para aparecer.
+
 ## Acesso ADM — revisão de 2026-10-29
 - Hash publicado em `VITE_ORGANIZER_PASSWORD_HASH`; bundle público conferido por derivação PBKDF2 contra a senha escolhida. Sem senha ou hash expostos nos relatórios.
 - Modo ADM libera as seis fichas no app normal e escreve QR, marcador, atividade, perfil e reinício somente na memória durante a sessão. Sair limpa esses dados.

@@ -19,9 +19,9 @@ function Shell(){
  useEffect(()=>{const id=continentFromURL(window.location.search);if(id&&!window.location.hash)navigate(`/continente/${id}`,{replace:true});},[]);
  useEffect(()=>{window.scrollTo(0,0);document.getElementById('content')?.focus({preventScroll:true});},[location.pathname]);
  return <>
-  <a className="skip-link" href="#content">Pular para o conteúdo</a><Navigation/>
+  <a className="skip-link" href="#content">Pular para o conteúdo</a><Navigation publicView={location.state?.organizerPublicView===true}/>
   {app.warning&&<div className="global-warning" role="status">{app.warning}</div>}
-  {app.organizerPreview&&<div className="global-warning organizer-preview-notice" role="status">Modo ADM ativo: os seis continentes estão liberados durante esta sessão. O progresso dos alunos não foi alterado.</div>}
+  {app.organizerPreview&&location.state?.organizerPublicView!==true&&<div className="global-warning organizer-preview-notice" role="status">Modo ADM ativo: os seis continentes estão liberados durante esta sessão. O progresso dos alunos não foi alterado.</div>}
   <div id="content" tabIndex={-1}><Suspense fallback={<main><p role="status">Preparando sua viagem…</p></main>}>
    {app.ready?<Routes>
     <Route path="/" element={<Home/>}/><Route path="/orientacao" element={<Orientation/>}/>

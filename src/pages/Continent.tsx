@@ -20,7 +20,7 @@ export default function Continent() {
   if (!c) return <Navigate to="/mapa" replace />;
   const unlocked = app.unlocked.includes(c.id);
   if (!unlocked) return <main className="narrow locked-page">
-    <Link className="back-link" to="/mapa">← Voltar ao mapa</Link>
+    {location.state?.organizerPublicView === true ? <div className="organizer-public-preview-bar"><span>Visualização pública do conteúdo publicado</span><Link className="button secondary" to="/organizador">Voltar ao Organizador</Link></div> : <Link className="back-link" to="/mapa">← Voltar ao mapa</Link>}
     <span className="eyebrow">UMA DESCOBERTA ESPERA POR VOCÊ</span>
     <h1>Vamos conhecer<br /><em>{c.nome}?</em></h1>
     <img className="guide-image" src={asset(c.dicaQr?.imagem || 'images/guia-qr.svg')} alt="Folha com QR e marcador: procure o QR ao lado do quadrado preto" />
