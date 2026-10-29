@@ -2,7 +2,7 @@
 
 Nenhum teste físico foi executado pelo agente. Testes automatizados de lógica/build não validam câmera, leitura de papel nem pose AR.
 
-Revisão de 2026-10-29: os 11 testes de domínio/artefatos/HTML e o build passaram. O navegador não esteve disponível ao agente; nenhum item manual abaixo foi marcado como aprovado. Teste o build desta revisão: a publicação anterior não se atualiza com commits somente locais.
+Revisão de 2026-10-29: os 11 testes de domínio/artefatos/HTML e o build passaram. O navegador não esteve disponível ao agente; nenhum item manual abaixo foi marcado como aprovado. Esta revisão foi publicada em https://pedroayan.github.io/testtt/ pelo workflow 40814989509; arquivos novos e recursos responderam HTTP 200. Use esse site para o roteiro com as folhas públicas, ou siga a preparação local abaixo.
 
 ## Preparação
 1. Node.js 22.12+ e celular na mesma rede do computador.

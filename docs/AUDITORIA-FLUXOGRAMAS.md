@@ -160,4 +160,6 @@ Juba foi confirmada no campo “Capital city” da [UNdata — South Sudan](http
 | `git diff --check` | Sem erros de whitespace |
 | Computer Use — inventário de apps/navegadores | Indisponível: “The browser access host is unavailable” e “Computer Use native pipe is unavailable” |
 | Câmera, QR impresso, pose/gestos/teardown no celular | NÃO EXECUTADOS, NÃO VALIDADOS; seguir `docs/TESTE-NO-CELULAR.md` |
-| Publicação desta revisão | Não executada; build e commits são locais |
+| Publicação desta revisão | Concluída posteriormente em 2026-10-29: `git push origin main`; código `7a5b95a`; workflow [40814989509](https://github.com/PedroAyan/testtt/actions/runs/40814989509) com build/deploy `success` |
+| Verificação pública após deploy | `node scripts/check-published.mjs`, exit 0: página/JS, hash do Organizador, bibliotecas locais e seis conjuntos HTTP 200; GLBs iguais aos locais |
+| Confirmação dos novos conteúdos | Verificador local em `artifacts/auditoria/check-new-published.mjs`, exit 0: Home/ficha/RA novos, fonte de Juba, CSS pastel, SVG e tokens públicos iguais aos locais por SHA-256 |

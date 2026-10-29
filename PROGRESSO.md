@@ -1,5 +1,14 @@
 # Progresso — Exploradores do Mundo
 
+## Publicação concluída — 2026-10-29
+- Repositório atualizado: https://github.com/PedroAyan/testtt , branch main. Os três commits da auditoria e do visual foram enviados por `git push origin main`.
+- Site atualizado: https://pedroayan.github.io/testtt/ . Código publicado: `7a5b95a6f64b7198896013af33310441394a6ef7`.
+- GitHub Actions: https://github.com/PedroAyan/testtt/actions/runs/40814989509 — build e deploy concluídos com `success`; executou npm ci, typecheck, testes, build:markers e build em Node 22.
+- `node scripts/check-published.mjs`: exit 0; página/JS, Organizador com hash configurado, bibliotecas AR locais e GLB/QR/marcador/PDF dos seis continentes responderam HTTP 200; GLBs iguais aos locais.
+- `node artifacts/auditoria/check-new-published.mjs`: exit 0; confirmou Home com ilustração nova, confirmação na ficha, resumo RA, fonte de Juba e CSS pastel. SVG novo e tokens públicos têm SHA-256 igual aos arquivos locais.
+- O registro documental posterior usa `[skip ci]`, pois não altera o app nem exige novo deploy. A imagem de referência permanece local, fora dos commits e do site.
+- Próximo passo exato: abrir o site atualizado em Android Chrome e iPhone Safari e executar docs/TESTE-NO-CELULAR.md com as folhas públicas. Câmera/RA, áudio, WebGL e revisão visual de interação continuam NÃO VALIDADOS fisicamente.
+
 ## Etapa atual — auditoria e revisão visual concluídas localmente (2026-10-29)
 - AGENTS.md, SPEC.md, PROGRESSO.md e PENDENCIAS.md lidos antes de alterações.
 - PDF local de cinco páginas renderizado e lido visualmente; cópias raiz/docs idênticas por SHA-256. Referência local `referencia-visual.png` inspecionada.
@@ -13,7 +22,7 @@
 - Última execução: `npm.cmd run typecheck` e `npm.cmd run build`, ambos exit 0; `npm.cmd test`, 11 testes em 2 arquivos, todos passaram. Uma regressão essencial de HTML foi acrescentada; não executa câmera/WebGL.
 - Contrastes principais calculados: texto >= 5,45:1; foco 6,44:1 e borda de campo 3,98:1. Revisão de layout no navegador continua pendente.
 - Documentação finalizada: auditoria de cada passo dos cinco fluxos, roteiro físico ampliado e pendências atualizadas. Nenhuma validação de câmera/RA foi declarada.
-- Commits desta revisão: `0c99b76` (leitura/achados) e `1d6ffcd` (implementação); marco documental registrado em commit posterior. Não houve push/deploy desta revisão.
+- Commits desta revisão: `0c99b76` (leitura/achados), `1d6ffcd` (implementação) e `7a5b95a` (auditoria final). Publicação concluída conforme o registro acima.
 - Imagem local do responsável preservada como referência; não incorporada ao build nem adicionada ao commit por não ter licença de redistribuição informada.
 - Próximo passo exato: executar `npm.cmd run dev`, configurar a URL HTTPS conforme README, gerar/imprimir as folhas para essa URL e cumprir docs/TESTE-NO-CELULAR.md separadamente em Android Chrome e iPhone Safari. Registrar aparelho, navegador, responsável e resultado de cada item. A revisão completa de layout, voz e Organizador também continua manual.
 
