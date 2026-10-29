@@ -94,6 +94,7 @@ async function writeModel(id, geometry, color, country=false) {
 }
 // A topologia dissolve fronteiras internas antes da extrusão.
 const topo=topology({world:geo});
+const mapTopo=simplify(presimplify(topo),0.04);
 const mapProjection=geoEqualEarth().fitExtent([[15,15],[985,480]],geo);
 const map=[];
 for(const id of IMPLEMENTED_CONTINENTS){
@@ -112,11 +113,12 @@ for(const id of IMPLEMENTED_CONTINENTS){
     if(!generated)delete c.modelo;
   }
   await writeFile(dataPath,JSON.stringify(data,null,2)+'\n');
-  map.push({id,nome:META[id].nome,cor:META[id].cor,d:geoPath(mapProjection)(continent),label:META[id].label});
+  const mapShape=merge(mapTopo,mapTopo.objects.world.geometries.filter(g=>mapping[g.properties.ADM0_A3]===id));
+  map.push({id,nome:META[id].nome,cor:META[id].cor,d:geoPath(mapProjection)(mapShape),label:META[id].label});
   console.log(`${id}: ${report.triangulos} triângulos, ${report.tamanhoKb} KB`);
 }
 // Mesmo na Etapa 1 há seis alvos no mapa, com os ainda não implementados inativos.
-for(const id of Object.keys(META).filter(id=>!IMPLEMENTED_CONTINENTS.includes(id))){const c=merge(topo,topo.objects.world.geometries.filter(g=>mapping[g.properties.ADM0_A3]===id));map.push({id,nome:META[id].nome,cor:META[id].cor,d:geoPath(mapProjection)(c),label:META[id].label});}
+for(const id of Object.keys(META).filter(id=>!IMPLEMENTED_CONTINENTS.includes(id))){const c=merge(mapTopo,mapTopo.objects.world.geometries.filter(g=>mapping[g.properties.ADM0_A3]===id));map.push({id,nome:META[id].nome,cor:META[id].cor,d:geoPath(mapProjection)(c),label:META[id].label});}
 await writeFile('src/data/generated/map.json',JSON.stringify(map));
 await writeFile('public/images/world-map.svg',`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500">${map.map(c=>`<path id="${c.id}" d="${c.d}" fill="${c.cor}" stroke="#5c3a45" stroke-width="0.5"/>`).join('')}</svg>`);
 await writeFile('models-report.json',JSON.stringify(reports,null,2)+'\n');

@@ -4,8 +4,18 @@ const params=new URLSearchParams(location.search), id=params.get('continente'), 
 const embedded=window.parent!==window,origin=location.origin,repo=new LocalStorageRepository();
 const status=document.querySelector('#status');
 let scene,marker,model,stableTimer,foundAt=0,stopped=false,scale=1,rotation=0,tilt=0;
+const streams=new Set();
 const post=(type,payload)=>{if(embedded)window.parent.postMessage({app:'exploradores-ar',version:1,type,payload},origin);};
 function error(type,code,text){status.textContent=text;post(type,{code});}
+// AR.js 3.4.7 não preserva sempre o erro nativo em CustomEvent.detail.
+// A interceptação mantém o código de permissão e fecha streams que chegam após sair.
+if(navigator.mediaDevices?.getUserMedia){
+ const nativeGetUserMedia=navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+ navigator.mediaDevices.getUserMedia=async constraints=>{
+  try{const stream=await nativeGetUserMedia(constraints);if(stopped){stream.getTracks().forEach(t=>t.stop());throw new DOMException('Cena encerrada','AbortError');}streams.add(stream);return stream;}
+  catch(e){if(!stopped)error(e.name==='NotAllowedError'?'ar:camera-denied':'ar:camera-error',e.name,e.name==='NotAllowedError'?'Câmera bloqueada. Autorize nas permissões do site.':'Não foi possível acessar a câmera.');throw e;}
+ };
+}
 function transform(){if(model){model.setAttribute('scale',`${scale} ${scale} ${scale}`);model.setAttribute('rotation',`${tilt} ${rotation} 0`);}}
 function action(type,payload={}){
  if(type==='ar:stop'){stop();return;}
@@ -26,6 +36,7 @@ async function stableFound(){
 function stop(){
  if(stopped){post('ar:stopped');return;}stopped=true;clearTimeout(stableTimer);
  scene?.pause();
+ streams.forEach(s=>s.getTracks().forEach(t=>t.stop()));streams.clear();
  const ar=scene?.systems?.arjs?._arSession;
  const source=ar?.arSource?.domElement;
  if(source?.srcObject)source.srcObject.getTracks().forEach(t=>t.stop());
@@ -42,7 +53,7 @@ function start(){
  if(!ids.includes(id)||modelPath!==`models/${id}.glb`){error('ar:model-error','invalid','Continente ou modelo inválido.');return;}
  const canvas=document.createElement('canvas');
  if(!isSecureContext||!navigator.mediaDevices?.getUserMedia||!(canvas.getContext('webgl2')||canvas.getContext('webgl'))){error('ar:camera-error','unsupported','É necessário HTTPS, câmera e WebGL para usar a RA.');return;}
- if(!window.AFRAME||!AFRAME.components.arjs){error('ar:camera-error','unsupported','As bibliotecas de RA não carregaram.');return;}
+ if(!window.AFRAME||!AFRAME.systems.arjs){error('ar:camera-error','unsupported','As bibliotecas de RA não carregaram.');return;}
  scene=document.createElement('a-scene');scene.setAttribute('embedded','');scene.setAttribute('vr-mode-ui','enabled: false');scene.setAttribute('renderer','antialias: true; alpha: true; precision: mediump; colorManagement: true;');
  scene.setAttribute('arjs','sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; cameraParametersUrl: ../vendor/camera_para.dat; patternRatio: 0.5; maxDetectionRate: 30;');
  marker=document.createElement('a-marker');marker.setAttribute('type','barcode');marker.setAttribute('value',String(ids.indexOf(id)));marker.setAttribute('emitevents','true');marker.setAttribute('smooth','false');

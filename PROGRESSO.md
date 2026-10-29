@@ -1,6 +1,6 @@
 # Progresso — Exploradores do Mundo
 
-## Etapa atual: Etapa 1 implementada; seguindo para Etapa 2
+## Etapa atual: Etapa 2 — arquitetura reutilizável
 - AGENTS.md e SPEC.md lidos integralmente; §14 governa a navegação.
 - Pasta original continha apenas AGENTS.md, SPEC.md e PROMPT-CODEX.md.
 - Repositório Git próprio iniciado nesta pasta (o repositório ancestral era C:/).
@@ -9,5 +9,7 @@
 - Verificados: `npm.cmd run typecheck`, `npm.cmd run build`, `npm.cmd test` (8 testes essenciais).
 - Build/Vitest exigiram execução fora do sandbox porque esbuild recebeu Acesso negado ao resolver diretórios.
 - Próximo passo exato: formalizar arquitetura reutilizável; expandir IMPLEMENTED_CONTINENTS para os seis, gerar e validar dados/modelos/folhas.
+- Leitor QR, ponte AR, repositórios e pipeline independem da África. Configuração única em scripts/config.mjs.
+- Ajustes da Etapa 2: mapa com simplificação própria, build Node sem encadeamento de shell, fechamento de streams tardios da AR e correção da detecção do sistema arjs.
 - Em seguida: reutilização, seis conjuntos, países/atividades, publicação/documentação e Organizador.
 - Câmera e AR: NÃO VALIDADOS em celular físico.
