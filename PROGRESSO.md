@@ -1,11 +1,13 @@
 # Progresso — Exploradores do Mundo
 
-## Sessão ADM — atualização em andamento
+## Sessão ADM — publicada; ajuste de rótulo em andamento
 - O responsável pediu os seis continentes liberados no próprio app enquanto estiver logado como ADM, com a senha escolhida `camila`.
 - Hash PBKDF2 atualizado pela GitHub API na variável `VITE_ORGANIZER_PASSWORD_HASH` (HTTP 204); a senha em texto não foi adicionada ao código.
 - Login ADM ativa mapa/fichas/atividades normais com os seis continentes liberados. QR/AR/atividades/perfil/reset usam memória temporária, descartada ao sair; progresso regular não é alterado.
 - `npm.cmd run typecheck` e `npm.cmd run build` passaram; seis conjuntos de dados/arquivos validados. `git diff --check` sem erros.
-- Próximo passo exato: commit/push do código; aguardar Actions e conferir login/hash e chunks públicos. O workflow executará a suíte existente de testes.
+- Publicação principal: commit `4f450d5` no site; hash PBKDF2 comparado ao valor escolhido no bundle público, sem exibir senha ou hash. `node scripts/check-published.mjs` passou; Actions concluiu build/testes/deploy.
+- O site usa o app normal durante a sessão ADM: seis continentes liberados; QR, marcador, atividades e perfil gravam apenas em memória. A sessão encerra e descarta os dados ao sair.
+- Rótulo “Sair do ADM” atualizado localmente; `npm.cmd run typecheck` e `npm.cmd run build` passaram. Próximo passo exato: publicar este ajuste e verificar o rótulo no bundle.
 
 ## Publicação concluída — 2026-10-29
 - Repositório atualizado: https://github.com/PedroAyan/testtt , branch main. Os três commits da auditoria e do visual foram enviados por `git push origin main`.

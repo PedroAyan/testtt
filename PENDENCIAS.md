@@ -1,9 +1,9 @@
 # Pendências
 
 ## Acesso ADM — revisão de 2026-10-29
-- Configuração solicitada atualizada: GitHub API aceitou o hash na variável de Actions (HTTP 204). O próximo build/deploy aplica a configuração ao site.
+- Hash publicado em `VITE_ORGANIZER_PASSWORD_HASH`; bundle público conferido por derivação PBKDF2 contra a senha escolhida. Sem senha ou hash expostos nos relatórios.
 - Modo ADM libera as seis fichas no app normal e escreve QR, marcador, atividade, perfil e reinício somente na memória durante a sessão. Sair limpa esses dados.
-- Login e saída ADM ainda precisam de conferência no site depois do deploy. Câmera e RA seguem NÃO VALIDADAS em celular.
+- Pendente: validar manualmente login, navegação e saída no navegador; validar câmera e RA em celular físico. O ajuste do rótulo “Sair do ADM” aguarda deploy.
 
 ## Revisão de 2026-10-29
 - Auditoria dos cinco fluxos concluída por comparação visual do PDF local com SPEC §14 e rastreamento do código: docs/AUDITORIA-FLUXOGRAMAS.md. A tabela distingue código, testes de domínio/HTML e teste físico pendente.
