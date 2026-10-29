@@ -55,7 +55,7 @@ Todos os recursos necessários ao build já estão versionados. Nenhuma CDN é u
 - Únicas portas: `discoverFromQR` valida QR capturado pela câmera; `discoverFromMarker` aceita somente o marcador selecionado com estabilidade contínua de 500 ms. URLs, navegação e Organizador não descobrem continentes.
 - Persistência versionada em `exploradores:v1`, validação na leitura e fallback em memória com aviso. Progresso do navegador não é proteção contra adulteração pelo próprio usuário.
 - React usa HashRouter e páginas pesadas carregadas sob demanda. `VITE_BASE_PATH` permite subpastas de GitHub Pages. As query strings de QR são convertidas para seleção sem conceder descoberta.
-- A cena em `public/ar/scene.html` é estática e isolada num iframe da mesma origem; somente mensagens validadas por origem, janela, app, versão e payload atravessam a fronteira. Teardown aguarda ACK ou 1500 ms e fecha streams, inclusive atrasados.
+- A cena em `public/ar/scene.html` é estática e isolada num iframe da mesma origem; somente mensagens validadas por origem, janela, app, versão e payload atravessam a fronteira. O iframe fica numa camada alinhada ao espaço da câmera, fora da árvore desmontada pelo React; permanece no mesmo nó/posição de DOM até o ACK ou 1500 ms, evitando reinicialização por movimentação de iframe durante teardown. Streams tardios também são fechados.
 - `public/ar/domain.js` é gerado de **exatamente os mesmos serviços TypeScript** de descoberta/persistência. O botão de página inteira é o plano B para Safari; grava o progresso pela mesma implementação. Não foi promovido a padrão sem teste físico.
 - AR.js 3.4.7 + A-Frame 1.6.0, model-viewer 4.0.0 e jsQR 1.4.0 em `public/vendor/`; licenças locais. Barcodes 3×3 0–5, gerados por matriz binária reproduzível, não confundidos com QR.
 - Modelos são filhos do marcador. Gestos só mudam escala/rotação locais; há botões equivalentes. Sem câmera/WebGL não é possível fazer uma nova descoberta; conteúdos já descobertos continuam acessíveis quando o visualizador é suportado.
@@ -99,12 +99,12 @@ Rascunhos em `exploradores:organizer:v1` são locais. **A senha é uma barreira 
 
 ## Publicar no GitHub Pages
 
-O workflow `.github/workflows/pages.yml` já existe. A pasta entregue não tem remote: não foi possível publicar ou verificar uma URL real sem o repositório de destino.
+O workflow `.github/workflows/pages.yml` usa o repositório informado pelo responsável: https://github.com/PedroAyan/testtt . A URL configurada é https://pedroayan.github.io/testtt/ . O resultado efetivo da publicação está registrado em PROGRESSO.md e docs/ENTREGA.md.
 
-1. Crie/escolha seu repositório e configure `origin` com a URL correta.
+1. O remote `origin` aponta para PedroAyan/testtt. Para reutilizar em outro repositório, troque origin e as variáveis de `.env.production`.
 2. Em Settings → Pages, escolha **GitHub Actions**. Em Settings → Secrets and variables → Actions → Variables, configure `VITE_ORGANIZER_PASSWORD_HASH` se for usar o Organizador.
 3. Envie a branch `master` ou `main`. O workflow instala, faz typecheck/testes, regenera os seis PDFs para a URL do Pages, faz build com subpasta correta e publica.
-4. Abra a URL retornada pelo job `deploy`; confira as seis folhas em `print/`, assets, QR e rastreamento no celular. Só distribua os PDFs baixados desse deploy, pois os PDFs do checkout apontam inicialmente para localhost.
+4. Abra a URL retornada pelo job `deploy`; confira as seis folhas em `print/`, assets, QR e rastreamento no celular. As folhas do checkout foram regeneradas para esse destino. Para testar por IP/túnel, configure `.env.local` e regenere novamente.
 5. Para build manual, defina `VITE_BASE_PATH=/NOME-DO-REPO/` e `VITE_PUBLIC_URL=https://USUARIO.github.io/NOME-DO-REPO/` no `.env.local`, depois `build:markers` e `build`.
 
 ## Verificação e limitações

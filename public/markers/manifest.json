@@ -2,42 +2,42 @@
   {
     "id": "africa",
     "barcode": 0,
-    "url": "https://localhost:5173/?continente=africa",
+    "url": "https://pedroayan.github.io/testtt/?continente=africa",
     "pdf": "print/africa-A4.pdf",
     "markerMm": 90
   },
   {
     "id": "america",
     "barcode": 1,
-    "url": "https://localhost:5173/?continente=america",
+    "url": "https://pedroayan.github.io/testtt/?continente=america",
     "pdf": "print/america-A4.pdf",
     "markerMm": 90
   },
   {
     "id": "antartida",
     "barcode": 2,
-    "url": "https://localhost:5173/?continente=antartida",
+    "url": "https://pedroayan.github.io/testtt/?continente=antartida",
     "pdf": "print/antartida-A4.pdf",
     "markerMm": 90
   },
   {
     "id": "asia",
     "barcode": 3,
-    "url": "https://localhost:5173/?continente=asia",
+    "url": "https://pedroayan.github.io/testtt/?continente=asia",
     "pdf": "print/asia-A4.pdf",
     "markerMm": 90
   },
   {
     "id": "europa",
     "barcode": 4,
-    "url": "https://localhost:5173/?continente=europa",
+    "url": "https://pedroayan.github.io/testtt/?continente=europa",
     "pdf": "print/europa-A4.pdf",
     "markerMm": 90
   },
   {
     "id": "oceania",
     "barcode": 5,
-    "url": "https://localhost:5173/?continente=oceania",
+    "url": "https://pedroayan.github.io/testtt/?continente=oceania",
     "pdf": "print/oceania-A4.pdf",
     "markerMm": 90
   }

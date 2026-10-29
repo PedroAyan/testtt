@@ -45,7 +45,7 @@ Revisão de artefatos: seis PDFs renderizados com PyMuPDF em cache local; todos 
 | 8. Organizador com hash, editor, exportar/importar e limitação documentada | **Implementado**; hash PBKDF2 e rejeição de override inválido testados. Fluxo visual/importação pelo navegador não validado; responsável precisa configurar hash próprio |
 | 9. Exploração sem câmera dos seis com países | **Implementado**; mesmos GLBs da AR e carregamento sob demanda. Parse Node verificado, interação WebGL em celular não validada |
 | 10. Typecheck, build e npm test | **Passaram**; 10 testes essenciais |
-| 11. Pages, README, SOURCES, PENDENCIAS e guias | **Arquivos concluídos**. Workflow incluído, mas **publicação não executada**: falta repositório/remote GitHub de destino |
+| 11. Pages, README, SOURCES, PENDENCIAS e guias | **Arquivos concluídos**. Destino informado posteriormente: PedroAyan/testtt; publicação em andamento, resultado registrado ao final deste relatório |
 
 ## Feito mas não verificado
 
