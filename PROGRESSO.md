@@ -1,12 +1,14 @@
 # Progresso — Exploradores do Mundo
 
-## Etapa atual — Apple e paleta sálvia (2026-10-29)
+## Etapa atual — Apple e paleta sálvia publicadas (2026-10-29)
 - Pedido atual: reformular a aparência com `apple-design`, usar as cores da imagem enviada e enviar ao GitHub ao concluir. Plano, amostragem e revisão contra o pedido em `docs/DIRECAO-APPLE-SALVIA.md`.
 - SPEC/AGENTS/PROGRESSO/PENDENCIAS e skills lidos; interface existente e referência examinadas. Verde de fundo `#eef3e9`, suporte `#e0e9d8` e tinta `#344b46` extraídos da imagem.
 - Revisão visual bloqueada nesta sessão: host de navegador indisponível; Computer Use nativo interrompido por não conseguir identificar a URL do Chrome com segurança. Sem contorno por outra automação. Continuar implementação autorizada e separar código de validação visual/física.
 - Implementação concluída: sistema sálvia e fonte do sistema; nova composição inicial/faixa de missão; materiais da navegação; destinos em lista agrupada; arte recolorida; arraste contínuo com Pointer Events/capture, resistência, projeção e mola crítica; botão de países preservado. Cena AR recebeu somente duas referências de token CSS; lógica AR e dados/persistência não mudaram.
 - `npm.cmd run typecheck`, `npm.cmd test` (15/15), `npm.cmd run build`, `node scripts/check-ui-contrast.mjs` (33/33), verificação dos tokens e `git diff --check` passaram. Arte isolada do planeta e folha rasterizada e examinada. Detalhes em `docs/DIRECAO-APPLE-SALVIA.md`.
-- Próximo passo exato: commitar a implementação, enviar com `git push origin main`, aguardar o workflow e conferir paleta/arte/CSS/chunks públicos atuais. Revisão visual, gesto real, câmera/AR e avaliação com crianças continuam pendentes.
+- Publicação concluída: implementação `5ad46f67a39ad553f99f18f0dd0a0eb1d20f3bd3` enviada a https://github.com/PedroAyan/testtt por `git -c safe.directory=C:/Users/ayan-/Desktop/claude push origin main`; SHA remoto conferido. Workflow https://github.com/PedroAyan/testtt/actions/runs/40957898631 terminou com `success`.
+- `node scripts/check-published.mjs` e `node artifacts/apple-salvia/check-published.mjs`: exit 0. Recursos dos seis continentes disponíveis; GLBs idênticos; Home/Collection/Continent/CSS públicos contêm a implementação nova; tokens, arte, cena HTML e fontes têm SHA-256 igual ao local. Site: https://pedroayan.github.io/testtt/ . Chunks resolvidos a partir da entrada pública atual, incluindo imports relativos.
+- Próximo passo exato: executar a seção Apple/sálvia de `docs/TESTE-NO-CELULAR.md` em navegador autorizado e nos aparelhos físicos. Revisão visual, gesto real, câmera/AR e avaliação com crianças continuam pendentes. Este registro posterior usa `[skip ci]`, sem alterar o app.
 
 ## Reformulação ilustrada publicada — 2026-10-29
 - Pedido de envio ao repositório atendido: `git push origin main` enviou os três commits pendentes, até `d6f8a23c1240c002ace57dd88100350427dbb350`, para https://github.com/PedroAyan/testtt . SHA remoto conferido com `git ls-remote`.

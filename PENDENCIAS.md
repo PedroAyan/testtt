@@ -2,6 +2,7 @@
 
 ## Apple e paleta sálvia — 2026-10-29
 - Código implementado e verificações locais concluídas: typecheck, 15 testes, build, 33 pares de contraste e consistência de tokens. Detalhes e comandos em `docs/DIRECAO-APPLE-SALVIA.md`. Sem novas dependências ou dados.
+- Publicado no GitHub/Pages: commit `5ad46f6`, workflow `40957898631` com `success`; verificadores HTTP/chunks/hashes passaram. Site: https://pedroayan.github.io/testtt/ . Não equivale à revisão das telas ou execução de câmera/WebGL.
 - Revisão das telas no navegador bloqueada: host indisponível e Computer Use nativo interrompido por não identificar a URL do Chrome com segurança. Não foi usada outra automação para contornar.
 - Após implementação, conferir início/mapa/ficha/atividades/Organizador em 320/360/390 px, desktop, paisagem, texto 200%, teclado, leitor de tela, movimento/transparência reduzida e contraste reforçado. Validar rastreamento e interrupção do gesto da ficha, com botão de países sempre disponível.
 - Câmera/QR/AR em aparelho físico e avaliação com crianças continuam NÃO VALIDADAS. Usar `docs/TESTE-NO-CELULAR.md`.

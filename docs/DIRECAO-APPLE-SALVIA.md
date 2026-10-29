@@ -56,4 +56,12 @@ Comandos executados:
 
 Correções por inspeção de código: histerese fixa após começar o arraste para evitar salto ao cruzar a origem; referências CSS da cena inteira atualizadas com os nomes semânticos; faixa de missão e ajuda quebram linha com texto grande; margem de rolagem reserva espaço para navegação; setas decorativas dispensadas no celular estreito. Layout e interação reais permanecem sem revisão por bloqueio do navegador. Roteiro acrescentado em `docs/TESTE-NO-CELULAR.md`.
 
-Próximo passo exato: publicar os commits autorizados, aguardar o workflow e conferir os arquivos/chunks públicos atuais. Registrar o resultado separadamente de validação visual/física.
+## Publicação concluída
+
+Implementação `5ad46f67a39ad553f99f18f0dd0a0eb1d20f3bd3` enviada para https://github.com/PedroAyan/testtt . `git -c safe.directory=C:/Users/ayan-/Desktop/claude push origin main` concluiu e `git ls-remote` confirmou o mesmo SHA. O primeiro comando sem `safe.directory` foi recusado por diferença de proprietário; a exceção foi aplicada só ao comando, sem modificar a configuração global.
+
+Workflow https://github.com/PedroAyan/testtt/actions/runs/40957898631 terminou com `success`, incluindo typecheck, testes, marcadores, build e deploy. Site: https://pedroayan.github.io/testtt/ .
+
+`node scripts/check-published.mjs` e `node artifacts/apple-salvia/check-published.mjs`: exit 0. Recursos dos seis continentes responderam; GLBs iguais aos locais. Chunks públicos atuais de Home/Collection/Continent e CSS contêm a implementação; tokens, planeta, diagrama, paisagens alteradas, cena HTML e fontes têm SHA-256 igual ao local. O verificador de publicação foi ajustado para resolver tanto `assets/...` como `./...` a partir da entrada pública, sem presumir nomes locais.
+
+Isso confirma publicação dos arquivos, sem executar layout, eventos do gesto, câmera ou WebGL. Próximo passo exato: cumprir a seção Apple/sálvia do roteiro no navegador autorizado e em aparelhos físicos. Registro posterior somente documental, com `[skip ci]`.
