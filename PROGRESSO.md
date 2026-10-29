@@ -2,7 +2,8 @@
 
 ## Visualização pública no Organizador — 2026-10-29
 - Botão “Ver como público” adicionado ao lado de cada continente. Abre a ficha pública publicada, oculta os avisos/controles de ADM nessa tela e oferece retorno ao Organizador.
-- `npm.cmd run typecheck` e `npm.cmd run build` passaram. Próximo passo: publicar e conferir a nova opção no site. O conteúdo de rascunho ainda não publicado não é aplicado nesta visualização.
+- `npm.cmd run typecheck` e `npm.cmd run build` passaram. Publicado no commit `52963fc`; workflow https://github.com/PedroAyan/testtt/actions/runs/40818399955 concluiu com sucesso. Chunks públicos do Organizador e da ficha conferidos. O conteúdo de rascunho ainda não publicado não é aplicado nesta visualização.
+- Próximo passo exato: nenhum para esta alteração; teste visual manual permanece opcional.
 
 ## Sessão ADM — publicada e conferida (2026-10-29)
 - O responsável pediu os seis continentes liberados no próprio app enquanto estiver logado como ADM, com a senha escolhida `camila`.

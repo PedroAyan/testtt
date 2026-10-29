@@ -1,7 +1,7 @@
 # Pendências
 
 ## Visualização pública do Organizador — 2026-10-29
-- Implementada localmente; typecheck/build passaram. Falta conferir após publicação. A visualização mostra o conteúdo publicado atual; alterações em rascunho precisam ser exportadas/publicadas para aparecer.
+- Publicada e conferida nos chunks públicos; typecheck/build passaram e Actions concluiu com sucesso. A visualização mostra o conteúdo publicado atual; alterações em rascunho precisam ser exportadas/publicadas para aparecer. Revisão visual manual não executada.
 
 ## Acesso ADM — revisão de 2026-10-29
 - Hash publicado em `VITE_ORGANIZER_PASSWORD_HASH`; bundle público conferido por derivação PBKDF2 contra a senha escolhida. Sem senha ou hash expostos nos relatórios.
