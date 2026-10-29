@@ -4,7 +4,6 @@ import { useApp, safePreference } from '../hooks/useApp';
 import { isContinentId } from '../services/collectionRepository';
 import { WorldMap } from '../components/WorldMap';
 import { activityContinents, isExplorationComplete } from '../services/activities';
-import { asset } from '../services/contentRepository';
 import type { ContinentId } from '../types/continent';
 import { DestinationCard } from '../components/DestinationCard';
 import { InterfaceIcon } from '../components/InterfaceIcon';
@@ -20,7 +19,7 @@ export default function Collection() {
     setSelected(id); safePreference('exploradores:selected:v1', id); navigate(`/continente/${id}`);
   };
   return <main className="collection-page">
-    <div className="page-heading collection-heading"><div><h1>Seu mundo de<br />descobertas</h1><p>Qual lugar vamos conhecer hoje?</p></div><img src={asset('images/planeta-guia.svg')} width="640" height="470" alt="" /></div>
+    <div className="page-heading collection-heading"><div><h1>Seu mundo de descobertas.</h1><p>Qual lugar vamos conhecer hoje?</p></div><span className="collection-emblem"><InterfaceIcon name="compass" /></span></div>
     <div className="collection-help"><p>Toque em um continente para começar.</p><Link className="button secondary" to="/orientacao">Como jogar</Link></div>
     <div className="progress-row">
       <div><span><InterfaceIcon name="compass" />Continentes descobertos</span><strong>{app.unlocked.length} <small>de 6</small></strong><progress aria-label="Continentes descobertos" max="6" value={app.unlocked.length} /><small>{Math.round(app.unlocked.length / 6 * 100)}% do mapa descoberto</small></div>

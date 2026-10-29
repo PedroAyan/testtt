@@ -8,6 +8,9 @@ Campo “Capital city”: Juba. Correção pontual registrada em `data-src/count
 ## [visual-reference] Referência estética fornecida pelo responsável — ./referencia-visual.png — licença de redistribuição não informada; somente consulta local — 2026-10-29
 Inspiração para cores pastel, cartões e hierarquia visual. A imagem, a marca, os textos e os desenhos originais não são distribuídos em `public/` nem no build. A ilustração `public/images/companheiros-de-viagem.svg` é autoral MIT, conforme [autoral]; representa um planeta lúdico, não um mapa geográfico.
 
+## [visual-reference-salvia] Paleta da imagem enviada pelo responsável — imagem local “Sem título.png” — somente consulta de cor; imagem não redistribuída — 2026-10-29
+Fundo `#eef3e9`, suporte `#e0e9d8`, neutro `#e0e5d9` e tinta `#344b46` amostrados do arquivo fornecido. Fonte do sistema operacional, sem redistribuição de fontes Apple. Recoloração dos SVGs autorais e novos ícones permanecem MIT, conforme [autoral]. A referência orienta cores; a composição e os desenhos são do projeto.
+
 
 ## [natural-earth] Natural Earth 5.1.2 — https://github.com/nvkelso/natural-earth-vector/tree/v5.1.2/geojson — domínio público — 2026-10-28
 `ne_50m_admin_0_countries.geojson`: geometria, nomes em português, POP_EST/POP_YEAR, regiões. `ne_50m_populated_places_simple.geojson`: capitais. Arquivos e SHA-256 em data-src/assets-manifest.json. Licença: https://www.naturalearthdata.com/about/terms-of-use/ . Limites cartográficos simplificados não resolvem disputas territoriais.

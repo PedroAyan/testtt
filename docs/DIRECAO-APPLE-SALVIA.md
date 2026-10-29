@@ -35,6 +35,25 @@ Apple: material translúcido apenas na navegação; superfícies de leitura sól
 
 `cua.getState()` retornou `The browser access host is unavailable`. A seleção do Chrome nativo foi interrompida porque a ferramenta não conseguiu identificar a URL atual com segurança. Nenhuma automação alternativa será usada para contornar esse bloqueio. A comparação das telas renderizadas, 320/360/390 px, desktop, 200%, teclado e gesto real continua pendente. Leitura de CSS, cálculos de contraste e testes de domínio não equivalem à revisão visual. Câmera/AR física e avaliação com crianças continuam NÃO VALIDADAS.
 
-## Estado
+## Implementação e verificações locais
 
-Plano registrado. Próximo passo: implementar o sistema visual e o gesto, executar typecheck/testes/build/contraste, revisar o diff e publicar os commits autorizados.
+Abertura sem painel lavanda: título com hierarquia, ação principal escura, planeta sálvia em halo estático e faixa de missão. Navegação com material translúcido e estado atual por fundo, peso e espessura do ícone, incluindo as fichas e atividades no percurso Meu mapa. Lista agrupada de destinos com nome, silhueta, estado escrito/ícone e acesso à atividade. Orientação e bloqueio mantêm os desenhos QR/marcador. A arte já existente foi recolorida; planeta e folha rasterizados por Sharp e examinados isoladamente, sem constituir revisão do app.
+
+Materiais sólidos para leitura; sombras restritas ao halo/legenda e à navegação. Fonte do sistema, tracking por tamanho, controles arredondados regulares. Cores principais medidas: texto secundário sobre o neutro mais exigente 4,60:1; texto principal sobre branco 9,37:1; texto branco na ação 9,37:1; bordas avaliadas ≥ 3,18:1. Cores claras dos ícones da referência não foram copiadas como texto informativo. Movimento e transparência reduzidos/contraste maior continuam contemplados.
+
+Gesto da alça acompanha o ponteiro: histerese de 10 px, captura de ponteiro, origem de captura preservada, resistência progressiva, decisão por projeção exponencial de velocidade e sinal de reversão. Retorno com solução analítica de mola crítica, interrompível a partir de posição/velocidade atuais. Arraste horizontal/cancelamento não navega. Segundo ponteiro não substitui o primeiro. Antártida sem gesto de países; botão Conhecer os países permanece para as demais. Movimento reduzido remove deslocamento.
+
+Implementação em `src/styles/{tokens,app,components,journey}.css`, início/coleção/navegação/destinos, ícones, `useCountryShortcut.ts` e `services/sheetMotion.ts`. `playful.css` substituído por `journey.css`. A cena AR recebeu somente a renomeação de duas variáveis CSS; seu código de reconhecimento e ponte não foram alterados. Fontes/licenças usa os mesmos tokens a partir do gerador `validate-content.mjs`. Sem novas dependências, dados geográficos, modelos ou alterações de persistência.
+
+Comandos executados:
+- `npm.cmd run typecheck`: exit 0.
+- `npm.cmd test`: 15/15, três arquivos; quatro testes de matemática do gesto, além de navegação/HTML e domínio existentes. Não exercitam eventos reais do navegador.
+- `npm.cmd run build`: exit 0; dados/fontes/arquivos dos seis continentes validados.
+- O último build exigiu repetir `npm.cmd run build` fora do sandbox depois de uma negativa de leitura do esbuild; a repetição terminou com exit 0. Não foi feita alteração de código para contornar a permissão.
+- `node scripts/check-ui-contrast.mjs`: 33/33 pares aprovados; não é auditoria WCAG completa.
+- `node artifacts/apple-salvia/verify-assets.mjs`: tokens de app/cena idênticos e nenhuma variável CSS sem definição nas superfícies alteradas.
+- `git diff --check`: sem erros. Comparação com HEAD dos dados, GLBs, QR/marcadores, conteúdo publicado, repositório de coleção, descoberta, ponte, scripts da cena e dependências: sem diferenças.
+
+Correções por inspeção de código: histerese fixa após começar o arraste para evitar salto ao cruzar a origem; referências CSS da cena inteira atualizadas com os nomes semânticos; faixa de missão e ajuda quebram linha com texto grande; margem de rolagem reserva espaço para navegação; setas decorativas dispensadas no celular estreito. Layout e interação reais permanecem sem revisão por bloqueio do navegador. Roteiro acrescentado em `docs/TESTE-NO-CELULAR.md`.
+
+Próximo passo exato: publicar os commits autorizados, aguardar o workflow e conferir os arquivos/chunks públicos atuais. Registrar o resultado separadamente de validação visual/física.

@@ -47,9 +47,9 @@ export default function Continent() {
     </div>
     <div className="explore-layout">
       <ModelViewer3D key={c.id} file={c.modelo.arquivo} name={c.nome} />
-      <section className="fact-card country-sheet">
+      <section className="fact-card country-sheet" ref={shortcut.sheetRef}>
         {c.id !== 'antartida' && <>
-          <div className="sheet-grip" aria-hidden="true" onTouchStart={shortcut.onTouchStart} onTouchEnd={shortcut.onTouchEnd} onTouchCancel={shortcut.onTouchCancel}><span /></div>
+          <div className="sheet-grip" aria-hidden="true" onPointerDown={shortcut.onPointerDown} onPointerMove={shortcut.onPointerMove} onPointerUp={shortcut.onPointerUp} onPointerCancel={shortcut.onPointerCancel} onLostPointerCapture={shortcut.onLostPointerCapture}><span /></div>
           {shortcut.showHint && <div className="gesture-hint"><p>Arraste a alça para baixo ou toque em “Conhecer os países”.</p><button onClick={shortcut.dismissHint} aria-label="Fechar dica de gesto">Entendi</button></div>}
         </>}
         <img className="fact-art" src={asset(c.fichaCurta.ilustracao)} alt={c.fichaCurta.ilustracaoAlt} />

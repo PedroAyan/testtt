@@ -13,14 +13,14 @@ function contrast(a, b) {
 }
 const pairs = [];
 for (const foreground of ['ink', 'ink-muted']) {
-  for (const background of ['canvas', 'surface', 'surface-warm', 'lavender', 'lavender-soft', 'peach', 'peach-soft', 'pink', 'mint', 'mint-soft', 'yellow']) {
+  for (const background of ['canvas', 'surface', 'surface-warm', 'tint', 'tint-soft', 'warm', 'warm-soft', 'success-tint', 'success-soft', 'yellow']) {
     pairs.push([foreground, background, 4.5]);
   }
 }
-pairs.push(['accent-ink', 'lavender-soft', 4.5], ['success', 'mint-soft', 4.5], ['danger', 'peach-soft', 4.5],
-  ['surface', 'ink', 4.5], ['surface', 'accent-ink', 4.5], ['ink', 'lavender-bold', 4.5],
-  ['focus', 'canvas', 3], ['focus', 'lavender-soft', 3], ['focus', 'peach-soft', 3], ['focus', 'mint-soft', 3],
-  ['border-control', 'surface', 3], ['border-control', 'lavender', 3], ['border-control', 'lavender-soft', 3]);
+pairs.push(['accent-ink', 'tint-soft', 4.5], ['success', 'success-soft', 4.5], ['danger', 'warm-soft', 4.5],
+  ['surface', 'ink', 4.5], ['surface', 'accent-ink', 4.5], ['ink', 'tint-strong', 4.5],
+  ['focus', 'canvas', 3], ['focus', 'tint-soft', 3], ['focus', 'warm-soft', 3], ['focus', 'success-soft', 3],
+  ['border-control', 'surface', 3], ['border-control', 'tint', 3], ['border-control', 'tint-soft', 3]);
 const results = pairs.map(([foreground, background, minimum]) => {
   const ratio = contrast(tokens[foreground], tokens[background]);
   return { foreground, background, ratio: Number(ratio.toFixed(2)), minimum, passed: ratio >= minimum };

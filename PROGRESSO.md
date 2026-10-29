@@ -4,7 +4,9 @@
 - Pedido atual: reformular a aparência com `apple-design`, usar as cores da imagem enviada e enviar ao GitHub ao concluir. Plano, amostragem e revisão contra o pedido em `docs/DIRECAO-APPLE-SALVIA.md`.
 - SPEC/AGENTS/PROGRESSO/PENDENCIAS e skills lidos; interface existente e referência examinadas. Verde de fundo `#eef3e9`, suporte `#e0e9d8` e tinta `#344b46` extraídos da imagem.
 - Revisão visual bloqueada nesta sessão: host de navegador indisponível; Computer Use nativo interrompido por não conseguir identificar a URL do Chrome com segurança. Sem contorno por outra automação. Continuar implementação autorizada e separar código de validação visual/física.
-- Próximo passo exato: implementar fonte do sistema, composição e materiais sálvia, lista agrupada de destinos, feedback e gesto contínuo; executar os comandos essenciais; commitar e publicar no GitHub.
+- Implementação concluída: sistema sálvia e fonte do sistema; nova composição inicial/faixa de missão; materiais da navegação; destinos em lista agrupada; arte recolorida; arraste contínuo com Pointer Events/capture, resistência, projeção e mola crítica; botão de países preservado. Cena AR recebeu somente duas referências de token CSS; lógica AR e dados/persistência não mudaram.
+- `npm.cmd run typecheck`, `npm.cmd test` (15/15), `npm.cmd run build`, `node scripts/check-ui-contrast.mjs` (33/33), verificação dos tokens e `git diff --check` passaram. Arte isolada do planeta e folha rasterizada e examinada. Detalhes em `docs/DIRECAO-APPLE-SALVIA.md`.
+- Próximo passo exato: commitar a implementação, enviar com `git push origin main`, aguardar o workflow e conferir paleta/arte/CSS/chunks públicos atuais. Revisão visual, gesto real, câmera/AR e avaliação com crianças continuam pendentes.
 
 ## Reformulação ilustrada publicada — 2026-10-29
 - Pedido de envio ao repositório atendido: `git push origin main` enviou os três commits pendentes, até `d6f8a23c1240c002ace57dd88100350427dbb350`, para https://github.com/PedroAyan/testtt . SHA remoto conferido com `git ls-remote`.

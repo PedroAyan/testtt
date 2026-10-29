@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-type IconName = 'home' | 'map' | 'settings' | 'scan' | 'compass' | 'book' | 'spark';
+type IconName = 'home' | 'map' | 'settings' | 'scan' | 'compass' | 'book' | 'spark' | 'arrow-right' | 'chevron-right' | 'lock';
 const paths: Record<IconName, ReactNode> = {
   home: <path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z" />,
   map: <path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2Zm6-2v16M15 5v16" />,
@@ -9,6 +9,9 @@ const paths: Record<IconName, ReactNode> = {
   compass: <><circle cx="12" cy="12" r="9" /><path d="m16 8-2 6-6 2 2-6Z" /></>,
   book: <path d="M12 5v16M3 3c4 0 7 1 9 3 2-2 5-3 9-3v15c-4 0-7 1-9 3-2-2-5-3-9-3Z" />,
   spark: <path d="m12 2 3 7 7 3-7 3-3 7-3-7-7-3 7-3Z" />,
+  'arrow-right': <path d="M4 12h16m-6-6 6 6-6 6" />,
+  'chevron-right': <path d="m9 5 7 7-7 7" />,
+  lock: <><rect x="5" y="10" width="14" height="11" rx="3" /><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3" /></>,
 };
 
 export function InterfaceIcon({ name, className = '' }: { name: IconName; className?: string }) {

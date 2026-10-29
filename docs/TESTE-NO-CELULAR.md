@@ -100,3 +100,19 @@ Revisão de telas no navegador bloqueada nesta sessão; nenhuma comparação ant
 | Descoberto → ficha, dica de gesto aberta/fechada e Antártida | Arte não cobre a alça/dica; ficha curta, Ouvir e Saiba mais legíveis; países ocultos na Antártida | NÃO VALIDADO |
 | Teclado, leitor de tela, preferências de movimento/transparência/contraste | Foco visível, sem transformação ao acionar por teclado; barra sólida quando solicitado; rótulos e ordem compreensíveis | NÃO VALIDADO |
 | QR da folha e AR em Android Chrome/iPhone Safari | Desbloqueio só por leitura válida ou marcador estável; modelo acompanha pose; perda/retorno e cinco ciclos de saída funcionam | NÃO VALIDADO |
+
+## Direção Apple e sálvia — 2026-10-29 — NÃO VALIDADA
+
+Revisão no navegador bloqueada por indisponibilidade do host e interrupção do Chrome nativo por identificação insegura da URL. Executar também no desktop. Testes de cálculo da mola não validam os eventos de toque ou o layout real.
+
+| Percurso | Resultado esperado | Resultado real / responsável |
+|---|---|---|
+| Início em 320/360/390 px, desktop e 200% | Fonte do sistema, fundo sálvia, título/convite/ações legíveis; faixa de missão e legenda do planeta sem corte horizontal | NÃO VALIDADO |
+| Mapa → seis destinos por lista, toque e teclado | Nomes, cadeado/descoberta e atividade claros; lista agrupada e progresso separado; foco visível | NÃO VALIDADO |
+| Ficha → arrastar alça devagar / soltar abaixo do limiar | Ficha acompanha o dedo; volta por mola sem oscilação; página continua rolável fora da alça | NÃO VALIDADO |
+| Ficha → flick para baixo / reverter para cima / tocar durante retorno | Flick abre países; reversão cancela; pegar a ficha em movimento continua da posição atual, sem salto ou bloqueio | NÃO VALIDADO |
+| Gesto horizontal, cancelamento e segundo dedo | Não abre países por gesto horizontal/cancelado; segundo dedo não muda a origem do primeiro | NÃO VALIDADO |
+| Ficha por teclado, movimento reduzido e Antártida | Botão Conhecer os países funciona sem gesto; preferência remove deslocamento; Antártida não oferece países | NÃO VALIDADO |
+| Barra flutuante, texto 200%, paisagem e fim da página | Foco/conteúdo não ficam escondidos; rótulos quebram; navegação estática em telas baixas e câmera | NÃO VALIDADO |
+| Transparência reduzida / contraste maior | Barra sólida, bordas claras, estado atual também pelo peso/traço do ícone | NÃO VALIDADO |
+| Organizador, fontes e AR inteira | Tema coerente; retorno público e editor preservados; câmera, pose e teardown seguem roteiro físico acima | NÃO VALIDADO |
