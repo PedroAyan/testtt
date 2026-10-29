@@ -116,3 +116,18 @@ Revisão no navegador bloqueada por indisponibilidade do host e interrupção do
 | Barra flutuante, texto 200%, paisagem e fim da página | Foco/conteúdo não ficam escondidos; rótulos quebram; navegação estática em telas baixas e câmera | NÃO VALIDADO |
 | Transparência reduzida / contraste maior | Barra sólida, bordas claras, estado atual também pelo peso/traço do ícone | NÃO VALIDADO |
 | Organizador, fontes e AR inteira | Tema coerente; retorno público e editor preservados; câmera, pose e teardown seguem roteiro físico acima | NÃO VALIDADO |
+
+## Atlas mobile — 2026-10-29
+
+Revisão no navegador executada a 320/360/390 px e desktop, inclusive fonte raiz de 200% em página descartável. Isso não substitui os testes físicos abaixo. Registrar aparelho, navegador, responsável e data.
+
+| Verificação em aparelho físico | Resultado |
+| --- | --- |
+| Barra inferior e topo respeitam recortes da tela; nenhum controle fica sob o indicador de início | NÃO VALIDADO |
+| Ampliar texto a 200%; navegação entra no fluxo, rótulos continuam legíveis e não há rolagem horizontal | NÃO VALIDADO |
+| Abrir teclado em busca e editor; foco e ações permanecem acessíveis sem zoom inesperado | NÃO VALIDADO |
+| Girar para paisagem; mapa completo, nomes e saídas continuam disponíveis | NÃO VALIDADO |
+| Toque dá retorno imediato e não deixa hover preso; texto das fichas continua selecionável | NÃO VALIDADO |
+| Voz, leitor de tela, foco e preferências de movimento/transparência/contraste do aparelho | NÃO VALIDADO |
+| Ler o QR correto, rejeitar outro continente, testar marcador estável, perda/retorno e cinco ciclos de AR | NÃO VALIDADO |
+| Crianças compreendem folha, QR, marcador e estados de descoberta/atividade | NÃO VALIDADO |

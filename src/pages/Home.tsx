@@ -2,30 +2,32 @@ import { Link } from 'react-router-dom';
 import { useApp, safePreference } from '../hooks/useApp';
 import { asset } from '../services/contentRepository';
 import { InterfaceIcon } from '../components/InterfaceIcon';
+import { AtlasCover } from '../components/AtlasCover';
 
 export default function Home() {
-  const { unlocked } = useApp();
+  const { unlocked, continents } = useApp();
+  const explore = safePreference('exploradores:intro:v1') ? '/mapa' : '/orientacao';
   return <main className="home">
-    <section className="welcome-world" aria-labelledby="welcome-title">
-    <div className="hero-copy">
-      <p className="hero-intro"><InterfaceIcon name="compass" />Sua próxima descoberta começa aqui</p>
-      <h1 id="welcome-title">Um mundo inteiro<br />para descobrir.</h1>
-      <p>Uma folha, uma pista e seis continentes. Escolha um lugar e comece sua viagem.</p>
-      <div className="actions">
-        <Link className="button primary" to={safePreference('exploradores:intro:v1') ? '/mapa' : '/orientacao'}><InterfaceIcon name="compass" />Explorar</Link>
+    <section className="home-start" aria-labelledby="welcome-title">
+      <h1 id="welcome-title">Qual continente<br />vamos conhecer?</h1>
+      <p>Pegue a folha da turma. A viagem começa no mapa.</p>
+      <div className="atlas-ticket">
+        <div className="atlas-ticket-heading"><InterfaceIcon name="map" /><span>Seu mapa de exploração</span></div>
+        <AtlasCover />
+        <div className="atlas-ticket-bottom"><span>6 continentes para descobrir</span><InterfaceIcon name="compass" /></div>
+      </div>
+      <div className="home-start-actions">
+        <Link className="button primary" to={explore}>Explorar<InterfaceIcon name="arrow-right" /></Link>
         <Link className="button secondary" to="/mapa"><InterfaceIcon name="book" />Minha coleção</Link>
       </div>
-    </div>
-    <div className="hero-art"><div className="planet-halo" aria-hidden="true" /><img className="travel-friends" src={asset('images/planeta-guia.svg')} width="640" height="470" alt="Um planeta verde sorridente acena e leva uma bússola para a aventura" /><span className="hero-caption"><InterfaceIcon name="map" />6 continentes. Muitas descobertas.</span></div>
     </section>
-    <Link className="mission-link" to={safePreference('exploradores:intro:v1') ? '/mapa' : '/orientacao'}>
-      <span className="mission-icon"><InterfaceIcon name="scan" /></span><span><strong>Uma pista, um novo destino</strong><span>Escolha um continente e encontre seu QR code.</span></span><InterfaceIcon name="arrow-right" />
-    </Link>
-      <div className="hero-progress"><span className="progress-count">{unlocked.length}<span> / 6</span></span><div>
-        <strong>Continentes descobertos</strong>
-        <span>Suas descobertas ficam neste navegador.</span>
-      </div></div>
-    <Link className="home-how" to="/orientacao"><span className="mission-icon"><InterfaceIcon name="book" /></span><span><strong>Primeira aventura?</strong><span>Veja como jogar com a folha da turma.</span></span><InterfaceIcon name="chevron-right" /></Link>
-    <div className="home-organizer"><div><h2>Espaço de quem ensina</h2><p>Prepare as fichas e atividades da turma.</p></div><Link className="button secondary" to="/organizador">Organizador</Link></div>
+    <section className="home-passport" aria-labelledby="passport-title">
+      <div className="section-label"><h2 id="passport-title">Suas descobertas</h2><span>{unlocked.length} de 6</span></div>
+      <div className="discovery-stamps" aria-hidden="true">{continents.map(c => <span key={c.id} className={unlocked.includes(c.id) ? 'stamp found' : 'stamp'}><img src={asset(`images/silhouettes/${c.id}.svg`)} alt="" />{unlocked.includes(c.id) && <b>✓</b>}</span>)}</div>
+      <p>{unlocked.length === 0 ? 'Seu primeiro continente está esperando.' : 'Cada continente descoberto fica guardado aqui.'}</p>
+      <p className="micro">Progresso salvo neste navegador.</p>
+    </section>
+    <Link className="help-row" to="/orientacao"><span className="help-icon"><InterfaceIcon name="scan" /></span><span><strong>Como jogar</strong><span>Da folha ao seu mapa, passo a passo.</span></span><InterfaceIcon name="chevron-right" /></Link>
+    <Link className="teacher-row" to="/organizador"><span><strong>Organizador</strong><span>Fichas e atividades da turma</span></span><InterfaceIcon name="chevron-right" /></Link>
   </main>;
 }

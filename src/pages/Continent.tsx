@@ -23,9 +23,9 @@ export default function Continent() {
   const unlocked = app.unlocked.includes(c.id);
   if (!unlocked) return <main className="narrow locked-page">
     {location.state?.organizerPublicView === true ? <div className="organizer-public-preview-bar"><span>Visualização pública do conteúdo publicado</span><Link className="button secondary" to="/organizador">Voltar ao Organizador</Link></div> : <Link className="back-link" to="/mapa">← Voltar ao mapa</Link>}
-    <span className="discovery-state">🔒 Ainda não descoberto</span>
-    <h1>Vamos conhecer<br />{c.nome}?</h1>
-    <p className="discovery-lead">A próxima pista está na folha da sua turma.</p>
+    <span className="discovery-state"><InterfaceIcon name="lock" />Ainda não descoberto</span>
+    <h1>{c.nome}</h1>
+    <p className="discovery-lead">Encontre o QR Code na folha da turma.</p>
     <DiscoveryGuide image={c.dicaQr?.imagem} />
     <p>{c.dicaQr?.texto}</p>
     <div className="actions">

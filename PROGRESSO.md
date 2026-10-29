@@ -1,9 +1,12 @@
 # Progresso — Exploradores do Mundo
 
-## Etapa atual — reformulação atlas mobile (2026-10-29)
+## Etapa atual — atlas mobile implementado e revisado (2026-10-29)
 - Pedido: mudar toda a interface com emil-design-eng/mobile-native. Correção posterior: usar apenas as cores da captura lilás/pêssego/menta enviada, substituindo o verde. Manter formato mobile e fluxos/regras existentes.
 - Leitura e inspeção inicial concluídas; direção e tabela Before/After em `docs/INTERFACE-ATLAS-MOBILE.md`. Interface anterior aberta no navegador local.
-- Próximo passo exato: implementar composição e paleta, revisar telas em navegador (320/360/390 px, desktop, 200%, teclado), executar typecheck/test/build/contraste e registrar limites. Câmera/AR físicas permanecem NÃO VALIDADAS.
+- Implementados: nova composição de atlas/passaporte, coluna mobile de até 520 px, mapa completo com nomes em botões, fichas ilustradas, navegação inferior e telas de estudo/edição coerentes. Cores amostradas da última captura; fonte, bordas, foco, toque, safe areas e texto ampliado tratados. Dados, GLBs, cena AR, persistência e desbloqueio preservados.
+- Navegador: 320/360/390 px e desktop 1280 px; fonte raiz a 200% em fixture descartável, navegação por Tab e pular conteúdo. Orientação, bloqueio, ficha/países, busca, erro/acerto de atividade, conclusão e editor conferidos. Login ADM só em build de QA com hash descartável no processo, sem mudar a senha real. Detalhes, limites e capturas em `docs/INTERFACE-ATLAS-MOBILE.md`.
+- Typecheck, 15 testes, build e 33 pares de contraste passaram; sintaxe do gerador e diff conferidos. Build final normal substitui QA e não inclui sua página ou hash. Não publicado nesta tarefa.
+- Próximo passo exato: executar o roteiro atlas mobile em `docs/TESTE-NO-CELULAR.md` em Android Chrome/iPhone Safari e registrar resultados. Câmera/QR/AR, áudio, leitor de tela e compreensão com crianças continuam NÃO VALIDADOS fisicamente.
 
 ## Skills globais de design do Emil — 2026-10-29
 - Pedido concluído: instalar as skills de design úteis da coleção oficial `https://github.com/emilkowalski/skills`, versão `a81dbca07f2217b7103e510c0f13f8d5b017afc9`.

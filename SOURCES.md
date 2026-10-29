@@ -1,5 +1,8 @@
 # Fontes e licenças
 
+## [visual-reference-atlas] Paleta da captura enviada pelo responsável — captura local do Exploradores do Mundo — somente consulta de cor; captura não redistribuída — 2026-10-29
+Paleta amostrada: fundo `#faf7fd`, lilás `#eeeafb`, destaque `#ded8f5`, pêssego `#f9ddd3`, menta `#d7eee1`, amarelo `#ffedbc`, tinta `#39334f` e apoio `#655a73`. A correção do responsável substitui a direção sálvia. Recolorações e interface autorais MIT, conforme [autoral]. O mapa de capa usa os mesmos contornos Natural Earth já registrados, sem novos dados ou imagens externas.
+
 Consulta original: 2026-10-28; acréscimos identificados em 2026-10-29. Textos educativos são redação original em português baseada em fatos das referências; não reproduzem artigos ou fotografias. Ilustrações e modelos são gerados localmente. Dados históricos são identificados pelo ano e não apresentados como atuais.
 
 ## [undata-south-sudan] UNdata, South Sudan — https://data.un.org/legacy/en/iso/ss.html — referência factual; página e tabelas não redistribuídas — 2026-10-29

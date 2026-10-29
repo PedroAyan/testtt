@@ -19,7 +19,7 @@ function Shell(){
  useEffect(()=>{const id=continentFromURL(window.location.search);if(id&&!window.location.hash)navigate(`/continente/${id}`,{replace:true});},[]);
  useEffect(()=>{window.scrollTo(0,0);document.getElementById('content')?.focus({preventScroll:true});},[location.pathname]);
  return <>
-  <a className="skip-link" href="#content">Pular para o conteúdo</a><Navigation publicView={location.state?.organizerPublicView===true}/>
+  <a className="skip-link" href="#content" onClick={e=>{e.preventDefault();document.getElementById('content')?.focus();}}>Pular para o conteúdo</a><Navigation publicView={location.state?.organizerPublicView===true}/>
   {app.warning&&<div className="global-warning" role="status">{app.warning}</div>}
   {app.organizerPreview&&location.state?.organizerPublicView!==true&&<div className="global-warning organizer-preview-notice" role="status">Modo ADM ativo: os seis continentes estão liberados durante esta sessão. O progresso dos alunos não foi alterado.</div>}
   <div id="content" tabIndex={-1}><Suspense fallback={<main><p role="status">Preparando sua viagem…</p></main>}>
@@ -34,7 +34,7 @@ function Shell(){
     <Route path="*" element={<Navigate to="/" replace/>}/>
    </Routes>:<main><p role="status">Carregando seu progresso…</p></main>}
   </Suspense></div>
-  <footer className="site-footer"><span>✦ Exploradores do Mundo</span><span>Aprender é descobrir, um continente de cada vez.</span><a href={`${import.meta.env.BASE_URL}fontes.html`} target="_blank" rel="noopener noreferrer">Fontes e licenças ↗</a></footer>
+  <footer className="site-footer"><a href={`${import.meta.env.BASE_URL}fontes.html`} target="_blank" rel="noopener noreferrer">Fontes e licenças ↗</a></footer>
  </>;
 }
 export default function App(){return <AppProvider><HashRouter><Shell/></HashRouter></AppProvider>;}

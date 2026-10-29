@@ -92,7 +92,7 @@ async function writeModel(id, geometry, color, country=false) {
   reports.push(report);
   if(!country){
     const path=geoPath(projection(id,usedGeometry))(usedGeometry);
-    await writeFile(`public/images/silhouettes/${id}.svg`,`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240"><path d="${path}" fill="${color}" stroke="#5c3a45" stroke-width="1.5" stroke-linejoin="round"/></svg>`);
+    await writeFile(`public/images/silhouettes/${id}.svg`,`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240"><path d="${path}" fill="#b7a9db" stroke="#39334f" stroke-width="1.5" stroke-linejoin="round"/></svg>`);
   }
   return report;
 }
