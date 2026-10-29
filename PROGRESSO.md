@@ -1,5 +1,12 @@
 # Progresso — Exploradores do Mundo
 
+## Etapa atual — auditoria e revisão visual (2026-10-29)
+- AGENTS.md, SPEC.md, PROGRESSO.md e PENDENCIAS.md lidos antes de alterações.
+- PDF local de cinco páginas renderizado e lido visualmente; cópias raiz/docs idênticas por SHA-256. Referência local `referencia-visual.png` inspecionada.
+- Achados e reconciliação com a SPEC §14 em docs/AUDITORIA-FLUXOGRAMAS.md.
+- Próximo passo exato: corrigir confirmação do QR, resumo/dica da RA, entradas da orientação, ficha e acessibilidade; aplicar tokens pastel; executar typecheck, build e testes essenciais.
+- Revisão de interface por Computer Use impedida: host de navegador e pipe nativo indisponíveis nesta sessão. Câmera/RA seguem NÃO VALIDADAS.
+
 ## Estado atual: seis etapas implementadas e site publicado
 - Site: https://pedroayan.github.io/testtt/
 - Repositório: https://github.com/PedroAyan/testtt — branch main, origin configurado.
