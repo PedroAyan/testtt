@@ -1,11 +1,19 @@
 # Progresso — Exploradores do Mundo
 
+## Publicação do atlas mobile — concluída (2026-10-29)
+- Pedido explícito de publicar em `https://github.com/PedroAyan/testtt` e ajustar Pages. Pages conferido pela API: modo workflow, main, HTTPS ativo; workflow pages.yml ativo e base configurada pelos outputs oficiais.
+- `git push origin main` enviou os três commits pendentes até `18f409307db8d0b31f4485f805792cb9b7a5800a`; SHA remoto confirmado por `git ls-remote`. Imagem de referência não enviada.
+- Workflow `https://github.com/PedroAyan/testtt/actions/runs/40962855759`: build e deploy concluídos com success; npm ci, typecheck, testes, build:markers e build executados em Node 22. Configuração do Pages já estava correta; nenhum ajuste desnecessário no workflow ou nas permissões.
+- `node scripts/check-published.mjs` e `node artifacts/interface-atlas/check-published.mjs`: exit 0. Página/chunks atuais da nova interface, CSS, tokens e arte conferidos; arquivos estáticos comparados por SHA-256; GLBs dos seis continentes idênticos; QR/marcadores/PDFs e bibliotecas locais HTTP 200. Hash real do Organizador presente, sem exibir seu valor.
+- Site `https://pedroayan.github.io/testtt/` aberto no navegador: novo início visível; Explorar → orientação → mapa conferidos em 390 px; scrollWidth igual ao clientWidth. Captura local em `artifacts/interface-atlas/publicado-390.jpg`.
+- Próximo passo exato: nenhum ajuste de publicação pendente. Câmera/QR/AR físicas continuam NÃO VALIDADAS; executar o roteiro em `docs/TESTE-NO-CELULAR.md`. Registro documental posterior com [skip ci], sem mudança no app publicado.
+
 ## Etapa atual — atlas mobile implementado e revisado (2026-10-29)
 - Pedido: mudar toda a interface com emil-design-eng/mobile-native. Correção posterior: usar apenas as cores da captura lilás/pêssego/menta enviada, substituindo o verde. Manter formato mobile e fluxos/regras existentes.
 - Leitura e inspeção inicial concluídas; direção e tabela Before/After em `docs/INTERFACE-ATLAS-MOBILE.md`. Interface anterior aberta no navegador local.
 - Implementados: nova composição de atlas/passaporte, coluna mobile de até 520 px, mapa completo com nomes em botões, fichas ilustradas, navegação inferior e telas de estudo/edição coerentes. Cores amostradas da última captura; fonte, bordas, foco, toque, safe areas e texto ampliado tratados. Dados, GLBs, cena AR, persistência e desbloqueio preservados.
 - Navegador: 320/360/390 px e desktop 1280 px; fonte raiz a 200% em fixture descartável, navegação por Tab e pular conteúdo. Orientação, bloqueio, ficha/países, busca, erro/acerto de atividade, conclusão e editor conferidos. Login ADM só em build de QA com hash descartável no processo, sem mudar a senha real. Detalhes, limites e capturas em `docs/INTERFACE-ATLAS-MOBILE.md`.
-- Typecheck, 15 testes, build e 33 pares de contraste passaram; sintaxe do gerador e diff conferidos. Build final normal substitui QA e não inclui sua página ou hash. Não publicado nesta tarefa.
+- Typecheck, 15 testes, build e 33 pares de contraste passaram; sintaxe do gerador e diff conferidos. Build final normal substitui QA e não inclui sua página ou hash. Publicado na etapa seguinte, conforme o registro acima.
 - Próximo passo exato: executar o roteiro atlas mobile em `docs/TESTE-NO-CELULAR.md` em Android Chrome/iPhone Safari e registrar resultados. Câmera/QR/AR, áudio, leitor de tela e compreensão com crianças continuam NÃO VALIDADOS fisicamente.
 
 ## Skills globais de design do Emil — 2026-10-29

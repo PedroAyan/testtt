@@ -3,7 +3,7 @@
 ## Atlas mobile — revisão de 2026-10-29
 - Reformulação e revisão no navegador concluídas localmente: 320/360/390 px, desktop 1280 px, fonte a 200%, Tab e atalho de conteúdo. Login, fichas, busca, atividade e editor revisados em build descartável de QA. Build final normal sem hash/página de QA. Detalhes e limites: `docs/INTERFACE-ATLAS-MOBILE.md`.
 - Câmera/QR/AR, pose e teardown em celular continuam NÃO VALIDADOS. Também pendentes safe areas/teclado virtual reais, toque, voz, leitor de tela, preferências do sistema e compreensão com crianças. Usar o roteiro novo em `docs/TESTE-NO-CELULAR.md`.
-- Publicação não executada nesta tarefa. As anotações antigas sobre bloqueio de navegador abaixo são históricas; nesta revisão houve acesso e revisão visual de layout.
+- Publicação concluída: implementação `18f4093` no GitHub/Pages; workflow `40962855759` com build/deploy success. `node scripts/check-published.mjs` e `node artifacts/interface-atlas/check-published.mjs` passaram. Início/orientação/mapa públicos conferidos no navegador a 390 px. Site: `https://pedroayan.github.io/testtt/`. Sem ajuste de publicação pendente. As anotações antigas sobre bloqueio de navegador abaixo são históricas.
 
 ## Apple e paleta sálvia — 2026-10-29
 - Código implementado e verificações locais concluídas: typecheck, 15 testes, build, 33 pares de contraste e consistência de tokens. Detalhes e comandos em `docs/DIRECAO-APPLE-SALVIA.md`. Sem novas dependências ou dados.

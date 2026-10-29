@@ -64,3 +64,11 @@ Evidências locais ignoradas pelo Git em `artifacts/interface-atlas/`: inicio-36
 Conferência final adicional: paisagem a 640×360 com navegação no fluxo e sem rolagem horizontal; foco visível nos cartões da coleção; barras dos dois progressos alinhadas (mesma posição vertical medida). `node artifacts/interface-atlas/final-check.mjs` confirmou tokens idênticos nas duas cópias, seis silhuetas na paleta e ausência de página/hash de QA no build normal final.
 
 Continuam pendentes: câmera, QR/AR e rastreamento em celular; safe areas, teclado virtual, toque/hover reais; voz, leitor de tela, preferências do sistema e avaliação com crianças. Roteiro em docs/TESTE-NO-CELULAR.md. Nenhuma validação física ou com crianças foi declarada.
+
+## Publicação posterior solicitada — 2026-10-29
+
+`git push origin main` enviou até `18f409307db8d0b31f4485f805792cb9b7a5800a` ao repositório `https://github.com/PedroAyan/testtt`. SHA remoto conferido com `git ls-remote`. A API confirmou Pages em modo workflow, main e HTTPS ativo; a configuração existente já era correta. Workflow `https://github.com/PedroAyan/testtt/actions/runs/40962855759` concluiu build e deploy com success.
+
+`node scripts/check-published.mjs` e `node artifacts/interface-atlas/check-published.mjs` passaram. Chunks resolvidos pela entrada pública atual; nova composição e CSS confirmados, tokens/arte/silhuetas/fontes/cena iguais ao local por SHA-256. Seis conjuntos de GLB, QR, marcador e PDF responderam corretamente, assim como as bibliotecas locais e overrides. O Organizador mantém seu hash real configurado, sem exposição em relatórios.
+
+Site `https://pedroayan.github.io/testtt/` conferido no navegador em 390 px: novo início, Explorar → orientação → mapa; sem rolagem horizontal na amostra medida. Captura em `artifacts/interface-atlas/publicado-390.jpg`. Isso não valida câmera/QR/AR física. O registro documental posterior não altera o bundle publicado.
