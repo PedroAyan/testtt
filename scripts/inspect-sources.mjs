@@ -1,0 +1,10 @@
+import { readFile, writeFile } from 'node:fs/promises';
+const s = await readFile('data-src/un-members.html', 'utf8');
+const names = [...s.matchAll(/<h2 class="mb-0">(.*?)<\/h2>/g)].map(x => x[1].replace(/&amp;/g, '&'));
+console.log('UN', names.length, JSON.stringify(names));
+const response = await fetch('https://api.github.com/repos/nicolocarpignoli/artoolkit-barcode-markers-collection/git/trees/master?recursive=1');
+const tree = await response.json();
+console.log('barcodes', JSON.stringify(tree.tree?.filter(x => /3x3|LICENSE/i.test(x.path)).slice(0,15)));
+const geo = JSON.parse(await readFile('data-src/geo/ne_50m_admin_0_countries.geojson', 'utf8'));
+console.log('natural-earth-country-types', JSON.stringify(Object.groupBy(geo.features.map(x => ({code:x.properties.ADM0_A3, name:x.properties.NAME_EN, type:x.properties.TYPE})), x=>x.type)));
+await writeFile('data-src/un-member-names.json', JSON.stringify(names, null, 2));

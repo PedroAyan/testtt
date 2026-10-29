@@ -1,0 +1,2 @@
+import { Link, useLocation } from 'react-router-dom';
+export function Navigation(){const {pathname}=useLocation();return <header className="site-header"><Link className="brand" to="/" aria-label="Exploradores do Mundo, início"><span className="brand-icon" aria-hidden="true">✦</span><span>exploradores<span className="brand-sub">DO MUNDO</span></span></Link><nav aria-label="Principal"><Link to="/mapa" aria-current={pathname==='/mapa'?'page':undefined}>Meu mapa</Link><Link to="/configuracoes" aria-label="Configurações">Configurações</Link></nav></header>;}

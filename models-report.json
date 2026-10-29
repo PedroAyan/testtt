@@ -1,0 +1,434 @@
+[
+  {
+    "id": "africa",
+    "tipo": "continente",
+    "arquivo": "models/africa.glb",
+    "triangulos": 6004,
+    "tamanhoKb": 386.58,
+    "simplificacao": 0.012
+  },
+  {
+    "id": "ZAF",
+    "tipo": "pais",
+    "arquivo": "models/countries/ZAF.glb",
+    "triangulos": 752,
+    "tamanhoKb": 48.55,
+    "simplificacao": 0.03
+  },
+  {
+    "id": "AGO",
+    "tipo": "pais",
+    "arquivo": "models/countries/AGO.glb",
+    "triangulos": 744,
+    "tamanhoKb": 48.8,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "DZA",
+    "tipo": "pais",
+    "arquivo": "models/countries/DZA.glb",
+    "triangulos": 796,
+    "tamanhoKb": 51.44,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "BEN",
+    "tipo": "pais",
+    "arquivo": "models/countries/BEN.glb",
+    "triangulos": 244,
+    "tamanhoKb": 16.72,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "BWA",
+    "tipo": "pais",
+    "arquivo": "models/countries/BWA.glb",
+    "triangulos": 412,
+    "tamanhoKb": 26.71,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "BFA",
+    "tipo": "pais",
+    "arquivo": "models/countries/BFA.glb",
+    "triangulos": 460,
+    "tamanhoKb": 30.27,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "BDI",
+    "tipo": "pais",
+    "arquivo": "models/countries/BDI.glb",
+    "triangulos": 140,
+    "tamanhoKb": 10.04,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "CPV",
+    "tipo": "pais",
+    "arquivo": "models/countries/CPV.glb",
+    "triangulos": 96,
+    "tamanhoKb": 9.06,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "CMR",
+    "tipo": "pais",
+    "arquivo": "models/countries/CMR.glb",
+    "triangulos": 652,
+    "tamanhoKb": 42.39,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "TCD",
+    "tipo": "pais",
+    "arquivo": "models/countries/TCD.glb",
+    "triangulos": 564,
+    "tamanhoKb": 36.32,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "COM",
+    "tipo": "pais",
+    "arquivo": "models/countries/COM.glb",
+    "triangulos": 48,
+    "tamanhoKb": 4.89,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "CIV",
+    "tipo": "pais",
+    "arquivo": "models/countries/CIV.glb",
+    "triangulos": 524,
+    "tamanhoKb": 34.42,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "DJI",
+    "tipo": "pais",
+    "arquivo": "models/countries/DJI.glb",
+    "triangulos": 116,
+    "tamanhoKb": 8.66,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "EGY",
+    "tipo": "pais",
+    "arquivo": "models/countries/EGY.glb",
+    "triangulos": 532,
+    "tamanhoKb": 34.49,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "ERI",
+    "tipo": "pais",
+    "arquivo": "models/countries/ERI.glb",
+    "triangulos": 368,
+    "tamanhoKb": 24.87,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "SWZ",
+    "tipo": "pais",
+    "arquivo": "models/countries/SWZ.glb",
+    "triangulos": 84,
+    "tamanhoKb": 6.46,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "ETH",
+    "tipo": "pais",
+    "arquivo": "models/countries/ETH.glb",
+    "triangulos": 580,
+    "tamanhoKb": 37.35,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "GAB",
+    "tipo": "pais",
+    "arquivo": "models/countries/GAB.glb",
+    "triangulos": 476,
+    "tamanhoKb": 30.88,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "GMB",
+    "tipo": "pais",
+    "arquivo": "models/countries/GMB.glb",
+    "triangulos": 180,
+    "tamanhoKb": 12.51,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "GHA",
+    "tipo": "pais",
+    "arquivo": "models/countries/GHA.glb",
+    "triangulos": 340,
+    "tamanhoKb": 22.42,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "GIN",
+    "tipo": "pais",
+    "arquivo": "models/countries/GIN.glb",
+    "triangulos": 556,
+    "tamanhoKb": 36.02,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "GNQ",
+    "tipo": "pais",
+    "arquivo": "models/countries/GNQ.glb",
+    "triangulos": 80,
+    "tamanhoKb": 6.91,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "GNB",
+    "tipo": "pais",
+    "arquivo": "models/countries/GNB.glb",
+    "triangulos": 172,
+    "tamanhoKb": 11.99,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "LSO",
+    "tipo": "pais",
+    "arquivo": "models/countries/LSO.glb",
+    "triangulos": 116,
+    "tamanhoKb": 8.52,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "LBR",
+    "tipo": "pais",
+    "arquivo": "models/countries/LBR.glb",
+    "triangulos": 252,
+    "tamanhoKb": 17.07,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "LBY",
+    "tipo": "pais",
+    "arquivo": "models/countries/LBY.glb",
+    "triangulos": 612,
+    "tamanhoKb": 39.63,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "MDG",
+    "tipo": "pais",
+    "arquivo": "models/countries/MDG.glb",
+    "triangulos": 604,
+    "tamanhoKb": 39.44,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "MWI",
+    "tipo": "pais",
+    "arquivo": "models/countries/MWI.glb",
+    "triangulos": 372,
+    "tamanhoKb": 24.44,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "MLI",
+    "tipo": "pais",
+    "arquivo": "models/countries/MLI.glb",
+    "triangulos": 820,
+    "tamanhoKb": 52.02,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "MAR",
+    "tipo": "pais",
+    "arquivo": "models/countries/MAR.glb",
+    "triangulos": 780,
+    "tamanhoKb": 49.82,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "MUS",
+    "tipo": "pais",
+    "arquivo": "models/countries/MUS.glb",
+    "triangulos": 36,
+    "tamanhoKb": 3.48,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "MRT",
+    "tipo": "pais",
+    "arquivo": "models/countries/MRT.glb",
+    "triangulos": 420,
+    "tamanhoKb": 27.58,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "MOZ",
+    "tipo": "pais",
+    "arquivo": "models/countries/MOZ.glb",
+    "triangulos": 628,
+    "tamanhoKb": 40.94,
+    "simplificacao": 0.03
+  },
+  {
+    "id": "NAM",
+    "tipo": "pais",
+    "arquivo": "models/countries/NAM.glb",
+    "triangulos": 484,
+    "tamanhoKb": 31.02,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "NER",
+    "tipo": "pais",
+    "arquivo": "models/countries/NER.glb",
+    "triangulos": 564,
+    "tamanhoKb": 36.63,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "NGA",
+    "tipo": "pais",
+    "arquivo": "models/countries/NGA.glb",
+    "triangulos": 692,
+    "tamanhoKb": 44.55,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "KEN",
+    "tipo": "pais",
+    "arquivo": "models/countries/KEN.glb",
+    "triangulos": 340,
+    "tamanhoKb": 22.58,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "CAF",
+    "tipo": "pais",
+    "arquivo": "models/countries/CAF.glb",
+    "triangulos": 660,
+    "tamanhoKb": 42.48,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "COD",
+    "tipo": "pais",
+    "arquivo": "models/countries/COD.glb",
+    "triangulos": 916,
+    "tamanhoKb": 58.23,
+    "simplificacao": 0.03
+  },
+  {
+    "id": "COG",
+    "tipo": "pais",
+    "arquivo": "models/countries/COG.glb",
+    "triangulos": 620,
+    "tamanhoKb": 40.33,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "RWA",
+    "tipo": "pais",
+    "arquivo": "models/countries/RWA.glb",
+    "triangulos": 140,
+    "tamanhoKb": 10.09,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "STP",
+    "tipo": "pais",
+    "arquivo": "models/countries/STP.glb",
+    "triangulos": 20,
+    "tamanhoKb": 2.38,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "SEN",
+    "tipo": "pais",
+    "arquivo": "models/countries/SEN.glb",
+    "triangulos": 444,
+    "tamanhoKb": 29.2,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "SLE",
+    "tipo": "pais",
+    "arquivo": "models/countries/SLE.glb",
+    "triangulos": 232,
+    "tamanhoKb": 16.5,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "SOM",
+    "tipo": "pais",
+    "arquivo": "models/countries/SOM.glb",
+    "triangulos": 340,
+    "tamanhoKb": 22.28,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "SDN",
+    "tipo": "pais",
+    "arquivo": "models/countries/SDN.glb",
+    "triangulos": 812,
+    "tamanhoKb": 51.72,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "SDS",
+    "tipo": "pais",
+    "arquivo": "models/countries/SDS.glb",
+    "triangulos": 636,
+    "tamanhoKb": 41.15,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "TZA",
+    "tipo": "pais",
+    "arquivo": "models/countries/TZA.glb",
+    "triangulos": 624,
+    "tamanhoKb": 42.25,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "TGO",
+    "tipo": "pais",
+    "arquivo": "models/countries/TGO.glb",
+    "triangulos": 228,
+    "tamanhoKb": 15.41,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "TUN",
+    "tipo": "pais",
+    "arquivo": "models/countries/TUN.glb",
+    "triangulos": 392,
+    "tamanhoKb": 26.72,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "UGA",
+    "tipo": "pais",
+    "arquivo": "models/countries/UGA.glb",
+    "triangulos": 300,
+    "tamanhoKb": 20.17,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "ZMB",
+    "tipo": "pais",
+    "arquivo": "models/countries/ZMB.glb",
+    "triangulos": 660,
+    "tamanhoKb": 42.32,
+    "simplificacao": 0.015
+  },
+  {
+    "id": "ZWE",
+    "tipo": "pais",
+    "arquivo": "models/countries/ZWE.glb",
+    "triangulos": 388,
+    "tamanhoKb": 25.14,
+    "simplificacao": 0.015
+  }
+]

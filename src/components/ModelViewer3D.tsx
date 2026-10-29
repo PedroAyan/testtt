@@ -1,0 +1,14 @@
+import { createElement, useEffect, useRef, useState } from 'react';
+import { asset } from '../services/contentRepository';
+type Viewer=HTMLElement&{cameraOrbit:string;cameraTarget:string;fieldOfView:string;getCameraOrbit:()=>{theta:number;phi:number;radius:number};jumpCameraToGoal:()=>void};
+let viewerPromise:Promise<void>|undefined;
+function loadViewer(){return viewerPromise??=new Promise((resolve,reject)=>{if(customElements.get('model-viewer')){resolve();return;}const script=document.createElement('script');script.type='module';script.src=asset('vendor/model-viewer-4.0.0.min.js');script.onload=()=>resolve();script.onerror=()=>{viewerPromise=undefined;reject(new Error('Não foi possível carregar o visualizador.'));};document.head.append(script);});}
+export function ModelViewer3D({file,name}:{file:string;name:string}){
+ const ref=useRef<Viewer|null>(null),[ready,setReady]=useState(false),[error,setError]=useState(''),[loading,setLoading]=useState(true);
+ useEffect(()=>{let active=true;void loadViewer().then(()=>{if(active)setReady(true);}).catch((e:Error)=>{if(active)setError(e.message);});return()=>{active=false;};},[]);
+ useEffect(()=>{if(!ready||!ref.current)return;const el=ref.current;const done=()=>setLoading(false),fail=()=>setError('O modelo não carregou. Verifique a conexão e tente novamente.');el.addEventListener('load',done);el.addEventListener('error',fail);return()=>{el.removeEventListener('load',done);el.removeEventListener('error',fail);el.removeAttribute('src');};},[ready,file]);
+ const orbit=(action:'zoom-in'|'zoom-out'|'rotate'|'reset')=>{const el=ref.current;if(!el)return;if(action==='reset'){el.cameraOrbit='0deg 35deg auto';el.cameraTarget='auto auto auto';el.fieldOfView='30deg';return;}const o=el.getCameraOrbit();el.cameraOrbit=`${o.theta+(action==='rotate'?Math.PI/6:0)}rad ${o.phi}rad ${o.radius*(action==='zoom-in'?.85:action==='zoom-out'?1.15:1)}m`;};
+ return <div className="model-panel">{ready&&!error&&createElement('model-viewer',{ref,src:asset(file),alt:`Modelo 3D de ${name}`,'camera-controls':true,'touch-action':'pan-y','camera-orbit':'0deg 35deg auto','environment-image':'neutral','shadow-intensity':'0.5',exposure:'1',loading:'eager','interaction-prompt':'none'})}
+ {error?<p role="alert">{error}</p>:loading&&<p className="model-loading" role="status">Preparando seu modelo 3D…</p>}
+ <div className="model-badge">3D INTERATIVO · SEM CÂMERA</div><div className="model-controls" aria-label="Controles do modelo"><button onClick={()=>orbit('zoom-in')} aria-label="Ampliar modelo">＋</button><button onClick={()=>orbit('zoom-out')} aria-label="Reduzir modelo">−</button><button onClick={()=>orbit('rotate')}>Girar</button><button onClick={()=>orbit('reset')}>Restaurar</button></div><p className="micro">Arraste para girar · use a pinça ou os botões para ampliar</p></div>;
+}

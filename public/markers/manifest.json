@@ -1,0 +1,9 @@
+[
+  {
+    "id": "africa",
+    "barcode": 0,
+    "url": "https://localhost:5173/?continente=africa",
+    "pdf": "print/africa-A4.pdf",
+    "markerMm": 90
+  }
+]
