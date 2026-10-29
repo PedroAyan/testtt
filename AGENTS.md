@@ -38,6 +38,17 @@ npm run build:markers# gera QR Codes e marcadores imprimíveis
 - Comentários só onde o porquê não é óbvio.
 - Textos da interface em português do Brasil.
 
+## Alterações de interface e acessibilidade infantil
+
+- Em tarefas de interface, leia e aplique as skills instaladas `frontend-design`, `apple-design` e `emil-design-eng` quando pertinentes. Use `threejs-assets`, `threejs-spatial-data` e `threejs-performance` somente para mudanças relacionadas a modelos, dados 3D ou desempenho. As skills não autorizam alterar os fluxos e as regras da `SPEC.md`.
+- Examine as telas existentes e a referência visual indicada antes de editar. Defina uma direção coerente com o pedido e preserve o que já atende bem ao projeto. Em reformulações visuais, trabalhe composição, hierarquia e ilustrações, além de cores e espaçamentos; em correções pontuais, mantenha o escopo pequeno.
+- Priorize crianças do ensino fundamental, inclusive em alfabetização e com diferentes necessidades de acessibilidade: frases curtas, palavras familiares, instruções por etapa, ações com rótulos claros e ilustrações que ajudem a entender. Siga os critérios da `SPEC.md` §7.
+- Priorize o celular: texto base ≥ 16 px, alvos de toque ≥ 44 px, contraste WCAG AA, foco visível, texto ampliável e respeito a `prefers-reduced-motion`. Não dependa somente de cor, ícone, áudio ou gesto para transmitir informação ou permitir uma ação.
+- Mantenha carregamentos, erros, bloqueios e confirmações compreensíveis, com uma indicação clara do próximo passo. Detalhes técnicos de implementação ficam fora do percurso infantil; podem aparecer no Organizador quando necessários à edição/publicação.
+- Quando houver ferramenta de navegador disponível e autorizada, revise as telas alteradas em larguras pequenas e desktop, incluindo texto ampliado e navegação por teclado. Compare antes e depois quando possível e corrija os problemas encontrados antes de encerrar.
+- Se a revisão visual estiver bloqueada, continue o trabalho autorizado, registre o motivo e os casos pendentes em `PROGRESSO.md` e `PENDENCIAS.md`. Build, testes automatizados e cálculo de contraste não equivalem a revisão visual, uso por crianças ou teste físico de câmera/AR.
+- Ao relatar a alteração, descreva decisões concretas orientadas pelas skills e o que foi realmente conferido. Apenas dizer que uma skill foi lida não comprova sua aplicação. Não declare validação com crianças ou aparelhos físicos sem execução e registro.
+
 ## Ao terminar qualquer tarefa
 
 Reporte em três blocos: **Feito e verificado** (com o comando executado), **Feito mas não verificado** (e por quê), **Pendente**.

@@ -1,5 +1,11 @@
 # Progresso — Exploradores do Mundo
 
+## Orientações permanentes de interface infantil — 2026-10-29
+- Seção acrescentada ao `AGENTS.md` da raiz, entre estilo de código e relatório final, para orientar alterações de interface em todo o projeto: skills pertinentes, escopo proporcional, decisões concretas e revisão visual quando disponível/autorizada.
+- `SPEC.md` §1 e §7 complementadas com compreensão infantil, instruções por etapa, ícones com rótulos, acessibilidade no celular/texto ampliado, estados claros e separação do percurso infantil e dos detalhes do Organizador. Fluxos, desbloqueio, arquitetura e requisitos de AR preservados.
+- Alteração somente documental; não constitui nova implementação nem validação da interface. Verificação desta etapa: revisão do diff e `git diff --check`; testes do app não foram repetidos porque não houve mudança de código.
+- Próximo passo exato: aplicar os novos critérios na próxima revisão visual e executar os percursos manuais de `docs/TESTE-NO-CELULAR.md`, registrando separadamente navegador, aparelho físico e avaliação de compreensão com crianças quando realizada.
+
 ## Etapa atual — refinamento infantil e mobile concluído localmente (2026-10-29)
 - Leitura integral dos quatro documentos obrigatórios e inspeção da referência concluídas antes de editar o app. Telas, componentes, estilos, testes e isolamento da cena AR examinados.
 - Direção e achados registrados em docs/REVISAO-INTERFACE.md; preservar arte autoral, dados, fluxos, sessão ADM e persistência. Skills frontend-design, emil-design-eng e apple-design aplicadas; nenhuma mudança 3D necessária.

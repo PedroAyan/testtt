@@ -1,5 +1,10 @@
 # Pendências
 
+## Critérios permanentes de acessibilidade infantil — 2026-10-29
+- Orientações registradas no `AGENTS.md` da raiz e na `SPEC.md` §1/§7. Esta atualização é documental: não valida retroativamente a interface implementada.
+- Na próxima revisão, conferir também leitura e compreensão das instruções, ícones com rótulos, 320–390 px/paisagem, texto a 200%, teclado/leitor de tela e distinção entre QR e marcador. Avaliação com crianças NÃO EXECUTADA; quando realizada, registrar contexto, responsável e resultados sem confundir com testes automatizados.
+- Permanecem pendentes a revisão visual e os testes físicos já descritos abaixo. Nenhuma alteração em dados, modelos, persistência ou regras de desbloqueio nesta etapa.
+
 ## Refinamento infantil e mobile — 2026-10-29
 - Código e verificações locais concluídos; detalhes e arquivos em docs/REVISAO-INTERFACE.md. Typecheck, 11 testes e build passaram; conteúdo/fontes/arquivos dos seis continentes validados pelo build. Contrastes principais aprovados por `node scripts/check-ui-contrast.mjs` (29/29); não equivale a certificação WCAG completa.
 - Pendente: revisão visual e interação em navegador e em aparelhos físicos, especialmente 320–390 px, texto ampliado, foco/leitor de tela, rolagem do mapa, recarga após falha do visualizador, alternativas de atividades e foco na revisão do Organizador. Computer Use recusou acesso ao Edge e ao Chrome por falta de autorização; não foi possível executar essa revisão nesta sessão.

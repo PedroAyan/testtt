@@ -4,7 +4,7 @@
 
 Jogo educativo em realidade aumentada, inspirado na mecânica de exploração do Pokémon GO, para ensinar os **6 continentes** (modelo com a América unificada, usado no ensino brasileiro). Cada continente corresponde a uma folha impressa contendo um **QR Code** (abre o site) e um **marcador AR** (ancora o modelo 3D). Ao reconhecer o marcador, o continente é desbloqueado e passa a ser acessível sem QR Code.
 
-Público: estudantes do ensino fundamental, em contexto universitário. Textos curtos, escaneáveis, tom acolhedor e profissional.
+Público: estudantes do 1º ao 9º ano do ensino fundamental, incluindo crianças em alfabetização, em um projeto universitário. Priorizar linguagem simples, leitura fácil, acolhimento e autonomia com apoio do professor, respeitando diferentes idades e necessidades de acessibilidade. Critérios de interface na §7.
 
 Fluxo:
 
@@ -190,6 +190,22 @@ Bordas arredondadas, ícones, animações discretas (respeitar `prefers-reduced-
 - Alvos de toque ≥ 44 px, `aria-label` nos controles, foco visível.
 - Fonte legível (sem serifa, tamanho base ≥ 16 px), textos curtos e hierarquia clara.
 - Tudo funciona sem depender de gesto (botões alternativos).
+
+### Experiência infantil e compreensão
+
+- **Linguagem:** usar palavras familiares, frases curtas e verbos que indiquem a ação. Apresentar uma instrução por etapa e manter o mesmo nome para a mesma ação ao longo do fluxo. Explicar termos novos no contexto: por exemplo, “realidade aumentada (RA)”. Textos por ano escolar continuam seguindo §14.0.4 e §14.6.
+- **Hierarquia:** deixar a ação principal de cada tela evidente e as ações secundárias reconhecíveis. Informações complementares permanecem em “Saiba mais”, sem substituir a ficha curta definida na §14.0.10. Separar visualmente descoberta e atividade concluída, conforme §14.0.14.
+- **Ilustrações:** usar arte amigável, formas arredondadas e cores pastel como direção visual, com licença registrada e texto alternativo nas imagens informativas. A ilustração deve ajudar a compreender a tarefa, especialmente a diferença entre QR Code e marcador AR. Decoração não deve competir com instruções, controles ou modelo. A referência visual sem licença de redistribuição permanece apenas para consulta local.
+- **Múltiplas formas de acesso:** combinar ícones com rótulos textuais nos controles de navegação e estudo. Não depender somente de cor, posição, ícone, áudio ou gesto. Manter textos legíveis mesmo quando “Ouvir” não estiver disponível; seguir §14.0.6 para áudio e §14.0.11 para alternativas aos gestos. Imagens decorativas não devem gerar anúncios desnecessários no leitor de tela.
+- **Estados compreensíveis:** carregamentos, erros e bloqueios devem explicar o que está acontecendo e qual é a próxima ação possível, com linguagem acolhedora e sem culpar a criança. Preservar “Tentar novamente”, saídas claras e tentativas sem punição nas atividades. Mensagens não podem prometer desbloqueio sem os eventos válidos da §3.5.
+- **Celular e texto ampliado:** considerar larguras de 320, 360 e 390 px e orientação paisagem. Permitir ampliação de texto a 200% sem cortar informações ou tornar controles inacessíveis. A página não deve exigir rolagem horizontal; o mapa pode ter rolagem própria, com indicação visível e lista alternativa dos seis continentes. Respeitar os mínimos de texto/toque acima e a separação da cena AR em iframe; status, resumo e saídas da câmera não podem se sobrepor a ponto de impedir o uso.
+- **Percurso infantil:** detalhes de arquivos, hashes, JSON, build e publicação não entram nas instruções dirigidas ao aluno. O Organizador pode apresentar esses detalhes quando forem necessários para preparar e publicar conteúdo, mantendo sua entrada identificada e os fluxos da §14.1.
+
+### Verificação de alterações visuais
+
+Revisar as telas alteradas no navegador quando houver ferramenta disponível e autorizada, incluindo larguras pequenas, desktop, texto ampliado, foco e alternativas por teclado. Usar capturas antes/depois quando possível para avaliar a direção visual e corrigir problemas observados. As mudanças devem ser proporcionais ao pedido: reformulações precisam trabalhar a composição e a hierarquia; correções pontuais não exigem redesenhar o projeto.
+
+Registrar separadamente verificação de código/contraste, revisão visual no navegador, teste em aparelho físico e avaliação com crianças. Nenhuma dessas verificações substitui as demais. Se alguma não puder ser executada, registrar o motivo e o próximo passo em `PROGRESSO.md`/`PENDENCIAS.md`, mantendo câmera/AR como **não validadas** até o roteiro físico da §11. Um visual infantil, por si só, não comprova acessibilidade ou compreensão pelas crianças.
 
 ### Telas
 
