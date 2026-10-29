@@ -69,3 +69,19 @@ Executar somente os percursos essenciais abaixo; não é uma bateria exaustiva. 
 | 360 px / teclado / movimento reduzido / leitor de tela | Sem corte dos cartões/botões; mapa desliza lateralmente e lista funciona; foco claro, importação focável e animação dispensável | NÃO VALIDADO |
 
 Se qualquer percurso falhar, registrar o passo da tabela em AUDITORIA-FLUXOGRAMAS.md e atualizar PENDENCIAS.md, sem transformar evidência de código em aprovação manual.
+
+## Refinamento infantil e mobile — 2026-10-29 — NÃO VALIDADO
+
+Repetir em Android Chrome e iPhone Safari, em perfil de teste, com largura pequena e texto ampliado. Nenhuma linha abaixo foi executada em aparelho físico nesta revisão.
+
+| Percurso | Resultado esperado | Resultado real / responsável |
+|---|---|---|
+| Início → Explorar / Minha coleção / Organizador | Ações legíveis, orientação na primeira visita e entrada do professor separada | NÃO VALIDADO |
+| Mapa a 320, 360 e 390 px, paisagem e texto ampliado | Página sem rolagem lateral; só o mapa desliza; nomes e alvos legíveis; lista oferece os mesmos destinos | NÃO VALIDADO |
+| Ficha / país → modelo carregando e falha de conexão | Status legível; controles indisponíveis durante carga; Tentar novamente recupera o visualizador | NÃO VALIDADO |
+| RA com ficha curta longa e texto ampliado | Status, ficha e saídas sem colisão; área para ver marcador; botões acessíveis pela rolagem; iframe alinhado à área da câmera | NÃO VALIDADO |
+| RA → Ajuda com câmera → página inteira | Ajuda expansível e plano B abrem a cena real; retornos e teardown continuam corretos | NÃO VALIDADO |
+| Atividades no celular, por toque e teclado | Alternativas em coluna, silhuetas com mesmo tamanho, dica/acerto claros, foco visível e sem punição | NÃO VALIDADO |
+| ADM → Ver como público → Voltar ao Organizador | Retorno disponível também quando a ficha já está desbloqueada; rascunho não aplicado como conteúdo publicado | NÃO VALIDADO |
+| Editor → Revisar modificações | Foco chega ao painel de revisão; dados legíveis; salvar/cancelar/importar/exportar mantêm o fluxo | NÃO VALIDADO |
+| Navegação com leitor de tela, zoom de 200% e movimento reduzido | Rótulos claros, ordem de foco coerente, controles ≥ 44 px, texto base ≥ 16 px, sem animação de movimento | NÃO VALIDADO |

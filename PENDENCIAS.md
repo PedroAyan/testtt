@@ -1,5 +1,11 @@
 # Pendências
 
+## Refinamento infantil e mobile — 2026-10-29
+- Código e verificações locais concluídos; detalhes e arquivos em docs/REVISAO-INTERFACE.md. Typecheck, 11 testes e build passaram; conteúdo/fontes/arquivos dos seis continentes validados pelo build. Contrastes principais aprovados por `node scripts/check-ui-contrast.mjs` (29/29); não equivale a certificação WCAG completa.
+- Pendente: revisão visual e interação em navegador e em aparelhos físicos, especialmente 320–390 px, texto ampliado, foco/leitor de tela, rolagem do mapa, recarga após falha do visualizador, alternativas de atividades e foco na revisão do Organizador. Computer Use recusou acesso ao Edge e ao Chrome por falta de autorização; não foi possível executar essa revisão nesta sessão.
+- Câmera/QR/RA, pose do marcador, perda/retorno e cinco ciclos de teardown continuam NÃO VALIDADOS fisicamente. Roteiro adicional em docs/TESTE-NO-CELULAR.md; registrar responsável e evidência antes de marcar como aprovado.
+- Nenhuma pendência nova de dados, fontes, dependências ou modelos. Referência visual preservada apenas para consulta local, fora do site.
+
 ## Visualização pública do Organizador — 2026-10-29
 - Publicada e conferida nos chunks públicos; typecheck/build passaram e Actions concluiu com sucesso. A visualização mostra o conteúdo publicado atual; alterações em rascunho precisam ser exportadas/publicadas para aparecer. Revisão visual manual não executada.
 

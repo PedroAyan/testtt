@@ -19,8 +19,8 @@ it('fichas respeitam bloqueio, confirmação do QR, Antártida e resumo sobrepos
     refresh: async () => {}, setYear: async () => {}, previewDraft: () => {},
   };
   vi.mocked(useApp).mockImplementation(() => state);
-  const render = (path: string, ar = false) => renderToStaticMarkup(createElement(MemoryRouter,
-    { initialEntries: [{ pathname: path, state: { discovered: true } }] },
+  const render = (path: string, ar = false, publicView = false) => renderToStaticMarkup(createElement(MemoryRouter,
+    { initialEntries: [{ pathname: path, state: { discovered: true, organizerPublicView: publicView } }] },
     createElement(Routes, null, createElement(Route, {
       path: ar ? '/ar/:id' : '/continente/:id', element: createElement(ar ? ARExperience : ContinentPage),
     })),
@@ -35,6 +35,7 @@ it('fichas respeitam bloqueio, confirmação do QR, Antártida e resumo sobrepos
   expect(discovered).toContain('Continente descoberto!');
   expect(discovered).toContain('Conhecer os países');
   expect(discovered).toContain('Fazer atividade');
+  expect(render('/continente/africa', false, true)).toContain('Voltar ao Organizador');
   expect(render('/continente/antartida')).not.toContain('Conhecer os países');
   const ar = render('/ar/africa', true);
   expect(ar).toContain('class="ar-fact"');

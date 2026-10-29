@@ -20,7 +20,7 @@
   --sky: #b8dce4;
   --border: #e1dae9;
   --border-strong: #c5bbd1;
-  --border-control: #887a96;
+  --border-control: #80718e;
   --shadow: #39334f12;
   --shadow-soft: #39334f08;
   --shadow-deep: #39334f24;
@@ -32,4 +32,5 @@
   --danger: #913c4b;
   --radius-card: 28px;
   --radius-button: 18px;
+  --ease-out: cubic-bezier(.23, 1, .32, 1);
 }

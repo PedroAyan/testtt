@@ -21,7 +21,7 @@ export default function Continent() {
   const unlocked = app.unlocked.includes(c.id);
   if (!unlocked) return <main className="narrow locked-page">
     {location.state?.organizerPublicView === true ? <div className="organizer-public-preview-bar"><span>Visualização pública do conteúdo publicado</span><Link className="button secondary" to="/organizador">Voltar ao Organizador</Link></div> : <Link className="back-link" to="/mapa">← Voltar ao mapa</Link>}
-    <span className="eyebrow">UMA DESCOBERTA ESPERA POR VOCÊ</span>
+    <span className="eyebrow">🔒 Ainda não descoberto</span>
     <h1>Vamos conhecer<br /><em>{c.nome}?</em></h1>
     <img className="guide-image" src={asset(c.dicaQr?.imagem || 'images/guia-qr.svg')} alt="Folha com QR e marcador: procure o QR ao lado do quadrado preto" />
     <p>{c.dicaQr?.texto}</p>
@@ -29,16 +29,16 @@ export default function Continent() {
       <Link className="button primary" to={`/qr/${c.id}`}>Escanear QR code ↗</Link>
       <Link className="button secondary" to={`/ar/${c.id}`}>Iniciar realidade aumentada</Link>
     </div>
-    <p className="micro">Abrir o endereço não registra uma descoberta. Use o QR dentro do app ou reconheça o marcador da folha.</p>
+    <p className="micro">Para guardar este continente na coleção, leia o QR aqui no app ou aponte a câmera para o marcador da folha.</p>
   </main>;
 
   return <main>
-    <Link className="back-link" to="/mapa">← Voltar ao mapa</Link>
+    {location.state?.organizerPublicView === true ? <div className="organizer-public-preview-bar"><span>Visualização pública do conteúdo publicado</span><Link className="button secondary" to="/organizador">Voltar ao Organizador</Link></div> : <Link className="back-link" to="/mapa">← Voltar ao mapa</Link>}
     {location.state?.discovered === true && <div className="notice success discovery-notice" role="status">
       <span aria-hidden="true">✦</span><div><strong>Continente descoberto!</strong><p>{c.nome} agora faz parte da sua coleção. Vamos conhecer?</p></div>
       <Link className="button secondary" to="/mapa">Minha coleção</Link>
     </div>}
-    <div className="page-heading"><div><span className="eyebrow">✓ SEU DIÁRIO DE DESCOBERTAS</span>
+    <div className="page-heading"><div><span className="eyebrow">✓ Continente descoberto</span>
       <h1>{c.nome}<span className="title-dot" style={{ background: c.cor }} /></h1></div>
       <Link className="button secondary" to={`/ar/${c.id}`}>Ver em RA ↗</Link>
     </div>
@@ -50,7 +50,7 @@ export default function Continent() {
           {shortcut.showHint && <div className="gesture-hint"><p>Arraste a alça para baixo ou toque em “Conhecer os países”.</p><button onClick={shortcut.dismissHint} aria-label="Fechar dica de gesto">Entendi</button></div>}
         </>}
         <img className="fact-art" src={asset(c.fichaCurta.ilustracao)} alt={c.fichaCurta.ilustracaoAlt} />
-        <span className="eyebrow">UMA PARADA PARA CONHECER</span>
+        <span className="eyebrow">Sua ficha de descobertas</span>
         <h2>Onde fica?</h2><p>{c.fichaCurta.localizacao}</p>
         <h2>Você sabia?</h2><p>{c.fichaCurta.curiosidade}</p>
         <ListenButton text={`${c.nome}. ${c.fichaCurta.localizacao} ${c.fichaCurta.curiosidade}`} audioUrl={c.audioUrl} />

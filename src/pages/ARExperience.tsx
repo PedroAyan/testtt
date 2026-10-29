@@ -35,15 +35,15 @@ export default function ARExperience() {
     sendARMessage(target.current, 'ar:set-scale', { scale: scale.current });
   }
   return <main className="ar-page">
-    <div className="ar-heading"><Link className="back-link" to="/mapa">← Voltar ao mapa</Link><strong>{c.nome} · realidade aumentada</strong></div>
+    <div className="ar-heading"><Link className="back-link" to="/mapa">← Voltar ao mapa</Link><h1>{c.nome}<span>Realidade aumentada</span></h1></div>
     <div className={`ar-stage ${found ? 'recognized' : ''}`}>
       <ARFrame continent={c} session={session} onMessage={m => void message(m)} onWindow={w => { target.current = w; }} />
       <div className="ar-status" role={error ? 'alert' : 'status'}>{found ? '✓ ' : ''}{status}</div>
       {unlocked && <section className="ar-fact" aria-label="Ficha sobreposta do continente"><strong>{c.nome}</strong><p>{c.fichaCurta.localizacao}</p><p>{c.fichaCurta.curiosidade}</p></section>}
       <div className="ar-exit"><Link className="button primary" to={`/continente/${c.id}`}>{unlocked ? 'Ver sem câmera' : 'Ver dica do QR'}</Link><Link className="button secondary" to="/mapa">Voltar ao mapa</Link></div>
     </div>
-    <div className="ar-toolbar" aria-label="Controles do modelo em realidade aumentada">
-      <button onClick={() => zoom(.25)} aria-label="Ampliar modelo">＋</button><button onClick={() => zoom(-.25)} aria-label="Reduzir modelo">−</button>
+    <div className="ar-toolbar" role="group" aria-label="Controles do modelo em realidade aumentada">
+      <button onClick={() => zoom(.25)} aria-label="Ampliar modelo">＋ Ampliar</button><button onClick={() => zoom(-.25)} aria-label="Reduzir modelo">− Reduzir</button>
       <button onClick={() => sendARMessage(target.current, 'ar:rotate', { degrees: 30 })}>Girar</button>
       <button onClick={() => { scale.current = 1; sendARMessage(target.current, 'ar:reset'); }}>Restaurar</button>
     </div>
@@ -54,8 +54,8 @@ export default function ARExperience() {
         {unlocked && <Link className="button primary" to={`/continente/${c.id}`}>{error ? 'Ver em 3D sem câmera' : 'Ver sem câmera'}</Link>}
         {error && <button className="button secondary" onClick={() => { scale.current = 1; setFound(false); setError(false); setSession(n => n + 1); setStatus('Reiniciando a câmera…'); }}>Tentar novamente</button>}
         <Link className="button secondary" to="/mapa">Minha coleção</Link>
-        <a className="button secondary" href={`${asset('ar/scene.html')}?continente=${c.id}&model=${encodeURIComponent(c.modelo.arquivo)}&full=1`}>Abrir RA em página inteira</a>
       </div>
+      <details><summary>Precisa de ajuda com a câmera?</summary><p>Se a câmera não abrir aqui, tente a realidade aumentada em uma página inteira.</p><a className="button secondary" href={`${asset('ar/scene.html')}?continente=${c.id}&model=${encodeURIComponent(c.modelo.arquivo)}&full=1`}>Abrir RA em página inteira</a></details>
     </div>
   </main>;
 }

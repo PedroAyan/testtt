@@ -1,9 +1,13 @@
 # Progresso — Exploradores do Mundo
 
-## Etapa atual — refinamento infantil e mobile (2026-10-29)
+## Etapa atual — refinamento infantil e mobile concluído localmente (2026-10-29)
 - Leitura integral dos quatro documentos obrigatórios e inspeção da referência concluídas antes de editar o app. Telas, componentes, estilos, testes e isolamento da cena AR examinados.
 - Direção e achados registrados em docs/REVISAO-INTERFACE.md; preservar arte autoral, dados, fluxos, sessão ADM e persistência. Skills frontend-design, emil-design-eng e apple-design aplicadas; nenhuma mudança 3D necessária.
-- Próximo passo exato: implementar os ajustes de hierarquia, leitura, controles e estados; executar typecheck, testes e build; registrar os limites da revisão visual e física.
+- Concluídos: início e orientação mais claros, navegação agrupada, coleção com rótulos acessíveis, texto de apoio ≥ 16 px, ações ≥ 44 px, atividades em coluna no celular, bordas contrastantes, foco e movimento reduzido. Arte existente reutilizada; referência não incorporada.
+- Fichas preservam conteúdo curto e Saiba mais. Visualizador com recuperação de erro e controles após carga. RA com status/resumo/saídas distribuídos em coluna, mantendo iframe/ponte/teardown. Organizador com ações por continente, importação/exportação de rascunho e foco na revisão; retorno da visualização pública funciona também na ficha descoberta.
+- `npm.cmd run typecheck`, `npm.cmd test` (11/11) e `npm.cmd run build`: exit 0. `node scripts/check-ui-contrast.mjs`: 29 pares principais aprovados (texto ≥ 4,67:1, foco avaliado ≥ 5,46:1, bordas ≥ 3,26:1). `git diff --check` sem erros. Relação completa de arquivos em docs/REVISAO-INTERFACE.md.
+- Revisão visual no navegador NÃO EXECUTADA: host de navegador indisponível e Computer Use nativo recusou Edge/Chrome por falta de autorização nesta sessão. Câmera/QR/RA e revisão em aparelhos físicos NÃO VALIDADOS. Os testes automatizados não equivalem a essas validações.
+- Próximo passo exato: executar as tabelas de docs/TESTE-NO-CELULAR.md em Android Chrome e iPhone Safari, incluindo o novo roteiro de refinamento, e registrar aparelho, navegador, responsável e resultado. Serviços, regras de desbloqueio, dados, modelos, sessão ADM, persistência, links de rota e dependências preservados.
 
 ## Visualização pública no Organizador — 2026-10-29
 - Botão “Ver como público” adicionado ao lado de cada continente. Abre a ficha pública publicada, oculta os avisos/controles de ADM nessa tela e oferece retorno ao Organizador.
