@@ -9,9 +9,17 @@ import { IMPLEMENTED_CONTINENTS } from '../scripts/config.mjs';
 import { continentSchema, validateOverrides } from '../src/services/contentSchema';
 import { activityContinents, answerActivity, defaultActivities, isExplorationComplete } from '../src/services/activities';
 import type { Continent } from '../src/types/continent';
+import { verifyOrganizerPassword } from '../src/services/organizerAuth';
+import { pbkdf2Sync, randomBytes } from 'node:crypto';
 class MemoryStorage implements StoragePort {data=new Map<string,string>();getItem(k:string){return this.data.get(k)||null;}setItem(k:string,v:string){this.data.set(k,v);}removeItem(k:string){this.data.delete(k);}}
 const data=async(id:string)=>JSON.parse(await readFile(`src/data/continents/${id}.json`,'utf8')) as Continent;
 describe('Verificações essenciais da especificação',()=>{
+ it('valida hash PBKDF2 sem guardar uma senha de Organizador no código',async()=>{
+  const password=randomBytes(16).toString('hex'),salt=randomBytes(16).toString('hex');
+  const expected=pbkdf2Sync(password,Buffer.from(salt,'hex'),100000,32,'sha256').toString('hex');
+  const encoded=`pbkdf2:sha256:100000:${salt}:${expected}`;
+  expect(await verifyOrganizerPassword(password,encoded)).toBe(true);expect(await verifyOrganizerPassword(password+'x',encoded)).toBe(false);expect(await verifyOrganizerPassword(password,'invalido')).toBe(false);
+ });
  it('persiste descobertas e atividades sem duplicar, valida storage e usa memória se bloqueado',async()=>{
   const storage=new MemoryStorage(),r=new LocalStorageRepository(storage);await r.unlock('africa');await r.unlock('africa');await r.completeActivity('africa-formato');await r.completeActivity('africa-formato');
   const reload=new LocalStorageRepository(storage);expect(await reload.getUnlocked()).toEqual(['africa']);expect(await reload.getCompletedActivities()).toEqual(['africa-formato']);
