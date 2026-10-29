@@ -5,5 +5,40 @@
     "url": "https://localhost:5173/?continente=africa",
     "pdf": "print/africa-A4.pdf",
     "markerMm": 90
+  },
+  {
+    "id": "america",
+    "barcode": 1,
+    "url": "https://localhost:5173/?continente=america",
+    "pdf": "print/america-A4.pdf",
+    "markerMm": 90
+  },
+  {
+    "id": "antartida",
+    "barcode": 2,
+    "url": "https://localhost:5173/?continente=antartida",
+    "pdf": "print/antartida-A4.pdf",
+    "markerMm": 90
+  },
+  {
+    "id": "asia",
+    "barcode": 3,
+    "url": "https://localhost:5173/?continente=asia",
+    "pdf": "print/asia-A4.pdf",
+    "markerMm": 90
+  },
+  {
+    "id": "europa",
+    "barcode": 4,
+    "url": "https://localhost:5173/?continente=europa",
+    "pdf": "print/europa-A4.pdf",
+    "markerMm": 90
+  },
+  {
+    "id": "oceania",
+    "barcode": 5,
+    "url": "https://localhost:5173/?continente=oceania",
+    "pdf": "print/oceania-A4.pdf",
+    "markerMm": 90
   }
 ]
