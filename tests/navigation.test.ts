@@ -15,7 +15,7 @@ vi.mock('../src/hooks/useApp', () => ({ useApp: vi.fn(), repository: {} }));
 it('fichas respeitam bloqueio, confirmação do QR, Antártida e resumo sobreposto da RA', () => {
   const state = {
     continents: [africa, antarctica] as Continent[], activities: [], unlocked: [] as ContinentId[],
-    completed: [], year: 'geral' as const, ready: true, warning: '',
+    completed: [], year: 'geral' as const, ready: true, warning: '', organizerPreview: false,
     refresh: async () => {}, setYear: async () => {}, previewDraft: () => {},
   };
   vi.mocked(useApp).mockImplementation(() => state);

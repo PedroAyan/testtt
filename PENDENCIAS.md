@@ -1,5 +1,10 @@
 # Pendências
 
+## Acesso ADM — revisão de 2026-10-29
+- Configuração solicitada atualizada: GitHub API aceitou o hash na variável de Actions (HTTP 204). O próximo build/deploy aplica a configuração ao site.
+- Modo ADM libera as seis fichas no app normal e escreve QR, marcador, atividade, perfil e reinício somente na memória durante a sessão. Sair limpa esses dados.
+- Login e saída ADM ainda precisam de conferência no site depois do deploy. Câmera e RA seguem NÃO VALIDADAS em celular.
+
 ## Revisão de 2026-10-29
 - Auditoria dos cinco fluxos concluída por comparação visual do PDF local com SPEC §14 e rastreamento do código: docs/AUDITORIA-FLUXOGRAMAS.md. A tabela distingue código, testes de domínio/HTML e teste físico pendente.
 - Verificações locais executadas: `npm.cmd run typecheck` (exit 0), `npm.cmd run build` (exit 0) e `npm.cmd test` (11/11 passaram). Não há falha automatizada conhecida nesta revisão.

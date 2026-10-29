@@ -1,5 +1,12 @@
 # Progresso — Exploradores do Mundo
 
+## Sessão ADM — atualização em andamento
+- O responsável pediu os seis continentes liberados no próprio app enquanto estiver logado como ADM, com a senha escolhida `camila`.
+- Hash PBKDF2 atualizado pela GitHub API na variável `VITE_ORGANIZER_PASSWORD_HASH` (HTTP 204); a senha em texto não foi adicionada ao código.
+- Login ADM ativa mapa/fichas/atividades normais com os seis continentes liberados. QR/AR/atividades/perfil/reset usam memória temporária, descartada ao sair; progresso regular não é alterado.
+- `npm.cmd run typecheck` e `npm.cmd run build` passaram; seis conjuntos de dados/arquivos validados. `git diff --check` sem erros.
+- Próximo passo exato: commit/push do código; aguardar Actions e conferir login/hash e chunks públicos. O workflow executará a suíte existente de testes.
+
 ## Publicação concluída — 2026-10-29
 - Repositório atualizado: https://github.com/PedroAyan/testtt , branch main. Os três commits da auditoria e do visual foram enviados por `git push origin main`.
 - Site atualizado: https://pedroayan.github.io/testtt/ . Código publicado: `7a5b95a6f64b7198896013af33310441394a6ef7`.

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom';
-import { useApp, repository } from '../hooks/useApp';
+import { useApp, activeCollectionRepository } from '../hooks/useApp';
 import { discoverFromQR } from '../services/discovery';
 import { asset } from '../services/contentRepository';
 type Decoder=(data:Uint8ClampedArray,width:number,height:number,options?:{inversionAttempts:string})=>{data:string}|null;
@@ -26,7 +26,7 @@ export default function QRScanner(){
     const frame=async(now:number)=>{
      if(!active)return;
      if(el.readyState>=2&&now-last>150){last=now;canvas.width=Math.min(640,el.videoWidth);canvas.height=Math.round(el.videoHeight*canvas.width/el.videoWidth);context.drawImage(el,0,0,canvas.width,canvas.height);const pixels=context.getImageData(0,0,canvas.width,canvas.height);const code=decode(pixels.data,canvas.width,canvas.height,{inversionAttempts:'dontInvert'});
-      if(code){close();const result=await discoverFromQR(repository,code.data,c!.id,import.meta.env.VITE_PUBLIC_URL||new URL(import.meta.env.BASE_URL,location.origin).href);if(result.ok){await app.refresh();navigate(`/continente/${c!.id}`,{replace:true,state:{discovered:true}});}else{setStatus(result.reason);setError(true);}return;}
+      if(code){close();const result=await discoverFromQR(activeCollectionRepository(),code.data,c!.id,import.meta.env.VITE_PUBLIC_URL||new URL(import.meta.env.BASE_URL,location.origin).href);if(result.ok){await app.refresh();navigate(`/continente/${c!.id}`,{replace:true,state:{discovered:true}});}else{setStatus(result.reason);setError(true);}return;}
      }
      raf=requestAnimationFrame(t=>{void frame(t);});
     };raf=requestAnimationFrame(t=>{void frame(t);});

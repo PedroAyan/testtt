@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
-import { useApp, repository } from '../hooks/useApp';
+import { useApp, activeCollectionRepository } from '../hooks/useApp';
 import { ARFrame } from '../components/ARFrame';
 import { discoverFromMarker } from '../services/discovery';
 import { sendARMessage, type ARMessage } from '../services/arBridge';
@@ -17,7 +17,7 @@ export default function ARExperience() {
     switch (m.type) {
       case 'ar:ready': setStatus('Câmera pronta. Aponte para o quadrado preto da folha.'); break;
       case 'ar:marker-found':
-        if (await discoverFromMarker(repository, continent.id, m.payload)) {
+        if (await discoverFromMarker(activeCollectionRepository(), continent.id, m.payload)) {
           await app.refresh(); setFound(true); setStatus('Continente descoberto! O modelo acompanha o marcador.');
         }
         break;

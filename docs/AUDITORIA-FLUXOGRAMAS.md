@@ -147,6 +147,14 @@ Os cálculos não certificam sozinhos toda a acessibilidade: foco real, tamanho 
 
 Juba foi confirmada no campo “Capital city” da [UNdata — South Sudan](https://data.un.org/legacy/en/iso/ss.html), acesso 2026-10-29. A correção está em `data-src/country-facts.json`, `scripts/build-data.mjs` e `africa.json`; fonte `undata-south-sudan` registrada em `SOURCES.md`. O relatório `docs/DADOS-EM-VERIFICACAO.md` foi regenerado; não marca mais essa capital como ausente. Nenhuma área/população foi calculada a partir de estimativas incompatíveis. Demais `null`/`verificar:true` permanecem.
 
+## Modo ADM pedido após a publicação anterior
+
+A senha é conferida pelo hash da variável `VITE_ORGANIZER_PASSWORD_HASH`. O valor solicitado foi atualizado diretamente no repositório via API; o texto da senha não entrou no código ou commit.
+
+Após login, o próprio app libera mapa, fichas, atividades e ferramentas para os seis continentes. As descobertas por QR/marcador, atividades, ano e reinício usam repositório em memória e são descartados ao sair do ADM. O desbloqueio normal dos alunos continua limitado aos reconhecimentos válidos. A sessão ADM não sobrevive a recarregar o site.
+
+A senha é curta e só oferece barreira de conveniência, pois o site executa no navegador público. Não deve ser reutilizada em outros serviços.
+
 ## Execução desta revisão
 
 | Comando / procedimento | Resultado real |
@@ -162,4 +170,5 @@ Juba foi confirmada no campo “Capital city” da [UNdata — South Sudan](http
 | Câmera, QR impresso, pose/gestos/teardown no celular | NÃO EXECUTADOS, NÃO VALIDADOS; seguir `docs/TESTE-NO-CELULAR.md` |
 | Publicação desta revisão | Concluída posteriormente em 2026-10-29: `git push origin main`; código `7a5b95a`; workflow [40814989509](https://github.com/PedroAyan/testtt/actions/runs/40814989509) com build/deploy `success` |
 | Verificação pública após deploy | `node scripts/check-published.mjs`, exit 0: página/JS, hash do Organizador, bibliotecas locais e seis conjuntos HTTP 200; GLBs iguais aos locais |
+| Publicação da configuração ADM | Hash atualizado pela GitHub API, HTTP 204; o novo deploy consome a variável configurada |
 | Confirmação dos novos conteúdos | Verificador local em `artifacts/auditoria/check-new-published.mjs`, exit 0: Home/ficha/RA novos, fonte de Juba, CSS pastel, SVG e tokens públicos iguais aos locais por SHA-256 |

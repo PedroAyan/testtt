@@ -8,6 +8,8 @@ Jogo educativo mobile-first em React e TypeScript: seis continentes, leitura rea
 
 Paleta e valores reutilizáveis ficam em `src/styles/tokens.css`: lavanda e pêssego complementam rosa, menta e amarelo. `app.css`/`components.css` usam os tokens e `playful.css` define a composição infantil. O preparo de desenvolvimento/build copia os tokens para `public/styles/tokens.css`, também usado pela página AR isolada; editar a fonte em `src/`, não a cópia gerada. Textos usam tons escuros, com contraste calculado documentado na auditoria, foco visível e controles alternativos aos gestos.
 
+Depois de entrar no Organizador, o **modo ADM** libera os seis continentes na navegação normal. QR, marcador, atividades, perfil e reinício passam a usar uma coleção temporária em memória. **Sair do modo de teste** encerra a sessão e descarta esse progresso; descobertas, atividades e ano dos alunos não são alterados. O login pede a mesma capitalização configurada. O hash vem de `VITE_ORGANIZER_PASSWORD_HASH` nas variáveis do GitHub Actions; não inclua o texto da senha no repositório.
+
 Dados pontuais confirmados que complementam o Natural Earth ficam em `data-src/country-facts.json`, com fonte em SOURCES.md; o pipeline aplica a capital de Juba confirmada na UNdata. Demais dados não confirmados continuam em verificação. Esta revisão passou em typecheck, build e 11 testes essenciais; câmera, RA e revisão manual da interface continuam pendentes. Publicada em [pedroayan.github.io/testtt](https://pedroayan.github.io/testtt/) pelo [workflow 40814989509](https://github.com/PedroAyan/testtt/actions/runs/40814989509), com sucesso em build/deploy e verificação HTTP dos arquivos novos.
 
 ## Rodar no Windows
