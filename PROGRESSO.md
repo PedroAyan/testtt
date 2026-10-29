@@ -1,5 +1,10 @@
 # Progresso — Exploradores do Mundo
 
+## Etapa atual — refinamento infantil e mobile (2026-10-29)
+- Leitura integral dos quatro documentos obrigatórios e inspeção da referência concluídas antes de editar o app. Telas, componentes, estilos, testes e isolamento da cena AR examinados.
+- Direção e achados registrados em docs/REVISAO-INTERFACE.md; preservar arte autoral, dados, fluxos, sessão ADM e persistência. Skills frontend-design, emil-design-eng e apple-design aplicadas; nenhuma mudança 3D necessária.
+- Próximo passo exato: implementar os ajustes de hierarquia, leitura, controles e estados; executar typecheck, testes e build; registrar os limites da revisão visual e física.
+
 ## Visualização pública no Organizador — 2026-10-29
 - Botão “Ver como público” adicionado ao lado de cada continente. Abre a ficha pública publicada, oculta os avisos/controles de ADM nessa tela e oferece retorno ao Organizador.
 - `npm.cmd run typecheck` e `npm.cmd run build` passaram. Publicado no commit `52963fc`; workflow https://github.com/PedroAyan/testtt/actions/runs/40818399955 concluiu com sucesso. Chunks públicos do Organizador e da ficha conferidos. O conteúdo de rascunho ainda não publicado não é aplicado nesta visualização.
